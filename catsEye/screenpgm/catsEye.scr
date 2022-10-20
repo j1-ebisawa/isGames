@@ -1,0 +1,274 @@
+      *catsEye.scr is generated from C:\Github\isGames\catsEye\screen\catsEye.isp
+       01 screen-1
+       .
+          03 screen-1-gr-1 Grid
+             line 12.75
+             column 4.6
+             size 38.5 cells 
+             lines 74.0 cells 
+             width-in-cells
+             height-in-cells
+             font Arial-8v0
+             id 1
+             boxed
+             column-headings
+             adjustable-rows
+             adjustable-columns
+             row-headings
+             row-dividers 1
+             heading-background-color rgb x#b6e2f7 
+             heading-foreground-color rgb x#000000
+             divider-color rgb x#000000
+             cursor-frame-width 3
+             num-col-headings 1
+             num-row-headings 1
+             num-rows 21
+             selection-mode 36
+             cell-selected-background-color rgb x#c0c0c0
+             rows-per-page 21
+             .
+          03 screen-1-pb-1 Push-Button
+             exception-value 1
+             line 10.83
+             column 56.0
+             size 8.4 cells 
+             lines 4.83 cells 
+             font Arial-9v0
+             id 2
+             self-act
+             title "file:"
+             .
+          03 screen-1-ef-1 Entry-Field
+             line 17.0
+             column 57.7
+             size 34.8 cells 
+             lines 4.17 cells 
+             font Arial-9v0
+             id 3
+             3-d
+             value map-file-name
+             .
+          03 screen-1-pb-2 Push-Button
+             exception-value 2
+             line 27.83
+             column 66.4
+             size 8.4 cells 
+             lines 4.83 cells 
+             font Arial-9v0
+             id 4
+             self-act
+             title "Load"
+             .
+          03 screen-1-pb-3 Push-Button
+             exception-value 3
+             line 27.83
+             column 77.8
+             size 8.4 cells 
+             lines 4.83 cells 
+             font Arial-9v0
+             id 5
+             self-act
+             title "Save"
+             .
+          03 screen-1-pb-4 Push-Button
+             exception-value 5
+             line 92.0
+             column 54.9
+             size 8.2 cells 
+             lines 4.17 cells 
+             font Arial-9v0
+             id 8
+             self-act
+             title "Step in"
+             .
+          03 screen-1-pb-5 Push-Button
+             exception-value 4
+             line 92.0
+             column 73.9
+             size 8.2 cells 
+             lines 4.17 cells 
+             font Arial-9v0
+             id 9
+             self-act
+             title "Reset"
+             .
+          03 screen-1-pb-6 Push-Button
+             exception-value 27
+             line 92.0
+             column 83.4
+             size 8.2 cells 
+             lines 4.17 cells 
+             font Arial-9v0
+             id 10
+             self-act
+             title "Quit"
+             .
+          03 screen-1-la-2 Label
+             line 35.83
+             column 56.0
+             size 18.7 cells 
+             lines 3.33 cells 
+             font Arial-9v0
+             id 11
+             title "Select setting Cells"
+             .
+          03 screen-1-la-3 Label
+             line 56.67
+             column 66.1
+             size 3.9 cells 
+             lines 4.17 cells 
+             font Arial-9v0
+             id 12
+             title "row"
+             .
+          03 screen-1-la-4 Label
+             line 56.33
+             column 77.5
+             size 3.5 cells 
+             lines 3.17 cells 
+             font Arial-9v0
+             id 13
+             title "col"
+             .
+          03 screen-1-ef-2 Entry-Field
+             line 56.5
+             column 70.3
+             size 5.2 cells 
+             lines 4.33 cells 
+             font Arial-9v0
+             id 14
+             3-d
+             .
+          03 screen-1-ef-3 Entry-Field
+             line 56.5
+             column 80.6
+             size 6.3 cells 
+             lines 4.33 cells 
+             font Arial-9v0
+             id 15
+             3-d
+             .
+          03 screen-1-pb-7 Push-Button
+             exception-value 11
+             line 44.83
+             column 56.3
+             size 5.7 cells 
+             lines 5.17 cells 
+             font Arial-9v0
+             id 6
+             title "Block"
+             .
+          03 screen-1-pb-8 Push-Button
+             exception-value 12
+             line 44.83
+             column 66.5
+             size 5.7 cells 
+             lines 5.17 cells 
+             font Arial-9v0
+             id 7
+             title "Gold"
+             .
+          03 screen-1-pb-9 Push-Button
+             exception-value 13
+             line 44.83
+             column 77.1
+             size 5.7 cells 
+             lines 5.17 cells 
+             font Arial-9v0
+             id 16
+             title "Start"
+             .
+          03 screen-1-ef-4 Entry-Field
+             line 78.83
+             column 57.2
+             size 32.7 cells 
+             lines 4.83 cells 
+             font Arial-9v0
+             id 17
+             3-d
+             read-only
+             value result-msg
+             .
+          03 screen-1-la-1 Label
+             line 57.17
+             column 55.7
+             size 9.6 cells 
+             lines 3.5 cells 
+             font Arial-9v0
+             id 18
+             title "GOLD position"
+             .
+          03 screen-1-pb-10 Push-Button
+             exception-value 14
+             line 44.83
+             column 86.8
+             size 5.7 cells 
+             lines 5.17 cells 
+             font Arial-9v0
+             id 19
+             title "Clear"
+             .
+          03 screen-1-la-5 Label
+             line 64.17
+             column 66.1
+             size 3.9 cells 
+             lines 4.17 cells 
+             font Arial-9v0
+             id 20
+             title "row"
+             .
+          03 screen-1-la-6 Label
+             line 64.0
+             column 77.3
+             size 3.5 cells 
+             lines 3.17 cells 
+             font Arial-9v0
+             id 21
+             title "col"
+             .
+          03 screen-1-la-7 Label
+             line 64.5
+             column 55.6
+             size 9.6 cells 
+             lines 3.5 cells 
+             font Arial-9v0
+             id 22
+             title "Start position"
+             .
+          03 screen-1-ef-5 Entry-Field
+             line 64.0
+             column 70.3
+             size 5.2 cells 
+             lines 4.33 cells 
+             font Arial-9v0
+             id 23
+             3-d
+             .
+          03 screen-1-ef-6 Entry-Field
+             line 64.0
+             column 80.7
+             size 6.2 cells 
+             lines 3.67 cells 
+             font Arial-9v0
+             id 24
+             3-d
+             .
+          03 screen-1-la-8 Label
+             line 4.5
+             column 19.3
+             size 28.1 cells 
+             lines 6.5 cells 
+             font Arial-20v0
+             id 25
+             title "CatsEye Gold"
+             .
+          03 screen-1-pb-11 Push-Button
+             exception-value 6
+             line 92.0
+             column 64.4
+             size 8.2 cells 
+             lines 4.17 cells 
+             font Arial-9v0
+             id 26
+             title "AutoRun"
+             .

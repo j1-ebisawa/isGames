@@ -1,0 +1,353 @@
+      *StarPilot.evt is generated from C:\Github\isGames\starPilot\screen\StarPilot.isp
+       screen-1-gr-1-evt-proc.
+           evaluate event-type
+           when msg-goto-cell-mouse
+              perform is-destroy-bitmaps
+           when msg-heading-clicked
+              perform screen-1-gr-1-evt-msg-heading-clicked
+           when other
+           end-evaluate
+           .
+       screen-1-pb-1-evt-proc.
+           evaluate event-control-id
+           when 3
+              evaluate event-type
+              when cmd-clicked
+                 perform SCREEN-1-PB-1-EVT-CMD-CLICKED
+              when other
+              end-evaluate
+           when 6
+              evaluate event-type
+              when cmd-clicked
+                 perform SCREEN-1-PB-2-EVT-CMD-CLICKED
+              when other
+              end-evaluate
+           when 7
+              evaluate event-type
+              when cmd-clicked
+                 perform screen-1-pb-3-evt-cmd-clicked
+              when other
+              end-evaluate
+           when 8
+              evaluate event-type
+              when cmd-clicked
+                 perform screen-1-pb-4-evt-cmd-clicked
+              when other
+              end-evaluate
+           when 9
+              evaluate event-type
+              when cmd-clicked
+                 perform screen-1-pb-5-evt-cmd-clicked
+              when other
+              end-evaluate
+           when 13
+              evaluate event-type
+              when cmd-clicked
+                 perform SCREEN-1-PB-6-EVT-CMD-CLICKED
+              when other
+              end-evaluate
+           when 14
+              evaluate event-type
+              when cmd-clicked
+                 perform SCREEN-1-PB-7-EVT-CMD-CLICKED
+              when other
+              end-evaluate
+           when 18
+              evaluate event-type
+              when cmd-clicked
+                 perform screen-1-pb-8-evt-cmd-clicked
+              when other
+              end-evaluate
+           when 19
+              evaluate event-type
+              when cmd-clicked
+                 perform screen-1-pb-9-evt-cmd-clicked
+              when other
+              end-evaluate
+           end-evaluate
+           .
+       screen-1-pb-10-evt-proc.
+           evaluate event-type
+           when cmd-clicked
+              perform screen-1-pb-10-evt-cmd-clicked
+           when other
+           end-evaluate
+           .
+       screen-1-pb-11-evt-proc.
+           evaluate event-type
+           when cmd-clicked
+              perform screen-1-pb-11-evt-cmd-clicked
+           when other
+           end-evaluate
+           .
+       screen-1-pb-12-evt-proc.
+           evaluate event-type
+           when cmd-clicked
+              perform screen-1-pb-12-evt-cmd-clicked
+           when other
+           end-evaluate
+           .
+      *start event editor code
+
+       screen-1-aft-create.
+      *    set environment "AJ_KEISN_COLOR" to 5
+      *    CALL "AJ_KEISN" USING wrk-len
+      *                       "BOX(05,005)(05,010)_"
+      *    CALL "AJ_KEISN" USING wrk-len
+      *                       "BOX(06,005)(06,010)_"
+      *    CALL "AJ_KEISN" USING wrk-len
+      *                       "BOX(07,005)(07,010)_"
+           .
+
+       screen-1-aft-init-data.
+           inquire screen-1-gr-1  alignment  buffer
+           modify screen-1-gr-1 alignment spaces
+           modify screen-1-gr-1 alignment = ( "C", "C", "C", "C", "C" )
+           inquire screen-1-gr-1 alignment  buffer
+           .
+ 
+         
+  
+       screen-1-gr-1-evt-msg-heading-clicked.
+           perform screen-1-gr-1-get-and-set
+            
+           .
+       screen-1-gr-1-get-and-set.
+           inquire screen-1-gr-1 cursor-y row-idx 
+           inquire screen-1-gr-1(row-idx) record-data code-list
+           modify  screen-1-ef-1  value w-rec-lineno 
+           modify  screen-1-co-1  value w-rec-statement 
+           modify  screen-1-ef-2  value w-rec-p1 
+                   
+           .
+       screen-1-pb-1-evt-cmd-clicked.
+           subtract 6 from wrk-x.
+           if wrk-x < 6.0 
+              perform err-outBounds
+              move 6.0 to wrk-x
+           end-if
+           modify screen-1-bi-1 line wrk-y col wrk-x
+           
+           add 1 to max-line
+           initialize code-list
+           move max-line  to w-rec-lineno
+           move "West"    to w-rec-statement
+           move "1"       to w-rec-p1
+           modify screen-1-gr-1 record-to-add code-list
+           .
+       screen-1-pb-2-evt-cmd-clicked.
+           subtract 2.4 from wrk-y.
+           if wrk-y < 4.9
+              perform err-outBounds
+              move 4.9 to wrk-y
+           end-if
+           modify screen-1-bi-1 line wrk-y col wrk-x
+           
+           add 1 to max-line
+           initialize code-list
+           move max-line   to w-rec-lineno
+           move "North"    to w-rec-statement
+           move "1"        to w-rec-p1
+           modify screen-1-gr-1 record-to-add code-list
+           .
+       screen-1-pb-3-evt-cmd-clicked.
+           move 30.0 to wrk-x.
+           move 14.5 to wrk-y.
+           modify screen-1-bi-1 line wrk-y col wrk-x
+           
+           add 1 to max-line
+           initialize code-list
+           move max-line   to w-rec-lineno
+           move "Home"     to w-rec-statement
+           move " "        to w-rec-p1
+           modify screen-1-gr-1 record-to-add code-list
+           .
+       screen-1-pb-4-evt-cmd-clicked.
+           add 2.4 to wrk-y
+           if wrk-y > 24.1
+              perform err-outBounds
+              move 24.1 to wrk-y
+           end-if
+           modify screen-1-bi-1 line wrk-y col wrk-x
+           
+           add 1 to max-line
+           initialize code-list
+           move max-line   to w-rec-lineno
+           move "South"    to w-rec-statement
+           move "1"        to w-rec-p1
+           modify screen-1-gr-1 record-to-add code-list
+           .
+       screen-1-pb-5-evt-cmd-clicked.
+           add 6 to wrk-x.
+           if wrk-x > 54
+              perform err-outBounds
+              move 54 to wrk-x
+           end-if
+           modify screen-1-bi-1 line wrk-y col wrk-x
+           
+           add 1 to max-line
+           initialize code-list
+           move max-line  to w-rec-lineno
+           move "East"    to w-rec-statement
+           move "1"       to w-rec-p1        
+           modify screen-1-gr-1 record-to-add code-list
+            
+           .            
+                   
+       SCREEN-1-PB-7-EVT-CMD-CLICKED.
+           inquire screen-1-gr-1 cursor-y row-idx
+           modify screen-1-gr-1  RECORD-TO-DELETE row-idx
+           perform until row-idx > max-line - 1
+              inquire screen-1-gr-1(row-idx) record-data code-list
+              subtract 1 from w-rec-lineno
+              modify screen-1-gr-1(row-idx) record-data code-list
+              add 1 to row-idx
+           end-perform.
+           compute max-line = max-line - 1
+           
+           .
+       SCREEN-1-PB-6-EVT-CMD-CLICKED.
+           inquire screen-1-ef-1 value w-rec-lineno
+           inquire screen-1-co-1 value w-rec-statement
+           inquire screen-1-ef-2 value w-rec-p1 
+           
+           compute row-idx = w-rec-lineno
+           modify screen-1-gr-1  insertion-index row-idx
+                                 RECORD-TO-ADD code-list.
+           add 1 to row-idx
+           perform until row-idx > max-line + 1
+              inquire screen-1-gr-1(row-idx) record-data code-list
+              add 1 to w-rec-lineno
+              modify screen-1-gr-1(row-idx) record-data code-list
+              add 1 to row-idx
+           end-perform.
+           compute max-line = max-line + 1
+           
+           .
+       screen-1-pb-8-evt-cmd-clicked.
+           move 30.0 to wrk-x.
+           move 14.5 to wrk-y.
+           modify screen-1-bi-1 line wrk-y col wrk-x
+           move 0 to max-line
+            
+           modify screen-1-gr-1 reset-grid 1
+           .
+           
+       screen-1-pb-9-evt-cmd-clicked.
+           set GRID-SEARCH-IGNORE-CASE  to true
+           set GRID-SEARCH-MATCH-ALL    to true
+           set GRID-SEARCH-ALL-DATA     to true
+           set GRID-SEARCH-MOVES-CURSOR to true
+           set GRID-SEARCH-SKIP-CURRENT to false
+           move 1 to GRID-SEARCH-COLUMN
+                            
+           move 1 to row-idx, prev-row-idx
+           
+           perform until row-idx > max-line
+              inquire screen-1-gr-1(row-idx) record-data code-list
+              perform show-current-row
+              
+              evaluate w-rec-statement
+                 when "West"
+                      subtract 6 from wrk-x
+                 when "East"
+                      add 6 to wrk-x
+                 when "North"
+                      subtract 2.4 from wrk-y
+                 when "South"
+                      add 2.4 to wrk-y
+                 when "Home"
+                      move 30.0 to wrk-x
+                      move 14.5 to wrk-y
+                 when "GOTO"
+                      move function NUMVAL(w-rec-p1) to row-idx
+                      exit perform cycle
+                 when "LOOP"
+                      move function NUMVAL(w-rec-p1) to repeat-times
+                      add  row-idx 1 giving repeat-idx
+                      add 1 to row-idx
+                      exit perform cycle
+                 when "END-LOOP"
+                      subtract 1 from repeat-times
+                      if repeat-times > 0
+                         move repeat-idx to row-idx
+                         exit perform cycle
+                      end-if
+                      add 1 to row-idx
+                      exit perform cycle                     
+                 when "STOP"
+                      exit perform
+              end-evaluate
+              if (wrk-x < 6   or wrk-x > 54 or
+                  wrk-y < 4.9 or wrk-y > 24.1)
+                 perform err-outBounds
+                 exit perform
+              end-if
+              modify screen-1-bi-1 line wrk-y col wrk-x
+              call "C$SLEEP" using 0.5
+              add 1 to row-idx
+           end-perform.
+            
+           .
+       screen-1-pb-10-evt-cmd-clicked.
+           initialize opensave-data
+           move "Choose a file" to opnsav-title
+           move "../data/"      to opnsav-default-dir
+
+           call "C$OPENSAVEBOX" using opensave-open-box, 
+                                      opensave-data
+                               giving opensave-status
+
+           if opensave-status > 0
+              move opnsav-filename to wk-fname
+              modify screen-1-ef-4 value wk-fname
+           end-if
+           .
+       screen-1-pb-11-evt-cmd-clicked.
+           inquire screen-1-ef-4 value wk-fname
+           move  wk-fname to code-f-nm
+           open output code-f
+           perform varying row-idx from 1 by 1 until row-idx > max-line
+              inquire screen-1-gr-1(row-idx) record-data code-list
+              move code-list to code-f-rec
+              write code-f-rec
+           end-perform
+           close  code-f 
+           .
+       screen-1-pb-12-evt-cmd-clicked.
+           inquire screen-1-ef-4 value wk-fname
+           move wk-fname to code-f-nm
+           open input code-f
+           move 0 to max-line
+           perform until 1 = 0
+             read code-f at end exit perform
+             end-read
+             move code-f-rec to code-list
+             modify screen-1-gr-1 record-to-add code-list
+             add 1 to max-line
+           end-perform
+           close code-f
+            
+           .
+       show-current-row.
+           modify screen-1-gr-1, search-options = GRID-SEARCH-OPTIONS           
+           move w-rec-lineno   TO SearchString
+           modify screen-1-gr-1 (row-idx, 1) 
+                                 search-text = SearchString
+                                 length  = 3
+                                 giving SearchResult     
+           .
+       err-outBounds.
+           move "moa02.wav"  to SoundName
+           move SND-ASYNC    to SoundFlag
+           call "WIN$PLAYSOUND" USING SoundName SoundFlag
+                                 giving SoundRCD
+           modify screen-1-ef-6 value = "Error OUT Bounds"
+                                visible=true
+           call "C$SLEEP" using 2.0
+           modify screen-1-ef-6 value = " "
+                               visible=false
+           .
+                                
+      
+      *end event editor code

@@ -1,0 +1,170 @@
+      *MonoChrome.evt is generated from C:\Github\isGames\MonoChrome\screen\MonoChrome.isp
+       screen-1-gr-1-evt-proc.
+           evaluate event-type
+           when msg-gd-dblclick
+              perform screen-1-gr-1-evt-msg-gd-dblclick
+           when other
+           end-evaluate
+           .
+      *start event editor code
+
+       screen-1-aft-init-data.
+           perform CLEAR-GRID.
+           *>modify screen-1-gr-1 mass-update = 1
+           modify screen-1-gr-1 cursor-Y 5 cursor-X 5
+           move 10 to num-width.
+           move 10 to num-height
+           modify screen-1-ef-1 value num-width.
+           modify screen-1-ef-2 value num-height.
+           perform varying wk-row from 1 by 1  
+                                  until wk-row > num-height
+              perform varying wk-col from 1 by 1 
+                                     until wk-col > num-width
+                 modify screen-1-gr-1(wk-row, wk-col) CELL-DATA = "0"
+                 modify screen-1-gr-1(wk-row, wk-col) cell-color = 396
+              end-perform
+           end-perform           
+            
+           .
+       screen-1-aft-create.
+            
+           .
+       screen-1-aft-end-acc.
+            evaluate key-status
+              when  1     *>enCode
+                  perform enCODE-RTN
+              when  2     *>deCode
+                  perform deCODE-RTN
+              when  6    *>Reset
+                  perform RESET-RTN
+            end-evaluate           
+           .
+       
+       screen-1-gr-1-evt-msg-gd-dblclick.
+           inquire screen-1-gr-1 X ws-X Y ws-Y
+           move ws-x to wk-col
+           move ws-y to wk-row
+           perform DBL-CLICKED-RTN
+
+           .
+       
+       CLEAR-GRID.
+           modify screen-1-gr-1 reset-grid 1
+           perform varying wk-row from 1 by 1  until wk-row > 10
+              perform varying wk-col from 1 by 1 until wk-col > 10
+                 modify screen-1-gr-1(wk-row, wk-col) CELL-DATA = " "
+                 modify screen-1-gr-1(wk-row, wk-col) cell-color = 289
+              end-perform
+           end-perform           
+           .
+       
+       enCODE-RTN.
+           move space to code-string.
+           move 1 to code-leng.
+           move num-width to runLeng
+           move runLeng-x to code-string(code-leng:2)
+           add  3 to code-leng
+      *    
+           move 0 to runLeng.
+           move 0 to c-color.
+           perform varying wk-row from 1 by 1 until wk-row > num-height
+              perform varying wk-col 
+                                  from 1 by 1 until wk-col > num-width
+                 modify  screen-1-gr-1 x = wk-col, y = wk-row
+                 inquire screen-1-gr-1 cell-data wk-cell
+                 if wk-cell = "1"
+                    move 1 to w-color
+                 else
+                    move 0 to w-color
+                 end-if
+                 if w-color = c-color
+                    add 1 to runLeng
+                 else
+                    move runLeng-x to code-string(code-leng:2)
+                    add  3 to code-leng
+                    move 1 to runLeng
+                    compute c-color =  1 -c-color
+                 end-if
+              end-perform
+           end-perform.
+           move runLeng-x to code-string(code-leng:2)
+           add 2 to code-leng
+           
+           modify screen-1-ef-3 value code-string(1:code-leng)             
+           .
+           
+       deCODE-RTN.
+           perform CLEAR-GRID.
+           move space to code-string.
+           inquire screen-1-ef-3 value = code-string
+           perform varying code-leng from 100 by -1 until code-leng < 1
+              if code-string(code-leng:1) NOT = " "
+                 exit perform
+              end-if
+           end-perform
+           move 1 to wk-k.
+           move code-string(wk-k:2) to runLeng-x
+           move runLeng to num-width
+           add 3 to wk-k
+      *
+           move 0 to c-color
+           move 1 to wk-row wk-col.
+           perform until wk-k > code-leng 
+              move code-string(wk-k:2) to runLeng-x
+              add 3 to wk-k
+              perform varying wk-i from 1 by 1 until wk-i > runLeng
+                 if c-color = 0
+                   modify screen-1-gr-1(wk-row, wk-col) 
+                          CELL-DATA = "0" cell-color = 396
+                 else
+                    compute map-key = wk-row * 100 + wk-col
+                    modify screen-1-gr-1(wk-row, wk-col) 
+                           cell-data = "1" cell-color = 297
+                 end-if
+                 add 1 to wk-col
+                 if wk-col > num-width 
+                    move 1 to wk-col
+                    add  1 to wk-row
+                 end-if
+              end-perform
+              compute c-color = 1 - c-color
+           end-perform.
+           move wk-row to num-height
+           modify screen-1-ef-1 value num-width.
+           modify screen-1-ef-2 value num-height.
+           
+           .    
+           
+       DBL-CLICKED-RTN.
+           compute map-key = wk-row * 100 + wk-col
+           modify  screen-1-gr-1 x = wk-col, y = wk-row
+           inquire screen-1-gr-1 cell-data wk-cell
+              
+           evaluate wk-cell
+              when  "0"
+                    modify screen-1-gr-1(wk-row, wk-col) 
+                            cell-data = "1" cell-color = 297
+              when "1"
+                    modify screen-1-gr-1(wk-row, wk-col) 
+                            cell-data = "0" cell-color = 396
+           end-evaluate
+           
+           .
+       
+       RESET-RTN.
+           perform CLEAR-GRID.
+           *>modify screen-1-gr-1 mass-update = 1
+           modify screen-1-gr-1 cursor-Y 5 cursor-X 5
+           inquire screen-1-ef-1 value num-width.
+           inquire screen-1-ef-2 value num-height.
+           perform varying wk-row from 1 by 1  
+                                  until wk-row > num-height
+              perform varying wk-col from 1 by 1 
+                                     until wk-col > num-width
+                 modify screen-1-gr-1(wk-row, wk-col) CELL-DATA = "0"
+                 modify screen-1-gr-1(wk-row, wk-col) cell-color = 396
+              end-perform
+           end-perform           
+           .
+
+      *end event editor code

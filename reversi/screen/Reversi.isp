@@ -1,0 +1,2166 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<java version="11.0.14" class="java.beans.XMLDecoder">
+ <array class="com.iscobol.screenpainter.beans.AbstractBeanWindow" length="1">
+  <void index="0">
+   <object class="com.iscobol.screenpainter.beans.swing.SwingWindow" id="SwingWindow0">
+    <void property="afterCreate">
+     <string>screen-1-aft-create</string>
+    </void>
+    <void property="afterEndAccept">
+     <string>screen-1-aft-end-acc</string>
+    </void>
+    <void property="afterInitData">
+     <string>screen-1-aft-init-data</string>
+    </void>
+    <void id="BackgroundIntensity0" property="backgroundIntensity">
+     <void id="Integer0" property="selection"/>
+    </void>
+    <void id="BackgroundColorType0" property="backgroundColor">
+     <void id="Boolean0" method="isBackHigh"/>
+    </void>
+    <void property="components">
+     <array class="com.iscobol.screenpainter.beans.AbstractBeanControl" length="20">
+      <void index="0">
+       <object class="com.iscobol.screenpainter.beans.swing.SwingLabel" id="SwingLabel0">
+        <void property="column">
+         <string>16.5</string>
+        </void>
+        <void property="columnPixels">
+         <float>156.0</float>
+        </void>
+        <void property="font">
+         <object class="com.iscobol.screenpainter.beans.types.FontType">
+          <string>Arial-20v0</string>
+          <string>Arial</string>
+          <float>20.0</float>
+          <int>0</int>
+          <string>Arial-20v0</string>
+          <null/>
+          <boolean>false</boolean>
+         </object>
+        </void>
+        <void property="id">
+         <int>1</int>
+        </void>
+        <void property="line">
+         <string>3.8</string>
+        </void>
+        <void property="linePixels">
+         <float>29.0</float>
+        </void>
+        <void property="lines">
+         <float>4.8</float>
+        </void>
+        <void property="linesPixels">
+         <float>48.0</float>
+        </void>
+        <void property="name">
+         <string>screen-1-la-1</string>
+        </void>
+        <void property="level">
+         <int>3</int>
+        </void>
+        <void property="size">
+         <float>22.9</float>
+        </void>
+        <void property="sizePixels">
+         <float>229.0</float>
+        </void>
+        <void property="tabOrder">
+         <int>1</int>
+        </void>
+        <void property="title">
+         <string>Reversi Game</string>
+        </void>
+        <void id="ForegroundColorType0" property="foregroundColor">
+         <void id="Boolean1" method="isPartOfColorProp"/>
+        </void>
+       </object>
+      </void>
+      <void index="1">
+       <object class="com.iscobol.screenpainter.beans.swing.SwingLabel">
+        <void property="column">
+         <string>52.4</string>
+        </void>
+        <void property="columnPixels">
+         <float>515.0</float>
+        </void>
+        <void property="id">
+         <object idref="Integer0"/>
+        </void>
+        <void property="line">
+         <string>6.6</string>
+        </void>
+        <void property="linePixels">
+         <float>57.0</float>
+        </void>
+        <void property="lines">
+         <float>3.1</float>
+        </void>
+        <void property="linesPixels">
+         <float>31.0</float>
+        </void>
+        <void property="name">
+         <string>screen-1-la-2</string>
+        </void>
+        <void property="level">
+         <int>3</int>
+        </void>
+        <void property="size">
+         <float>15.8</float>
+        </void>
+        <void property="sizePixels">
+         <float>158.0</float>
+        </void>
+        <void property="tabOrder">
+         <object idref="Integer0"/>
+        </void>
+        <void property="title">
+         <string>Select Map file</string>
+        </void>
+       </object>
+      </void>
+      <void index="2">
+       <object class="com.iscobol.screenpainter.beans.swing.SwingPushButton" id="SwingPushButton0">
+        <void property="column">
+         <string>75.9</string>
+        </void>
+        <void property="columnPixels">
+         <float>750.0</float>
+        </void>
+        <void property="exceptionValue">
+         <int>1</int>
+        </void>
+        <void property="id">
+         <int>3</int>
+        </void>
+        <void property="line">
+         <string>9.6</string>
+        </void>
+        <void property="linePixels">
+         <float>87.0</float>
+        </void>
+        <void property="lines">
+         <float>3.1</float>
+        </void>
+        <void property="linesPixels">
+         <float>31.0</float>
+        </void>
+        <void property="name">
+         <string>screen-1-pb-1</string>
+        </void>
+        <void property="level">
+         <int>3</int>
+        </void>
+        <void property="size">
+         <float>4.4</float>
+        </void>
+        <void property="sizePixels">
+         <float>44.0</float>
+        </void>
+        <void property="tabOrder">
+         <int>3</int>
+        </void>
+        <void property="title">
+         <string>...</string>
+        </void>
+        <void id="PushButtonAlignment0" property="alignment">
+         <void id="Integer1" property="selection"/>
+        </void>
+       </object>
+      </void>
+      <void index="3">
+       <object class="com.iscobol.screenpainter.beans.swing.SwingEntryField" id="SwingEntryField0">
+        <void property="column">
+         <string>52.4</string>
+        </void>
+        <void property="columnPixels">
+         <float>515.0</float>
+        </void>
+        <void property="id">
+         <object idref="Integer1"/>
+        </void>
+        <void property="line">
+         <string>9.6</string>
+        </void>
+        <void property="linePixels">
+         <float>87.0</float>
+        </void>
+        <void property="lines">
+         <float>3.1</float>
+        </void>
+        <void property="linesPixels">
+         <float>31.0</float>
+        </void>
+        <void property="name">
+         <string>screen-1-ef-1</string>
+        </void>
+        <void id="ItemSettingList0" property="proposal">
+         <void id="SettingItemArray0" property="settings"/>
+         <void property="settings">
+          <object idref="SettingItemArray0"/>
+         </void>
+        </void>
+        <void property="level">
+         <int>3</int>
+        </void>
+        <void property="size">
+         <float>22.2</float>
+        </void>
+        <void property="sizePixels">
+         <float>222.0</float>
+        </void>
+        <void property="tabOrder">
+         <object idref="Integer1"/>
+        </void>
+        <void id="Integer2" property="visibleProposalCount"/>
+       </object>
+      </void>
+      <void index="4">
+       <object class="com.iscobol.screenpainter.beans.swing.SwingPushButton">
+        <void property="column">
+         <string>53.5</string>
+        </void>
+        <void property="columnPixels">
+         <float>526.0</float>
+        </void>
+        <void property="exceptionValue">
+         <object idref="Integer0"/>
+        </void>
+        <void property="id">
+         <object idref="Integer2"/>
+        </void>
+        <void property="line">
+         <string>14.8</string>
+        </void>
+        <void property="linePixels">
+         <float>139.0</float>
+        </void>
+        <void property="lines">
+         <float>3.2</float>
+        </void>
+        <void property="linesPixels">
+         <float>32.0</float>
+        </void>
+        <void property="name">
+         <string>screen-1-pb-2</string>
+        </void>
+        <void property="level">
+         <int>3</int>
+        </void>
+        <void property="size">
+         <float>9.6</float>
+        </void>
+        <void property="sizePixels">
+         <float>96.0</float>
+        </void>
+        <void property="tabOrder">
+         <object idref="Integer2"/>
+        </void>
+        <void property="title">
+         <string>file load</string>
+        </void>
+       </object>
+      </void>
+      <void index="5">
+       <object class="com.iscobol.screenpainter.beans.swing.SwingPushButton">
+        <void property="column">
+         <string>67.0</string>
+        </void>
+        <void property="columnPixels">
+         <float>661.0</float>
+        </void>
+        <void property="exceptionValue">
+         <int>3</int>
+        </void>
+        <void property="id">
+         <int>6</int>
+        </void>
+        <void property="line">
+         <string>14.8</string>
+        </void>
+        <void property="linePixels">
+         <float>139.0</float>
+        </void>
+        <void property="lines">
+         <float>3.2</float>
+        </void>
+        <void property="linesPixels">
+         <float>32.0</float>
+        </void>
+        <void property="name">
+         <string>screen-1-pb-3</string>
+        </void>
+        <void property="level">
+         <int>3</int>
+        </void>
+        <void property="size">
+         <float>9.0</float>
+        </void>
+        <void property="sizePixels">
+         <float>90.0</float>
+        </void>
+        <void property="tabOrder">
+         <int>6</int>
+        </void>
+        <void property="title">
+         <string>file save</string>
+        </void>
+       </object>
+      </void>
+      <void index="6">
+       <object class="com.iscobol.screenpainter.beans.swing.SwingLabel">
+        <void property="column">
+         <string>52.8</string>
+        </void>
+        <void property="columnPixels">
+         <float>519.0</float>
+        </void>
+        <void property="id">
+         <int>7</int>
+        </void>
+        <void property="line">
+         <string>22.1</string>
+        </void>
+        <void property="linePixels">
+         <float>212.0</float>
+        </void>
+        <void property="lines">
+         <float>3.4</float>
+        </void>
+        <void property="linesPixels">
+         <float>34.0</float>
+        </void>
+        <void property="name">
+         <string>screen-1-la-3</string>
+        </void>
+        <void property="level">
+         <int>3</int>
+        </void>
+        <void property="size">
+         <float>8.4</float>
+        </void>
+        <void property="sizePixels">
+         <float>84.0</float>
+        </void>
+        <void property="tabOrder">
+         <int>7</int>
+        </void>
+        <void property="title">
+         <string>Mode</string>
+        </void>
+       </object>
+      </void>
+      <void index="7">
+       <object class="com.iscobol.screenpainter.beans.swing.SwingPushButton">
+        <void property="column">
+         <string>63.4</string>
+        </void>
+        <void property="columnPixels">
+         <float>625.0</float>
+        </void>
+        <void property="exceptionValue">
+         <object idref="Integer1"/>
+        </void>
+        <void property="id">
+         <int>8</int>
+        </void>
+        <void property="line">
+         <string>22.1</string>
+        </void>
+        <void property="linePixels">
+         <float>212.0</float>
+        </void>
+        <void property="lines">
+         <float>3.4</float>
+        </void>
+        <void property="linesPixels">
+         <float>34.0</float>
+        </void>
+        <void property="name">
+         <string>screen-1-pb-4</string>
+        </void>
+        <void property="level">
+         <int>3</int>
+        </void>
+        <void property="size">
+         <float>14.5</float>
+        </void>
+        <void property="sizePixels">
+         <float>145.0</float>
+        </void>
+        <void property="tabOrder">
+         <int>8</int>
+        </void>
+        <void property="title">
+         <string>Play Game</string>
+        </void>
+       </object>
+      </void>
+      <void index="8">
+       <object class="com.iscobol.screenpainter.beans.swing.SwingLabel">
+        <void property="column">
+         <string>53.5</string>
+        </void>
+        <void property="columnPixels">
+         <float>526.0</float>
+        </void>
+        <void property="id">
+         <int>9</int>
+        </void>
+        <void property="line">
+         <string>28.6</string>
+        </void>
+        <void property="linePixels">
+         <float>277.0</float>
+        </void>
+        <void property="lines">
+         <float>2.9</float>
+        </void>
+        <void property="linesPixels">
+         <float>29.0</float>
+        </void>
+        <void property="name">
+         <string>screen-1-la-4</string>
+        </void>
+        <void property="level">
+         <int>3</int>
+        </void>
+        <void property="size">
+         <float>15.7</float>
+        </void>
+        <void property="sizePixels">
+         <float>157.0</float>
+        </void>
+        <void property="tabOrder">
+         <int>9</int>
+        </void>
+        <void property="title">
+         <string>Select Cell and click</string>
+        </void>
+       </object>
+      </void>
+      <void index="9">
+       <object class="com.iscobol.screenpainter.beans.swing.SwingRadioButton">
+        <void property="column">
+         <string>53.4</string>
+        </void>
+        <void property="columnPixels">
+         <float>525.0</float>
+        </void>
+        <void property="group">
+         <int>1</int>
+        </void>
+        <void property="id">
+         <int>11</int>
+        </void>
+        <void property="line">
+         <string>37.1</string>
+        </void>
+        <void property="linePixels">
+         <float>362.0</float>
+        </void>
+        <void property="lines">
+         <float>3.1</float>
+        </void>
+        <void property="linesPixels">
+         <float>31.0</float>
+        </void>
+        <void property="name">
+         <string>screen-1-rb-1</string>
+        </void>
+        <void property="level">
+         <int>3</int>
+        </void>
+        <void property="size">
+         <float>9.3</float>
+        </void>
+        <void property="sizePixels">
+         <float>93.0</float>
+        </void>
+        <void property="tabOrder">
+         <int>10</int>
+        </void>
+        <void property="title">
+         <string>White :</string>
+        </void>
+       </object>
+      </void>
+      <void index="10">
+       <object class="com.iscobol.screenpainter.beans.swing.SwingRadioButton">
+        <void property="column">
+         <string>53.1</string>
+        </void>
+        <void property="columnPixels">
+         <float>522.0</float>
+        </void>
+        <void property="group">
+         <int>1</int>
+        </void>
+        <void property="id">
+         <int>12</int>
+        </void>
+        <void property="line">
+         <string>43.1</string>
+        </void>
+        <void property="linePixels">
+         <float>422.0</float>
+        </void>
+        <void property="lines">
+         <float>3.1</float>
+        </void>
+        <void property="linesPixels">
+         <float>31.0</float>
+        </void>
+        <void property="name">
+         <string>screen-1-rb-2</string>
+        </void>
+        <void property="level">
+         <int>3</int>
+        </void>
+        <void property="size">
+         <float>9.3</float>
+        </void>
+        <void property="sizePixels">
+         <float>93.0</float>
+        </void>
+        <void property="tabOrder">
+         <int>11</int>
+        </void>
+        <void property="title">
+         <string>Black :</string>
+        </void>
+       </object>
+      </void>
+      <void index="11">
+       <object class="com.iscobol.screenpainter.beans.swing.SwingEntryField" id="SwingEntryField1">
+        <void property="column">
+         <string>65.6</string>
+        </void>
+        <void property="columnPixels">
+         <float>647.0</float>
+        </void>
+        <void property="id">
+         <int>13</int>
+        </void>
+        <void property="line">
+         <string>37.1</string>
+        </void>
+        <void property="linePixels">
+         <float>362.0</float>
+        </void>
+        <void property="lines">
+         <float>3.1</float>
+        </void>
+        <void property="linesPixels">
+         <float>31.0</float>
+        </void>
+        <void property="name">
+         <string>screen-1-ef-2</string>
+        </void>
+        <void id="ItemSettingList1" property="proposal">
+         <void id="SettingItemArray1" property="settings"/>
+         <void property="settings">
+          <object idref="SettingItemArray1"/>
+         </void>
+        </void>
+        <void property="level">
+         <int>3</int>
+        </void>
+        <void property="size">
+         <float>9.3</float>
+        </void>
+        <void property="sizePixels">
+         <float>93.0</float>
+        </void>
+        <void property="tabOrder">
+         <int>12</int>
+        </void>
+       </object>
+      </void>
+      <void index="12">
+       <object class="com.iscobol.screenpainter.beans.swing.SwingEntryField" id="SwingEntryField2">
+        <void property="column">
+         <string>65.3</string>
+        </void>
+        <void property="columnPixels">
+         <float>644.0</float>
+        </void>
+        <void property="id">
+         <int>14</int>
+        </void>
+        <void property="line">
+         <string>43.1</string>
+        </void>
+        <void property="linePixels">
+         <float>422.0</float>
+        </void>
+        <void property="lines">
+         <float>3.1</float>
+        </void>
+        <void property="linesPixels">
+         <float>31.0</float>
+        </void>
+        <void property="name">
+         <string>screen-1-ef-3</string>
+        </void>
+        <void id="ItemSettingList2" property="proposal">
+         <void id="SettingItemArray2" property="settings"/>
+         <void property="settings">
+          <object idref="SettingItemArray2"/>
+         </void>
+        </void>
+        <void property="level">
+         <int>3</int>
+        </void>
+        <void property="size">
+         <float>9.3</float>
+        </void>
+        <void property="sizePixels">
+         <float>93.0</float>
+        </void>
+        <void property="tabOrder">
+         <int>13</int>
+        </void>
+       </object>
+      </void>
+      <void index="13">
+       <object class="com.iscobol.screenpainter.beans.swing.SwingLabel">
+        <void property="column">
+         <string>52.9</string>
+        </void>
+        <void property="columnPixels">
+         <float>520.0</float>
+        </void>
+        <void property="id">
+         <int>15</int>
+        </void>
+        <void property="line">
+         <string>48.5</string>
+        </void>
+        <void property="linePixels">
+         <float>476.0</float>
+        </void>
+        <void property="lines">
+         <float>3.1</float>
+        </void>
+        <void property="linesPixels">
+         <float>31.0</float>
+        </void>
+        <void property="name">
+         <string>screen-1-la-6</string>
+        </void>
+        <void property="level">
+         <int>3</int>
+        </void>
+        <void property="size">
+         <float>9.3</float>
+        </void>
+        <void property="sizePixels">
+         <float>93.0</float>
+        </void>
+        <void property="tabOrder">
+         <int>14</int>
+        </void>
+        <void property="title">
+         <string>Reversed</string>
+        </void>
+       </object>
+      </void>
+      <void index="14">
+       <object class="com.iscobol.screenpainter.beans.swing.SwingEntryField" id="SwingEntryField3">
+        <void property="column">
+         <string>65.3</string>
+        </void>
+        <void property="columnPixels">
+         <float>644.0</float>
+        </void>
+        <void property="id">
+         <int>16</int>
+        </void>
+        <void property="line">
+         <string>48.5</string>
+        </void>
+        <void property="linePixels">
+         <float>476.0</float>
+        </void>
+        <void property="lines">
+         <float>3.1</float>
+        </void>
+        <void property="linesPixels">
+         <float>31.0</float>
+        </void>
+        <void property="name">
+         <string>screen-1-ef-4</string>
+        </void>
+        <void id="ItemSettingList3" property="proposal">
+         <void id="SettingItemArray3" property="settings"/>
+         <void property="settings">
+          <object idref="SettingItemArray3"/>
+         </void>
+        </void>
+        <void property="level">
+         <int>3</int>
+        </void>
+        <void property="size">
+         <float>9.3</float>
+        </void>
+        <void property="sizePixels">
+         <float>93.0</float>
+        </void>
+        <void property="tabOrder">
+         <int>15</int>
+        </void>
+       </object>
+      </void>
+      <void index="15">
+       <object class="com.iscobol.screenpainter.beans.swing.SwingPushButton">
+        <void property="column">
+         <string>51.8</string>
+        </void>
+        <void property="columnPixels">
+         <float>509.0</float>
+        </void>
+        <void property="exceptionValue">
+         <int>27</int>
+        </void>
+        <void property="id">
+         <int>17</int>
+        </void>
+        <void property="line">
+         <string>58.3</string>
+        </void>
+        <void property="linePixels">
+         <float>574.0</float>
+        </void>
+        <void property="lines">
+         <float>3.2</float>
+        </void>
+        <void property="linesPixels">
+         <float>32.0</float>
+        </void>
+        <void property="name">
+         <string>screen-1-pb-5</string>
+        </void>
+        <void property="level">
+         <int>3</int>
+        </void>
+        <void property="size">
+         <float>10.3</float>
+        </void>
+        <void property="sizePixels">
+         <float>103.0</float>
+        </void>
+        <void property="tabOrder">
+         <int>16</int>
+        </void>
+        <void property="title">
+         <string>Quit</string>
+        </void>
+       </object>
+      </void>
+      <void index="16">
+       <object class="com.iscobol.screenpainter.beans.swing.SwingPushButton">
+        <void property="column">
+         <string>67.6</string>
+        </void>
+        <void property="columnPixels">
+         <float>667.0</float>
+        </void>
+        <void property="exceptionValue">
+         <int>6</int>
+        </void>
+        <void property="id">
+         <int>18</int>
+        </void>
+        <void property="line">
+         <string>57.4</string>
+        </void>
+        <void property="linePixels">
+         <float>565.0</float>
+        </void>
+        <void property="lines">
+         <float>3.7</float>
+        </void>
+        <void property="linesPixels">
+         <float>37.0</float>
+        </void>
+        <void property="name">
+         <string>screen-1-pb-6</string>
+        </void>
+        <void property="level">
+         <int>3</int>
+        </void>
+        <void property="size">
+         <float>10.8</float>
+        </void>
+        <void property="sizePixels">
+         <float>108.0</float>
+        </void>
+        <void property="tabOrder">
+         <int>17</int>
+        </void>
+        <void property="title">
+         <string>Reset</string>
+        </void>
+       </object>
+      </void>
+      <void index="17">
+       <object class="com.iscobol.screenpainter.beans.swing.SwingGrid" id="SwingGrid0">
+        <void property="eventProcedure">
+         <string>screen-1-gr-1-evt-proc</string>
+        </void>
+        <void property="adjustableColumns">
+         <object idref="Boolean1"/>
+        </void>
+        <void property="adjustableRows">
+         <object idref="Boolean1"/>
+        </void>
+        <void property="border">
+         <object class="com.iscobol.screenpainter.beans.types.BorderStyle">
+          <int>1</int>
+         </object>
+        </void>
+        <void property="borderColor">
+         <object class="com.iscobol.screenpainter.beans.types.ForegroundColorType">
+          <int>-1</int>
+          <int>0</int>
+          <int>0</int>
+         </object>
+        </void>
+        <void id="GridCellSettingList0" property="cellSettings">
+         <void id="SettingItemArray4" property="settings"/>
+         <void property="settings">
+          <object idref="SettingItemArray4"/>
+         </void>
+        </void>
+        <void property="column">
+         <string>7.4</string>
+        </void>
+        <void property="columnHeadings">
+         <object idref="Boolean0"/>
+        </void>
+        <void property="columnPixels">
+         <float>65.0</float>
+        </void>
+        <void property="columnSettings">
+         <void property="settings">
+          <array class="com.iscobol.screenpainter.beans.types.SettingItem" length="8">
+           <void index="0">
+            <object class="com.iscobol.screenpainter.beans.types.GridColumnSetting">
+             <void property="dataColumn">
+              <int>3</int>
+             </void>
+             <void property="displayColumn">
+              <int>3</int>
+             </void>
+             <void property="picture">
+              <string>X(3)</string>
+             </void>
+            </object>
+           </void>
+           <void index="1">
+            <object class="com.iscobol.screenpainter.beans.types.GridColumnSetting">
+             <void property="dataColumn">
+              <int>3</int>
+             </void>
+             <void property="displayColumn">
+              <int>3</int>
+             </void>
+             <void property="picture">
+              <string>X(3)</string>
+             </void>
+            </object>
+           </void>
+           <void index="2">
+            <object class="com.iscobol.screenpainter.beans.types.GridColumnSetting">
+             <void property="dataColumn">
+              <int>3</int>
+             </void>
+             <void property="displayColumn">
+              <int>3</int>
+             </void>
+             <void property="picture">
+              <string>X(3)</string>
+             </void>
+            </object>
+           </void>
+           <void index="3">
+            <object class="com.iscobol.screenpainter.beans.types.GridColumnSetting">
+             <void property="dataColumn">
+              <int>3</int>
+             </void>
+             <void property="displayColumn">
+              <int>3</int>
+             </void>
+             <void property="picture">
+              <string>X(3)</string>
+             </void>
+            </object>
+           </void>
+           <void index="4">
+            <object class="com.iscobol.screenpainter.beans.types.GridColumnSetting">
+             <void property="dataColumn">
+              <int>3</int>
+             </void>
+             <void property="displayColumn">
+              <int>3</int>
+             </void>
+             <void property="picture">
+              <string>X(3)</string>
+             </void>
+            </object>
+           </void>
+           <void index="5">
+            <object class="com.iscobol.screenpainter.beans.types.GridColumnSetting">
+             <void property="dataColumn">
+              <int>3</int>
+             </void>
+             <void property="displayColumn">
+              <int>3</int>
+             </void>
+             <void property="picture">
+              <string>X(3)</string>
+             </void>
+            </object>
+           </void>
+           <void index="6">
+            <object class="com.iscobol.screenpainter.beans.types.GridColumnSetting">
+             <void property="dataColumn">
+              <int>3</int>
+             </void>
+             <void property="displayColumn">
+              <int>3</int>
+             </void>
+             <void property="picture">
+              <string>X(3)</string>
+             </void>
+            </object>
+           </void>
+           <void index="7">
+            <object class="com.iscobol.screenpainter.beans.types.GridColumnSetting">
+             <void property="dataColumn">
+              <int>3</int>
+             </void>
+             <void property="displayColumn">
+              <int>3</int>
+             </void>
+             <void property="picture">
+              <string>X(3)</string>
+             </void>
+            </object>
+           </void>
+          </array>
+         </void>
+        </void>
+        <void property="dividerColor">
+         <object class="com.iscobol.screenpainter.beans.types.ForegroundColorType">
+          <int>-1</int>
+          <int>0</int>
+          <int>0</int>
+         </object>
+        </void>
+        <void property="font">
+         <object class="com.iscobol.screenpainter.beans.types.FontType">
+          <string>Arial-20v0</string>
+          <string>Arial</string>
+          <float>20.0</float>
+          <int>0</int>
+          <string>Arial-20v00</string>
+          <null/>
+          <boolean>false</boolean>
+         </object>
+        </void>
+        <void property="id">
+         <int>19</int>
+        </void>
+        <void property="line">
+         <string>12.3</string>
+        </void>
+        <void property="linePixels">
+         <float>114.0</float>
+        </void>
+        <void property="lines">
+         <float>39.9</float>
+        </void>
+        <void property="linesPixels">
+         <float>399.0</float>
+        </void>
+        <void property="linesUnit">
+         <object class="com.iscobol.screenpainter.beans.types.DimensionUnit">
+          <object idref="Integer0"/>
+         </object>
+        </void>
+        <void property="msgGdDblclickEv">
+         <string>screen-1-gr-1-evt-msg-gd-dblclick</string>
+        </void>
+        <void property="name">
+         <string>screen-1-gr-1</string>
+        </void>
+        <void property="numColumns">
+         <int>8</int>
+        </void>
+        <void property="numRows">
+         <int>8</int>
+        </void>
+        <void property="protection">
+         <object class="com.iscobol.screenpainter.beans.types.Protection">
+          <int>1</int>
+         </object>
+        </void>
+        <void id="ItemSettingList4" property="recordToAdd">
+         <void id="SettingItemArray5" property="settings"/>
+         <void property="settings">
+          <object idref="SettingItemArray5"/>
+         </void>
+        </void>
+        <void id="RowColorPatternSettingList0" property="rowColorPatterns">
+         <void id="SettingItemArray6" property="settings"/>
+         <void property="settings">
+          <object idref="SettingItemArray6"/>
+         </void>
+        </void>
+        <void id="GridRowSettingList0" property="rowSettings">
+         <void id="SettingItemArray7" property="settings"/>
+         <void property="settings">
+          <object idref="SettingItemArray7"/>
+         </void>
+        </void>
+        <void property="rowsPerPage">
+         <int>8</int>
+        </void>
+        <void property="level">
+         <int>3</int>
+        </void>
+        <void property="size">
+         <float>36.9</float>
+        </void>
+        <void property="sizePixels">
+         <float>369.0</float>
+        </void>
+        <void property="sizeUnit">
+         <object class="com.iscobol.screenpainter.beans.types.DimensionUnit">
+          <object idref="Integer0"/>
+         </object>
+        </void>
+        <void property="tabOrder">
+         <int>18</int>
+        </void>
+       </object>
+      </void>
+      <void index="18">
+       <object class="com.iscobol.screenpainter.beans.swing.SwingLabel">
+        <void property="column">
+         <string>6.3</string>
+        </void>
+        <void property="columnPixels">
+         <float>54.0</float>
+        </void>
+        <void property="id">
+         <int>20</int>
+        </void>
+        <void property="line">
+         <string>59.9</string>
+        </void>
+        <void property="linePixels">
+         <float>590.0</float>
+        </void>
+        <void property="lines">
+         <float>3.1</float>
+        </void>
+        <void property="linesPixels">
+         <float>31.0</float>
+        </void>
+        <void property="name">
+         <string>screen-1-la-7</string>
+        </void>
+        <void property="level">
+         <int>3</int>
+        </void>
+        <void property="size">
+         <float>28.2</float>
+        </void>
+        <void property="sizePixels">
+         <float>282.0</float>
+        </void>
+        <void property="tabOrder">
+         <int>19</int>
+        </void>
+        <void property="title">
+         <string>result</string>
+        </void>
+       </object>
+      </void>
+      <void index="19">
+       <object class="com.iscobol.screenpainter.beans.swing.SwingLabel">
+        <void property="column">
+         <string>71.9</string>
+        </void>
+        <void property="columnPixels">
+         <float>710.0</float>
+        </void>
+        <void property="id">
+         <int>10</int>
+        </void>
+        <void property="line">
+         <string>28.6</string>
+        </void>
+        <void property="linePixels">
+         <float>277.0</float>
+        </void>
+        <void property="lines">
+         <float>2.9</float>
+        </void>
+        <void property="linesPixels">
+         <float>29.0</float>
+        </void>
+        <void property="name">
+         <string>screen-1-la-5</string>
+        </void>
+        <void property="level">
+         <int>3</int>
+        </void>
+        <void property="size">
+         <float>9.5</float>
+        </void>
+        <void property="sizePixels">
+         <float>95.0</float>
+        </void>
+        <void property="tabOrder">
+         <int>20</int>
+        </void>
+        <void property="title">
+         <string>〇  |   ●</string>
+        </void>
+       </object>
+      </void>
+     </array>
+    </void>
+    <void id="DockableList0" property="layout">
+     <void id="SettingItemArray8" property="settings"/>
+     <void property="settings">
+      <object idref="SettingItemArray8"/>
+     </void>
+    </void>
+    <void property="lines">
+     <float>62.9</float>
+    </void>
+    <void id="MenuArray0" property="menus"/>
+    <void property="menus">
+     <object idref="MenuArray0"/>
+    </void>
+    <void property="name">
+     <string>screen-1</string>
+    </void>
+    <void property="size">
+     <float>86.4</float>
+    </void>
+    <void id="IToolbarArray0" property="toolbars"/>
+    <void property="toolbars">
+     <object idref="IToolbarArray0"/>
+    </void>
+    <void property="windowHandle">
+     <string>window-handle</string>
+    </void>
+   </object>
+  </void>
+ </array>
+ <array class="com.iscobol.screenpainter.beans.types.VariableType" length="29">
+  <void index="0">
+   <object class="com.iscobol.screenpainter.beans.types.VariableType" id="VariableType0">
+    <void id="SettingTreeItemArray0" property="children"/>
+    <void property="children">
+     <object idref="SettingTreeItemArray0"/>
+    </void>
+    <void property="level">
+     <string>77</string>
+    </void>
+    <void property="name">
+     <string>window-handle</string>
+    </void>
+    <void property="usage">
+     <object class="com.iscobol.screenpainter.beans.types.VariableUsage">
+      <int>25</int>
+     </object>
+    </void>
+    <void property="NType">
+     <int>1003</int>
+    </void>
+   </object>
+  </void>
+  <void index="1">
+   <object class="com.iscobol.screenpainter.beans.types.VariableType" id="VariableType1">
+    <void id="SettingTreeItemArray1" property="children"/>
+    <void property="children">
+     <object idref="SettingTreeItemArray1"/>
+    </void>
+    <void property="level">
+     <string>77</string>
+    </void>
+    <void property="name">
+     <string>Arial-20v0</string>
+    </void>
+    <void property="usage">
+     <object class="com.iscobol.screenpainter.beans.types.VariableUsage">
+      <int>26</int>
+     </object>
+    </void>
+    <void property="NType">
+     <int>1003</int>
+    </void>
+   </object>
+  </void>
+  <void index="2">
+   <object class="com.iscobol.screenpainter.beans.types.VariableType" id="VariableType2">
+    <void id="SettingTreeItemArray2" property="children"/>
+    <void property="children">
+     <object idref="SettingTreeItemArray2"/>
+    </void>
+    <void property="level">
+     <string>77</string>
+    </void>
+    <void property="name">
+     <string>Arial-12v0</string>
+    </void>
+    <void property="usage">
+     <object class="com.iscobol.screenpainter.beans.types.VariableUsage">
+      <int>26</int>
+     </object>
+    </void>
+    <void property="NType">
+     <int>1003</int>
+    </void>
+   </object>
+  </void>
+  <void index="3">
+   <object class="com.iscobol.screenpainter.beans.types.VariableType" id="VariableType3">
+    <void id="SettingTreeItemArray3" property="children"/>
+    <void property="children">
+     <object idref="SettingTreeItemArray3"/>
+    </void>
+    <void property="level">
+     <string>77</string>
+    </void>
+    <void property="name">
+     <string>Arial-14v0</string>
+    </void>
+    <void property="usage">
+     <object class="com.iscobol.screenpainter.beans.types.VariableUsage">
+      <int>26</int>
+     </object>
+    </void>
+    <void property="NType">
+     <int>1003</int>
+    </void>
+   </object>
+  </void>
+  <void index="4">
+   <object class="com.iscobol.screenpainter.beans.types.VariableType" id="VariableType4">
+    <void id="SettingTreeItemArray4" property="children"/>
+    <void property="children">
+     <object idref="SettingTreeItemArray4"/>
+    </void>
+    <void property="level">
+     <string>77</string>
+    </void>
+    <void property="name">
+     <string>Arial-13v0</string>
+    </void>
+    <void property="usage">
+     <object class="com.iscobol.screenpainter.beans.types.VariableUsage">
+      <int>26</int>
+     </object>
+    </void>
+    <void property="NType">
+     <int>1003</int>
+    </void>
+   </object>
+  </void>
+  <void index="5">
+   <object class="com.iscobol.screenpainter.beans.types.VariableType" id="VariableType5">
+    <void id="SettingTreeItemArray5" property="children"/>
+    <void property="children">
+     <object idref="SettingTreeItemArray5"/>
+    </void>
+    <void property="level">
+     <string>77</string>
+    </void>
+    <void property="name">
+     <string>Arial-14v00</string>
+    </void>
+    <void property="usage">
+     <object class="com.iscobol.screenpainter.beans.types.VariableUsage">
+      <int>26</int>
+     </object>
+    </void>
+    <void property="NType">
+     <int>1003</int>
+    </void>
+   </object>
+  </void>
+  <void index="6">
+   <object class="com.iscobol.screenpainter.beans.types.VariableType" id="VariableType6">
+    <void id="SettingTreeItemArray6" property="children"/>
+    <void property="children">
+     <object idref="SettingTreeItemArray6"/>
+    </void>
+    <void property="level">
+     <string>77</string>
+    </void>
+    <void property="name">
+     <string>Arial-15v0</string>
+    </void>
+    <void property="usage">
+     <object class="com.iscobol.screenpainter.beans.types.VariableUsage">
+      <int>26</int>
+     </object>
+    </void>
+    <void property="NType">
+     <int>1003</int>
+    </void>
+   </object>
+  </void>
+  <void index="7">
+   <object class="com.iscobol.screenpainter.beans.types.VariableType" id="VariableType7">
+    <void id="SettingTreeItemArray7" property="children"/>
+    <void property="children">
+     <object idref="SettingTreeItemArray7"/>
+    </void>
+    <void property="level">
+     <string>77</string>
+    </void>
+    <void property="name">
+     <string>Arial-16v0</string>
+    </void>
+    <void property="usage">
+     <object class="com.iscobol.screenpainter.beans.types.VariableUsage">
+      <int>26</int>
+     </object>
+    </void>
+    <void property="NType">
+     <int>1003</int>
+    </void>
+   </object>
+  </void>
+  <void index="8">
+   <object class="com.iscobol.screenpainter.beans.types.VariableType" id="VariableType8">
+    <void id="SettingTreeItemArray8" property="children"/>
+    <void property="children">
+     <object idref="SettingTreeItemArray8"/>
+    </void>
+    <void property="name">
+     <string>map-f-sts</string>
+    </void>
+    <void property="picture">
+     <string>x(02)</string>
+    </void>
+   </object>
+  </void>
+  <void index="9">
+   <object class="com.iscobol.screenpainter.beans.types.VariableType" id="VariableType9">
+    <void id="SettingTreeItemArray9" property="children"/>
+    <void property="children">
+     <object idref="SettingTreeItemArray9"/>
+    </void>
+    <void property="name">
+     <string>mode-sw</string>
+    </void>
+    <void property="picture">
+     <string>9(01)</string>
+    </void>
+   </object>
+  </void>
+  <void index="10">
+   <object class="com.iscobol.screenpainter.beans.types.VariableType" id="VariableType10">
+    <void id="SettingTreeItemArray10" property="children"/>
+    <void property="children">
+     <object idref="SettingTreeItemArray10"/>
+    </void>
+    <void property="name">
+     <string>num-white</string>
+    </void>
+    <void property="picture">
+     <string>9(02)</string>
+    </void>
+   </object>
+  </void>
+  <void index="11">
+   <object class="com.iscobol.screenpainter.beans.types.VariableType" id="VariableType11">
+    <void id="SettingTreeItemArray11" property="children"/>
+    <void property="children">
+     <object idref="SettingTreeItemArray11"/>
+    </void>
+    <void property="name">
+     <string>num-black</string>
+    </void>
+    <void property="picture">
+     <string>9(02)</string>
+    </void>
+   </object>
+  </void>
+  <void index="12">
+   <object class="com.iscobol.screenpainter.beans.types.VariableType" id="VariableType12">
+    <void id="SettingTreeItemArray12" property="children"/>
+    <void property="children">
+     <object idref="SettingTreeItemArray12"/>
+    </void>
+    <void property="name">
+     <string>num-reverse</string>
+    </void>
+    <void property="picture">
+     <string>9(02)</string>
+    </void>
+   </object>
+  </void>
+  <void index="13">
+   <object class="com.iscobol.screenpainter.beans.types.VariableType" id="VariableType13">
+    <void id="SettingTreeItemArray13" property="children"/>
+    <void property="children">
+     <object idref="SettingTreeItemArray13"/>
+    </void>
+    <void property="name">
+     <string>wk_row</string>
+    </void>
+    <void property="picture">
+     <string>9(02)</string>
+    </void>
+   </object>
+  </void>
+  <void index="14">
+   <object class="com.iscobol.screenpainter.beans.types.VariableType" id="VariableType14">
+    <void id="SettingTreeItemArray14" property="children"/>
+    <void property="children">
+     <object idref="SettingTreeItemArray14"/>
+    </void>
+    <void property="name">
+     <string>wk-col</string>
+    </void>
+    <void property="picture">
+     <string>9(02)</string>
+    </void>
+   </object>
+  </void>
+  <void index="15">
+   <object class="com.iscobol.screenpainter.beans.types.VariableType">
+    <void property="children">
+     <array class="com.iscobol.screenpainter.beans.types.SettingTreeItem" length="2">
+      <void index="0">
+       <object class="com.iscobol.screenpainter.beans.types.VariableType">
+        <void property="children">
+         <array class="com.iscobol.screenpainter.beans.types.SettingTreeItem" length="2">
+          <void index="0">
+           <object class="com.iscobol.screenpainter.beans.types.VariableType" id="VariableType15">
+            <void id="SettingTreeItemArray15" property="children"/>
+            <void property="children">
+             <object idref="SettingTreeItemArray15"/>
+            </void>
+            <void property="level">
+             <string>10</string>
+            </void>
+            <void property="name">
+             <string>filler</string>
+            </void>
+            <void property="picture">
+             <string>x(03)</string>
+            </void>
+            <void property="value">
+             <string>&quot;○&quot;</string>
+            </void>
+           </object>
+          </void>
+          <void index="1">
+           <object class="com.iscobol.screenpainter.beans.types.VariableType" id="VariableType16">
+            <void id="SettingTreeItemArray16" property="children"/>
+            <void property="children">
+             <object idref="SettingTreeItemArray16"/>
+            </void>
+            <void property="level">
+             <string>10</string>
+            </void>
+            <void property="name">
+             <string>filler</string>
+            </void>
+            <void property="picture">
+             <string>x(03)</string>
+            </void>
+            <void property="value">
+             <string>&quot;●&quot;</string>
+            </void>
+           </object>
+          </void>
+         </array>
+        </void>
+        <void property="level">
+         <string>05</string>
+        </void>
+        <void property="name">
+         <string>g-char-def</string>
+        </void>
+       </object>
+      </void>
+      <void index="1">
+       <object class="com.iscobol.screenpainter.beans.types.VariableType">
+        <void property="children">
+         <array class="com.iscobol.screenpainter.beans.types.SettingTreeItem" length="1">
+          <void index="0">
+           <object class="com.iscobol.screenpainter.beans.types.VariableType" id="VariableType17">
+            <void id="SettingTreeItemArray17" property="children"/>
+            <void property="children">
+             <object idref="SettingTreeItemArray17"/>
+            </void>
+            <void property="level">
+             <string>10</string>
+            </void>
+            <void property="name">
+             <string>g-char</string>
+            </void>
+            <void property="occurs">
+             <void property="occurs">
+              <object idref="Boolean1"/>
+             </void>
+             <void property="times">
+              <object idref="Integer0"/>
+             </void>
+            </void>
+            <void property="picture">
+             <string>x(03)</string>
+            </void>
+           </object>
+          </void>
+         </array>
+        </void>
+        <void property="level">
+         <string>05</string>
+        </void>
+        <void property="name">
+         <string>filler</string>
+        </void>
+        <void property="redefines">
+         <string>g-char-def</string>
+        </void>
+       </object>
+      </void>
+     </array>
+    </void>
+    <void property="name">
+     <string>g-char-tbl</string>
+    </void>
+   </object>
+  </void>
+  <void index="16">
+   <object class="com.iscobol.screenpainter.beans.types.VariableType" id="VariableType18">
+    <void id="SettingTreeItemArray18" property="children"/>
+    <void property="children">
+     <object idref="SettingTreeItemArray18"/>
+    </void>
+    <void property="name">
+     <string>map-key</string>
+    </void>
+    <void property="picture">
+     <string>9(04)</string>
+    </void>
+   </object>
+  </void>
+  <void index="17">
+   <object class="com.iscobol.screenpainter.beans.types.VariableType" id="VariableType19">
+    <void id="SettingTreeItemArray19" property="children"/>
+    <void property="children">
+     <object idref="SettingTreeItemArray19"/>
+    </void>
+    <void property="name">
+     <string>ret-cd</string>
+    </void>
+    <void property="picture">
+     <string>S9(01)</string>
+    </void>
+   </object>
+  </void>
+  <void index="18">
+   <object class="com.iscobol.screenpainter.beans.types.VariableType" id="VariableType20">
+    <void id="SettingTreeItemArray20" property="children"/>
+    <void property="children">
+     <object idref="SettingTreeItemArray20"/>
+    </void>
+    <void property="name">
+     <string>c-color</string>
+    </void>
+    <void property="picture">
+     <string>9(01)</string>
+    </void>
+    <void property="value">
+     <string>1</string>
+    </void>
+   </object>
+  </void>
+  <void index="19">
+   <object class="com.iscobol.screenpainter.beans.types.VariableType" id="VariableType21">
+    <void id="SettingTreeItemArray21" property="children"/>
+    <void property="children">
+     <object idref="SettingTreeItemArray21"/>
+    </void>
+    <void property="name">
+     <string>wk-cell</string>
+    </void>
+    <void property="picture">
+     <string>x(03)</string>
+    </void>
+   </object>
+  </void>
+  <void index="20">
+   <object class="com.iscobol.screenpainter.beans.types.VariableType" id="VariableType22">
+    <void id="SettingTreeItemArray22" property="children"/>
+    <void property="children">
+     <object idref="SettingTreeItemArray22"/>
+    </void>
+    <void property="name">
+     <string>ws-x</string>
+    </void>
+    <void property="picture">
+     <string>S9(02)</string>
+    </void>
+   </object>
+  </void>
+  <void index="21">
+   <object class="com.iscobol.screenpainter.beans.types.VariableType" id="VariableType23">
+    <void id="SettingTreeItemArray23" property="children"/>
+    <void property="children">
+     <object idref="SettingTreeItemArray23"/>
+    </void>
+    <void property="name">
+     <string>ws-y</string>
+    </void>
+    <void property="picture">
+     <string>S9(02)</string>
+    </void>
+   </object>
+  </void>
+  <void index="22">
+   <object class="com.iscobol.screenpainter.beans.types.VariableType" id="VariableType24">
+    <void id="SettingTreeItemArray24" property="children"/>
+    <void property="children">
+     <object idref="SettingTreeItemArray24"/>
+    </void>
+    <void property="name">
+     <string>wk-i</string>
+    </void>
+    <void property="picture">
+     <string>9(02)</string>
+    </void>
+   </object>
+  </void>
+  <void index="23">
+   <object class="com.iscobol.screenpainter.beans.types.VariableType" id="VariableType25">
+    <void id="SettingTreeItemArray25" property="children"/>
+    <void property="children">
+     <object idref="SettingTreeItemArray25"/>
+    </void>
+    <void property="name">
+     <string>wk-j</string>
+    </void>
+    <void property="picture">
+     <string>9(02)</string>
+    </void>
+   </object>
+  </void>
+  <void index="24">
+   <object class="com.iscobol.screenpainter.beans.types.VariableType" id="VariableType26">
+    <void id="SettingTreeItemArray26" property="children"/>
+    <void property="children">
+     <object idref="SettingTreeItemArray26"/>
+    </void>
+    <void property="name">
+     <string>dx</string>
+    </void>
+    <void property="picture">
+     <string>S9(02)</string>
+    </void>
+   </object>
+  </void>
+  <void index="25">
+   <object class="com.iscobol.screenpainter.beans.types.VariableType" id="VariableType27">
+    <void id="SettingTreeItemArray27" property="children"/>
+    <void property="children">
+     <object idref="SettingTreeItemArray27"/>
+    </void>
+    <void property="name">
+     <string>dy</string>
+    </void>
+    <void property="picture">
+     <string>s9(02)</string>
+    </void>
+   </object>
+  </void>
+  <void index="26">
+   <object class="com.iscobol.screenpainter.beans.types.VariableType" id="VariableType28">
+    <void id="SettingTreeItemArray28" property="children"/>
+    <void property="children">
+     <object idref="SettingTreeItemArray28"/>
+    </void>
+    <void property="name">
+     <string>MatSize</string>
+    </void>
+    <void property="picture">
+     <string>9(02)</string>
+    </void>
+    <void property="value">
+     <string>8</string>
+    </void>
+   </object>
+  </void>
+  <void index="27">
+   <object class="com.iscobol.screenpainter.beans.types.VariableType">
+    <void property="children">
+     <array class="com.iscobol.screenpainter.beans.types.SettingTreeItem" length="2">
+      <void index="0">
+       <object class="com.iscobol.screenpainter.beans.types.VariableType" id="VariableType29">
+        <void id="SettingTreeItemArray29" property="children"/>
+        <void property="children">
+         <object idref="SettingTreeItemArray29"/>
+        </void>
+        <void property="level">
+         <string>02</string>
+        </void>
+        <void property="name">
+         <string>rev-cnt</string>
+        </void>
+        <void property="picture">
+         <string>9(02)</string>
+        </void>
+       </object>
+      </void>
+      <void index="1">
+       <object class="com.iscobol.screenpainter.beans.types.VariableType" id="VariableType30">
+        <void property="children">
+         <array class="com.iscobol.screenpainter.beans.types.SettingTreeItem" length="2">
+          <void index="0">
+           <object class="com.iscobol.screenpainter.beans.types.VariableType" id="VariableType31">
+            <void id="SettingTreeItemArray30" property="children"/>
+            <void property="children">
+             <object idref="SettingTreeItemArray30"/>
+            </void>
+            <void property="level">
+             <string>10</string>
+            </void>
+            <void property="name">
+             <string>rev-y</string>
+            </void>
+            <void property="picture">
+             <string>9(02)</string>
+            </void>
+           </object>
+          </void>
+          <void index="1">
+           <object class="com.iscobol.screenpainter.beans.types.VariableType" id="VariableType32">
+            <void id="SettingTreeItemArray31" property="children"/>
+            <void property="children">
+             <object idref="SettingTreeItemArray31"/>
+            </void>
+            <void property="level">
+             <string>10</string>
+            </void>
+            <void property="name">
+             <string>rev-x</string>
+            </void>
+            <void property="picture">
+             <string>9(02)</string>
+            </void>
+           </object>
+          </void>
+         </array>
+        </void>
+        <void property="level">
+         <string>02</string>
+        </void>
+        <void property="name">
+         <string>filler</string>
+        </void>
+        <void property="occurs">
+         <void property="occurs">
+          <object idref="Boolean1"/>
+         </void>
+         <void property="times">
+          <int>10</int>
+         </void>
+        </void>
+       </object>
+      </void>
+     </array>
+    </void>
+    <void property="name">
+     <string>rev_tbl</string>
+    </void>
+   </object>
+  </void>
+  <void index="28">
+   <object class="com.iscobol.screenpainter.beans.types.VariableType" id="VariableType33">
+    <void id="SettingTreeItemArray32" property="children"/>
+    <void property="children">
+     <object idref="SettingTreeItemArray32"/>
+    </void>
+    <void property="level">
+     <string>77</string>
+    </void>
+    <void property="name">
+     <string>Arial-20v00</string>
+    </void>
+    <void property="usage">
+     <object class="com.iscobol.screenpainter.beans.types.VariableUsage">
+      <int>26</int>
+     </object>
+    </void>
+    <void property="NType">
+     <int>1003</int>
+    </void>
+   </object>
+  </void>
+ </array>
+ <object class="com.iscobol.screenpainter.propertysheet.EventParagraphs">
+  <void property="body">
+   <string>&#13;
+       screen-1-aft-init-data.&#13;
+           modify screen-1-gr-1 reset-grid 1&#13;
+           *&gt;modify screen-1-gr-1 mass-update = 0&#13;
+           perform varying wk-row from 1 by 1  until wk-row &gt; 8&#13;
+              perform varying wk-col from 1 by 1 until wk-col &gt; 8&#13;
+                 modify screen-1-gr-1(wk-row, wk-col) CELL-DATA = &quot; &quot;&#13;
+                 modify screen-1-gr-1(wk-row, wk-col) cell-color = 289&#13;
+              end-perform&#13;
+           end-perform           &#13;
+           *&gt;modify screen-1-gr-1 mass-update = 1&#13;
+           modify screen-1-gr-1 cursor-Y 6 cursor-X 6&#13;
+           move 0 to num-white num-black num-reverse ret-cd&#13;
+           move 0 to mode-sw&#13;
+           move 1 to c-color&#13;
+           modify screen-1-rb-1 enabled = 1&#13;
+           modify screen-1-rb-2 enabled = 0&#13;
+            &#13;
+           .&#13;
+       screen-1-aft-create.&#13;
+           move 0 to rev-cnt.&#13;
+            &#13;
+           .&#13;
+       screen-1-aft-end-acc.&#13;
+            evaluate key-status&#13;
+              when  1     *&gt;file&#13;
+                  perform FILE-CHOOSE-RTN&#13;
+              when  2     *&gt;Load&#13;
+                  perform FILE-LOAD-RTN&#13;
+              when  3     *&gt;Save&#13;
+                  perform FILE-SAVE-RTN&#13;
+              when  4     *&gt;Mode Changerow&#13;
+                  perform CHANGE-MODE-RTN                  &#13;
+              when  6    *&gt;Reset&#13;
+                  perform RESET-RTN&#13;
+            end-evaluate           &#13;
+           .&#13;
+       &#13;
+       screen-1-gr-1-evt-msg-gd-dblclick.&#13;
+           inquire screen-1-gr-1 X ws-X Y ws-Y&#13;
+           move ws-x to wk-col&#13;
+           move ws-y to wk-row&#13;
+           perform DBL-CLICKED-RTN&#13;
+&#13;
+           .&#13;
+       &#13;
+           &#13;
+       DBL-CLICKED-RTN.&#13;
+           if mode-sw = 0     *&gt;Play Mode&#13;
+              perform REVERSE-RTN&#13;
+              modify screen-1-ef-4 value num-reverse&#13;
+              compute c-color = 3 - c-color&#13;
+              if c-color = 1&#13;
+                 modify screen-1-rb-1 enabled = 1&#13;
+                 modify screen-1-rb-2 enabled = 0&#13;
+              else&#13;
+                 modify screen-1-rb-1 enabled = 0&#13;
+                 modify screen-1-rb-2 enabled = 1&#13;
+              end-if&#13;
+           else&#13;
+              compute map-key = wk-row * 100 + wk-col&#13;
+              modify  screen-1-gr-1 x = wk-col, y = wk-row&#13;
+              inquire screen-1-gr-1 cell-data wk-cell&#13;
+              &#13;
+              evaluate wk-cell&#13;
+                 when  g-char(1)&#13;
+                    subtract 1 from num-white&#13;
+                    move 2 to map-color&#13;
+                    add 1 to num-black&#13;
+                    modify screen-1-gr-1(wk-row, wk-col) &#13;
+                            cell-data = g-char(2) cell-color = 257&#13;
+                 when g-char(2)&#13;
+                    subtract 1 from num-black &#13;
+                    modify screen-1-gr-1(wk-row, wk-col) &#13;
+                            cell-data = &quot;　&quot; cell-color = 289&#13;
+                 when &quot; &quot;&#13;
+                    move 1 to map-color&#13;
+                    add 1 to num-white&#13;
+                    modify screen-1-gr-1(wk-row, wk-col) &#13;
+                           cell-data = g-char(1) cell-color = 257&#13;
+              end-evaluate&#13;
+           end-if.&#13;
+           modify screen-1-ef-2 value num-white&#13;
+           modify screen-1-ef-3 value num-black&#13;
+           modify screen-1-ef-4 value num-reverse&#13;
+           &#13;
+           .&#13;
+       &#13;
+       REVERSE-RTN.&#13;
+           move 0 to num-reverse&#13;
+           modify  screen-1-gr-1 x = wk-col, y = wk-row&#13;
+           inquire screen-1-gr-1 cell-data wk-cell&#13;
+           if wk-cell not = &quot; &quot;&#13;
+              move -1 to ret-cd&#13;
+              exit paragraph&#13;
+           end-if.&#13;
+           move g-char(c-color) to wk-cell&#13;
+           modify screen-1-gr-1(wk-row, wk-col)  cell-data = wk-cell&#13;
+                           cell-color = 257&#13;
+           if c-color = 1&#13;
+              add 1 to num-white&#13;
+           else&#13;
+              add 1 to num-black&#13;
+           end-if&#13;
+           perform varying wk-i from 1 by 1 until wk-i &gt; 8&#13;
+              move function numval(dev-y(wk-i)) to dy&#13;
+              move function numval(dev-x(wk-i)) to dx&#13;
+              perform ReverseCount&#13;
+           end-perform&#13;
+                         &#13;
+          .&#13;
+       ReverseCount.&#13;
+           move 0 to rev-cnt.&#13;
+           compute ws-y = wk-row + dy &#13;
+           compute ws-x = wk-col + dx&#13;
+           perform until 1 = 0&#13;
+              if ws-x &lt; 1 OR ws-x &gt; 8 OR ws-y &lt; 1 OR ws-y &gt; 8&#13;
+                 move 0 to rev-cnt&#13;
+                 exit perform&#13;
+              end-if&#13;
+              modify  screen-1-gr-1 x = ws-x, y = ws-y&#13;
+              inquire screen-1-gr-1 cell-data wk-cell&#13;
+              if wk-cell = &quot; &quot;&#13;
+                 move 0 to rev-cnt&#13;
+                 exit perform&#13;
+              end-if&#13;
+              if  wk-cell = g-char(c-color)&#13;
+                  perform REVERSE-FLUSH &#13;
+                 exit perform&#13;
+              end-if&#13;
+              add 1 to rev-cnt&#13;
+              move ws-y to rev-y(rev-cnt)&#13;
+              move ws-x to rev-x(rev-cnt)&#13;
+              &#13;
+              compute ws-y = ws-y + dy &#13;
+              compute ws-x = ws-x + dx&#13;
+           end-perform&#13;
+       &#13;
+           .        &#13;
+       REVERSE-FLUSH.&#13;
+           if rev-cnt &gt; 0&#13;
+                 perform varying wk-j from 1 by 1 &#13;
+                         until wk-j &gt; rev-cnt&#13;
+                    move rev-y(wk-j) to map-row&#13;
+                    move rev-x(wk-j) to map-col&#13;
+                    move g-char(c-color) to wk-cell&#13;
+                    modify screen-1-gr-1(map-row, map-col)  &#13;
+                           cell-data = wk-cell cell-color = 257&#13;
+                    if c-color = 1&#13;
+                       add      1 to   num-white&#13;
+                       subtract 1 from num-black&#13;
+                    else&#13;
+                       add      1 to   num-black&#13;
+                       subtract 1 from num-white&#13;
+                    end-if&#13;
+                    add 1 to num-reverse&#13;
+                 end-perform&#13;
+           end-if&#13;
+       &#13;
+           .  &#13;
+       FILE-CHOOSE-RTN.  &#13;
+           initialize opensave-data&#13;
+           move &quot;Choose a file&quot; to opnsav-title&#13;
+           move &quot;../data/&quot;      to opnsav-default-dir&#13;
+&#13;
+           call &quot;C$OPENSAVEBOX&quot; using opensave-open-box, &#13;
+                                      opensave-data&#13;
+                               giving opensave-status&#13;
+&#13;
+           if opensave-status &gt; 0&#13;
+              move opnsav-filename to map-file-name&#13;
+              modify screen-1-ef-1 value map-file-name&#13;
+           end-if&#13;
+           .&#13;
+       FILE-SAVE-RTN.&#13;
+           inquire screen-1-ef-1 value map-file-name&#13;
+           open output map-file&#13;
+           initialize  map-record&#13;
+           perform varying wk-i from 1 by 1 until wk-i &gt; MatSize&#13;
+              perform varying wk-j from 1 by 1 until wk-j &gt; MatSize&#13;
+                   inquire screen-1-gr-1(wk-i, wk-j) cell-data wk-cell&#13;
+                   if wk-cell = &quot; &quot;&#13;
+                      exit perform cycle&#13;
+                   end-if&#13;
+                   evaluate wk-cell&#13;
+                      when g-char(1)  move 0 to map-color&#13;
+                      when g-char(2)  move 1 to map-color&#13;
+                   end-evaluate&#13;
+                   move wk-i to map-row&#13;
+                   move wk-j to map-col&#13;
+                   write map-record&#13;
+               end-perform                    &#13;
+           end-perform.&#13;
+           close  map-file &#13;
+           .&#13;
+       FILE-LOAD-RTN.&#13;
+           move 0 to num-white num-black num-reverse&#13;
+           modify screen-1-gr-1 mass-update = 1&#13;
+           modify screen-1-gr-1 reset-grid 1&#13;
+           perform screen-1-aft-init-data.&#13;
+           inquire screen-1-ef-1 value map-file-name&#13;
+           open input map-file&#13;
+           perform until 1 = 0&#13;
+              read map-file at end exit perform&#13;
+              end-read&#13;
+              move map-row   to wk-row&#13;
+              move map-col   to wk-col&#13;
+              if map-color = 1&#13;
+                 modify screen-1-gr-1(wk-row, wk-col) &#13;
+                         cell-data g-char(1) cell-color = 257&#13;
+                 add 1 to num_white&#13;
+              else&#13;
+                 modify screen-1-gr-1(wk-row, wk-col) &#13;
+                         cell-data g-char(2) cell-color = 257&#13;
+                 add 1 to num-black&#13;
+              end-if&#13;
+           end-perform&#13;
+           close map-file.     &#13;
+           &#13;
+           modify screen-1-ef-2 value num-white&#13;
+           modify screen-1-ef-3 value num-black&#13;
+           modify screen-1-ef-4 value num-reverse&#13;
+           modify screen-1-gr-1 mass-update = 0&#13;
+           .&#13;
+       CHANGE-MODE-RTN.&#13;
+    	     if mode-sw = 0&#13;
+    		      move 1 to mode-sw&#13;
+    		      modify screen-1-la-5 value &quot;〇→●→△&quot;&#13;
+    		      modify screen-1-pb-4 value &quot;Set stones&quot;&#13;
+    		    else&#13;
+    		      move 0 to mode-sw&#13;
+    		      modify screen-1-la-5 value &quot;〇  |  ●&quot;&#13;
+    		      modify screen-1-pb-4 value &quot;Play Game&quot;&#13;
+    		    end-if.&#13;
+           .&#13;
+       RESET-RTN.&#13;
+           perform screen-1-aft-init-data&#13;
+           modify screen-1-ef-2 value num-white&#13;
+           modify screen-1-ef-3 value num-black&#13;
+           modify screen-1-ef-4 value num-reverse&#13;
+           .&#13;
+           &#13;
+       &#13;
+       &#13;
+</string>
+  </void>
+ </object>
+ <object class="com.iscobol.screenpainter.beans.types.FileSection" id="FileSection0">
+  <void id="FDAttributesArray0" property="FDAttributes"/>
+  <void property="FDAttributes">
+   <object idref="FDAttributesArray0"/>
+  </void>
+  <void id="FileEntryArray0" property="FDEntries"/>
+  <void property="FDEntries">
+   <object idref="FileEntryArray0"/>
+  </void>
+  <void id="FileEntryArray1" property="SLEntries"/>
+  <void property="SLEntries">
+   <object idref="FileEntryArray1"/>
+  </void>
+  <void id="DataSetArray0" property="dataSets"/>
+  <void property="dataSets">
+   <object idref="DataSetArray0"/>
+  </void>
+  <void id="FileEntryArray2" property="declarativeEntries"/>
+  <void property="declarativeEntries">
+   <object idref="FileEntryArray2"/>
+  </void>
+  <void property="fdDefinitions">
+   <void property="body">
+    <string>       fd  map-file.&#13;
+       01  map-record.&#13;
+           05  map-row    pic 99.&#13;
+           05  fil-01     pic x.&#13;
+           05  map-col    pic 99.&#13;
+           05  fil-02     pic x.&#13;
+           05  map-color  pic 9.</string>
+   </void>
+  </void>
+  <void property="slDefinitions">
+   <void property="body">
+    <string>       select map-file assign to dynamic map-file-name&#13;
+           organization line sequential&#13;
+           file status map-f-sts.</string>
+   </void>
+  </void>
+ </object>
+ <object class="com.iscobol.screenpainter.beans.types.Repository" id="Repository0">
+  <void id="Repository$EntryArray0" property="entries"/>
+  <void property="entries">
+   <object idref="Repository$EntryArray0"/>
+  </void>
+  <void id="FileEntryArray3" property="fileEntries"/>
+  <void property="fileEntries">
+   <object idref="FileEntryArray3"/>
+  </void>
+ </object>
+ <object class="java.util.Hashtable">
+  <void method="put">
+   <string>iscobol.release</string>
+   <string>isCOBOL2022R2</string>
+  </void>
+ </object>
+ <object class="com.iscobol.screenpainter.beans.types.AlphabetList" id="AlphabetList0">
+  <void id="AlphabetArray0" property="alphabets"/>
+  <void property="alphabets">
+   <object idref="AlphabetArray0"/>
+  </void>
+  <void id="FileEntryArray4" property="fileEntries"/>
+  <void property="fileEntries">
+   <object idref="FileEntryArray4"/>
+  </void>
+ </object>
+ <array class="com.iscobol.reportdesigner.beans.Report" length="0"/>
+ <object class="com.iscobol.screenpainter.beans.types.VariableTypeList" id="VariableTypeList0">
+  <void id="SettingItemArray9" property="settings"/>
+  <void property="settings">
+   <object idref="SettingItemArray9"/>
+  </void>
+ </object>
+ <object class="com.iscobol.screenpainter.propertysheet.DataDefinition">
+  <string>wss</string>
+  <void property="body">
+   <string>       COPY &quot;isopensave.def&quot;.&#13;
+       01  map-file-name pic x(128).&#13;
+       01  opensave-status pic s9(01).&#13;
+       01  dev-tbl.&#13;
+           05 dev-def.&#13;
+             10 dev-def-y pic x(16) value &quot;-1-1-10000+1+1+1&quot;.&#13;
+             10 dev-def-x pic x(16) value &quot;-100+1-1+1-100+1&quot;.&#13;
+           05 filler redefines dev-def.&#13;
+             10 dev-y occurs 8 pic x(02).&#13;
+             10 dev-x occurs 8 pic x(02).&#13;
+       </string>
+  </void>
+ </object>
+ <object class="com.iscobol.screenpainter.propertysheet.DataDefinition">
+  <string>lks</string>
+ </object>
+ <object class="com.iscobol.screenpainter.propertysheet.DataDefinition">
+  <string>lss</string>
+ </object>
+ <object class="com.iscobol.screenpainter.propertysheet.DataDefinition">
+  <string>tlss</string>
+ </object>
+ <array class="com.iscobol.screenpainter.beans.types.FontType" length="0"/>
+ <object class="java.util.TreeSet"/>
+</java>

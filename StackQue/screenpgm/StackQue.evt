@@ -1,0 +1,223 @@
+      *StackQue.evt is generated from C:\Github\isGames\StackQue\screen\StackQue.isp
+      *start event editor code
+       screen-1-aft-init-data.
+           modify screen-1-gr-1 reset-grid 1.
+           modify screen-1-gr-1 y = 11 row-background-color 3
+           modify screen-1-gr-2 reset-grid 1.
+           modify screen-1-gr-3 reset-grid 1.
+           modify screen-1-ef-1 value " "
+           modify screen-1-ef-2 value " "
+           modify screen-1-pb-6 value "Push"
+           modify screen-1-pb-7 value "Pop"
+           move 1 to wk-j.
+           perform varying wk-i from 1 by 1 until wk-i > 26
+              move wk-alpha(wk-i) to wk-cell
+              modify screen-1-gr-2(wk-j, wk-i) CELL-DATA = wk-cell
+           end-perform
+           
+           move  0 to mode-sw
+           move  1 to sp.
+           move -1 to wp.
+           move -1 to rp.
+           move 0 to out-idx.
+           
+           modify screen-1-gr-1(1, 1) cell-data = "  ".            
+           .
+       screen-1-aft-end-acc.
+            evaluate key-status
+              when  1     *>file
+                  continue
+              when  2     *>Load
+                  continue
+              when  3     *>save
+                  continue
+              when  4     *>Reset
+                  perform RESET-RTN
+              when  11    *>ChangeMode
+                  perform CHANGE-MODE-RTN
+              when  12    *>Push/Queue
+                  if mode-sw = 0
+                     perform PUSH-RTN
+                  else
+                     perform QUEUE-RTN
+                  end-if
+              when  13    *>Pop/Deque
+                  if mode-sw = 0
+                     perform POP-RTN
+                  else
+                     perform DEQUE-RTN
+                  end-if
+              when  15    *>AutoRun
+                  continue 
+            end-evaluate  
+            
+           .
+       RESET-RTN.
+           perform screen-1-aft-init-data
+           .
+ 
+       CHANGE-MODE-RTN.
+           if mode-SW = 0
+              move 1 to mode-sw
+              modify screen-1-pb-6 value "Queue"
+              modify screen-1-pb-7 value "Deque"
+           else
+              move 0 to mode-sw
+              modify screen-1-pb-6 value "Push"
+              modify screen-1-pb-7 value "Pop"
+           end-if.
+           .
+       PUSH-RTN.
+           move 0 to ret-cd
+           
+           if sp > 10 
+              move -1 to ret-cd
+              exit paragraph
+           end-if
+           
+           perform GET-INDATA.
+           if ret-cd = -1
+              exit paragraph
+           end-if
+           
+           if sp = 0
+              move 1 to sp
+           end-if
+           
+           modify screen-1-gr-1 X = 1 Y = sp
+           modify screen-1-gr-1 cell-data "   "
+           modify screen-1-gr-1 X = 2 y = sp
+           modify screen-1-gr-1 cell-data wk-cell-save
+           
+           add 1 to sp
+
+           modify screen-1-gr-1 X = 1 y = sp
+           modify screen-1-gr-1 cell-data "SP->"
+           modify screen-1-gr-1 cursor-x 1 cursor-y sp
+           .
+           
+           .
+       POP-RTN.
+           move 0 to ret-cd.
+           if sp = 0
+              move -1 to ret-cd
+              exit paragraph
+           end-if
+
+           modify screen-1-gr-1 X = 1 Y = sp
+           modify screen-1-gr-1 cell-data = "    "
+           
+           subtract 1 from sp
+           modify  screen-1-gr-1 X = 2 Y = sp
+           inquire screen-1-gr-1 cell-data wk-cell                      
+           modify  screen-1-ef-2 value wk-cell 
+           modify  screen-1-ef-1 value " "
+           
+           add 1 to out-idx
+           modify screen-1-gr-3 X = out-idx Y = 1
+           modify screen-1-gr-3 cell-data wk-cell
+           modify screen-1-gr-3 cursor-x out-idx cursor-y 1
+           .
+           
+           if sp > 1
+              modify screen-1-gr-1 X = 1 Y = sp
+              modify screen-1-gr-1 cell-data "sp->"
+           end-if
+           modify screen-1-gr-1 X = 2 Y = sp
+           modify screen-1-gr-1 cell-data "    "
+           modify screen-1-gr-1 cursor-x 1 cursor-y sp.
+           
+           if sp = 1
+              move 0 to sp
+           end-if.
+           .
+       GET-INDATA.
+           move 0 to ret-cd
+           modify  screen-1-gr-2 X = 1 Y = 1
+           inquire screen-1-gr-2 cell-data wk-cell 
+           modify  screen-1-ef-1 value wk-cell
+           modify  screen-1-ef-2 value " "
+           if wk-cell = " "
+              move -1 to ret-cd
+              exit paragraph
+           end-if
+           
+           move wk-cell to wk-cell-save
+           
+           perform varying wk-i from 1 by 1 until wk-i >  25
+              compute wk-j = wk-i + 1
+              modify  screen-1-gr-2 X = wk-j Y = 1
+              inquire screen-1-gr-2 cell-data wk-cell 
+              modify  screen-1-gr-2 X = wk-i Y = 1
+              modify  screen-1-gr-2 cell-data wk-cell 
+           end-perform
+           modify  screen-1-gr-2(1, 26) cell-data " "
+           .
+       
+       QUEUE-RTN.
+           if wp = -1 
+            	move 1 to wp
+           end-if
+           if rp = -1
+              move wp to rp
+           end-if.
+           if wp + 1 = rp 
+              move -1 to ret-cd
+              exit paragraph
+           end-if
+           
+           perform GET-INDATA.
+           if ret-cd = -1
+              exit paragraph
+           end-if
+           
+           modify screen-1-gr-1 X = 1 Y = wp
+           modify screen-1-gr-1 cell-data "   "
+           modify screen-1-gr-1 X = 2 y = wp
+           modify screen-1-gr-1 cell-data wk-cell-save
+           
+           add 1 to wp
+           if wp > 10 
+              move 1 to wp
+           end-if
+
+           modify screen-1-gr-1 X = 1 y = wp
+           modify screen-1-gr-1 cell-data "wp->"
+           modify screen-1-gr-1 X = 2 y = wp
+           modify screen-1-gr-1 cell-data " "
+           modify screen-1-gr-1 X = 3 y = wp
+           modify screen-1-gr-1 cell-data " "    
+           modify screen-1-gr-1 cursor-x 1 cursor-y wp
+           .
+           
+       DEQUE-RTN.
+           if rp = -1
+              move -1 to ret-cd 
+              exit paragraph
+           end-if.
+           if rp = wp
+              move -1 to ret-cd
+              exit paragraph
+           end-if
+           modify  screen-1-gr-1 X = 2 Y = rp
+           inquire screen-1-gr-1 cell-data wk-cell                      
+           modify  screen-1-gr-1 cell-data = "    "
+           modify  screen-1-gr-1 X = 3 Y = rp
+           modify  screen-1-gr-1 cell-data = "    "
+           modify  screen-1-ef-2 value wk-cell 
+           modify  screen-1-ef-1 value " "
+           
+           add 1 to out-idx
+           modify screen-1-gr-3 X = out-idx Y = 1
+           modify screen-1-gr-3 cell-data wk-cell
+           modify screen-1-gr-3 cursor-x out-idx cursor-y 1
+           .
+                      
+           add 1 to rp
+           if rp > 10
+              move 1 to rp
+           end-if 
+           modify screen-1-gr-1 x = 3 y = rp 
+           modify screen-1-gr-1 cell-data "<-rp"
+           .
+      *end event editor code

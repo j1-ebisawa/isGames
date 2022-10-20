@@ -1,0 +1,84 @@
+      *MineSweeper.wrk is generated from C:\Github\isGames\MineSweeper\screen\MineSweeper.isp
+       77 key-status is special-names crt status pic 9(4) value 0.
+          88 exit-pushed value 27.
+          88 message-received value 95.
+          88 event-occurred value 96.
+          88 screen-no-input-field value 97.
+          88 screen-time-out value 99.
+       77 quit-mode-flag pic s9(5) comp-4 value 0.
+       77 window-handle handle of window.
+       77 Arial-20v0 handle of font.
+       77 Arial-12v0 handle of font.
+       77 Arial-9v0 handle of font.
+       01 mode-sw pic 9 value 0.
+       01 show-bomb-sw pic 9(01) value 0.
+       01 timer-sw pic 9(01).
+       01 ret-cd pic s9(01).
+       01 ws-X pic 9(02).
+       01 ws-y pic 9(02).
+       01 wk-row pic s9(02).
+       01 wk-col pic s9(02).
+       01 num-bombs pic S9(02).
+       01 num-cleared pic s9(02).
+       01 bomb-cnt pic 9(02).
+       01 wk-cell pic x(03).
+       01 wk-idx pic 9(04).
+       01 wk-i pic 9(02).
+       01 wk-j pic 9(02).
+       01 wk-k pic 99.
+       77 wk-msg pic x(30) value "msg".
+       01 dev-tbl.
+          05 dev-def.
+             10 dev-def-y pic x(16) value "-1-1-10000+1+1+1".
+             10 dev-def-x pic x(16) value "-100+1-1+1-100+1".
+          05 filler redefines dev-def.
+             10 dev-y occurs 8 pic x(02).
+             10 dev-x occurs 8 pic x(02).
+       01 map-f-sts pic X(02).
+       01 map-file-name pic X(128).
+       01 wk-y pic 99.
+       01 wk-x pic 9(02).
+       01 wrk-item pic 99.
+       01 hit pic 9.
+       77 Arial-10v0 handle of font.
+      *start working-storage editor code
+       01  bombList   object reference ArrayList.
+       01  clist-a    object reference ArrayList.
+       01  clist-t    object reference ArrayList.
+       01  cell-item  object reference CellItem.
+       COPY "isopensave.def".
+       01  opensave-status pic s9(01).
+      *
+       01  hMain                   handle of thread.
+       01  hTime                   handle of thread.
+       01  receive-status          pic 99.
+       01  system-time             pic 9(8).
+       01  time-disp.
+        03 h-disp                  pic 99.
+        03 filler                  pic x value ":".
+        03 m-disp                  pic 99.         
+        03 filler                  pic x value ":".
+        03 s-disp                  pic 99.
+       01  msg-string              pic x(1).
+       78  stop-msg                value "X".
+       77  SYNC-TIME-1          PIC 9(8).
+       77  SYNC-TIME-2          PIC 9(8).
+       77  TIME-DIFF            PIC 9(6)V99.
+       77  BEGIN-SECS           PIC 9(6)V99.
+       77  END-SECS             PIC 9(6)V99.
+       77  BEGIN-TIME           PIC 9(8).
+       01  BEGIN-TIME-FIELDS    REDEFINES BEGIN-TIME.
+           03  BEGIN-HOURS      PIC 9(2).
+           03  BEGIN-MINUTES    PIC 9(2).
+           03  BEGIN-SECONDS    PIC 9(2).
+           03  BEGIN-HUNDRETHS  PIC 9(2).
+       77  END-TIME             PIC 9(8).
+       01  END-TIME-FIELDS      REDEFINES END-TIME.
+           03  END-HOURS        PIC 9(2).
+           03  END-MINUTES      PIC 9(2).
+           03  END-SECONDS      PIC 9(2).
+           03  END-HUNDRETHS    PIC 9(2).
+       77  TOTAL-TIME           PIC 9(7)V99 VALUE ZERO.
+       
+       
+      *end working-storage editor code

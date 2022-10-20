@@ -1,0 +1,340 @@
+      *HitBlow.scr is generated from C:\Github\isGames\HitBlow\screen\HitBlow.isp
+       01 screen-1
+       .
+          03 screen-1-la-1 Label
+             line 3.4
+             column 20.9
+             size 36.8 cells 
+             lines 5.9 cells 
+             font Arial-20v0
+             id 1
+             title "Hit and Blow Game"
+             .
+          03 screen-1-la-3 Label
+             line 17.7
+             column 59.3
+             size 11.8 cells 
+             lines 3.0 cells 
+             id 5
+             title "Input Number"
+             .
+          03 screen-1-ef-2 Entry-Field
+             line 17.1
+             column 72.9
+             size 9.4 cells 
+             lines 3.6 cells 
+             font Arial-12v0
+             id 6
+             3-d
+             .
+          03 screen-1-pb-2 Push-Button
+             exception-value 12
+             line 17.7
+             column 85.3
+             size 9.1 cells 
+             lines 3.0 cells 
+             id 7
+             title "Check"
+             .
+          03 screen-1-la-2 Label
+             line 9.8
+             column 59.2
+             size 10.1 cells 
+             lines 4.4 cells 
+             id 2
+             title "Play Digit"
+             .
+          03 screen-1-ef-1 Entry-Field
+             line 9.8
+             column 73.5
+             size 8.8 cells 
+             lines 3.8 cells 
+             font Arial-12v0
+             id 3
+             3-d
+             value P-DIGIT
+             .
+          03 screen-1-pb-1 Push-Button
+             exception-value 11
+             line 9.8
+             column 84.2
+             size 10.2 cells 
+             lines 3.8 cells 
+             id 4
+             title "Reset"
+             .
+          03 screen-1-gr-1 Grid
+             line 10.8
+             column 10.6
+             size 36.4 cells 
+             lines 43.0 cells 
+             font Arial-12v0
+             id 8
+             boxed
+             column-headings
+             vscroll
+             row-dividers 1
+             heading-background-color rgb x#c0c0c0
+             divider-color rgb x#000000
+             cursor-frame-width 3
+             protection 1
+             num-row-headings 1
+             num-rows 11
+             border-color rgb x#000000
+             rows-per-page 10
+             .
+          03 screen-1-ef-3 Entry-Field
+             line 28.3
+             column 59.6
+             size 4.8 cells 
+             lines 3.9 cells 
+             font Arial-12v0
+             id 9
+             3-d
+             read-only
+             value "0"
+             .
+          03 screen-1-pb-3 Push-Button
+             exception-value 27
+             line 60.3
+             column 80.9
+             size 9.5 cells 
+             lines 3.8 cells 
+             id 10
+             title "Quit"
+             .
+          03 screen-1-ef-21 Entry-Field
+             line 59.2
+             column 5.5
+             size 53.1 cells 
+             lines 4.2 cells 
+             id 11
+             3-d
+             .
+          03 screen-1-ef-4 Entry-Field
+             line 28.3
+             column 66.4
+             size 4.8 cells 
+             lines 3.9 cells 
+             font Arial-12v0
+             id 12
+             3-d
+             read-only
+             value "1"
+             .
+          03 screen-1-ef-5 Entry-Field
+             line 28.3
+             column 73.2
+             size 4.8 cells 
+             lines 3.9 cells 
+             font Arial-12v0
+             id 13
+             3-d
+             read-only
+             value "2"
+             .
+          03 screen-1-ef-6 Entry-Field
+             line 28.3
+             column 80.2
+             size 4.8 cells 
+             lines 3.9 cells 
+             font Arial-12v0
+             id 14
+             3-d
+             read-only
+             value "3"
+             .
+          03 screen-1-ef-7 Entry-Field
+             line 28.3
+             column 87.5
+             size 4.8 cells 
+             lines 3.9 cells 
+             font Arial-12v0
+             id 15
+             3-d
+             read-only
+             value "4"
+             .
+          03 screen-1-ef-8 Entry-Field
+             line 35.3
+             column 59.6
+             size 4.8 cells 
+             lines 3.9 cells 
+             font Arial-12v0
+             id 16
+             3-d
+             read-only
+             value "5"
+             .
+          03 screen-1-ef-9 Entry-Field
+             line 35.3
+             column 66.4
+             size 4.8 cells 
+             lines 3.9 cells 
+             font Arial-12v0
+             id 17
+             3-d
+             read-only
+             value "6"
+             .
+          03 screen-1-ef-10 Entry-Field
+             line 35.3
+             column 73.2
+             size 4.8 cells 
+             lines 3.9 cells 
+             font Arial-12v0
+             id 18
+             3-d
+             read-only
+             value "7"
+             .
+          03 screen-1-ef-11 Entry-Field
+             line 35.3
+             column 80.1
+             size 4.8 cells 
+             lines 3.9 cells 
+             font Arial-12v0
+             id 19
+             3-d
+             read-only
+             value "8"
+             .
+          03 screen-1-ef-12 Entry-Field
+             line 35.3
+             column 87.3
+             size 4.8 cells 
+             lines 3.9 cells 
+             font Arial-12v0
+             id 20
+             3-d
+             read-only
+             value "9"
+             .
+          03 screen-1-la-4 Label
+             line 43.5
+             column 57.0
+             size 7.9 cells 
+             lines 2.7 cells 
+             id 21
+             title "Analyzer"
+             .
+          03 screen-1-la-5 Label
+             line 47.0
+             column 63.5
+             size 5.9 cells 
+             lines 3.0 cells 
+             id 22
+             title "Gray"
+             .
+          03 screen-1-la-6 Label
+             line 50.5
+             column 63.5
+             size 5.2 cells 
+             lines 2.6 cells 
+             id 23
+             title "Cyan"
+             .
+          03 screen-1-la-7 Label
+             line 43.5
+             column 71.1
+             size 4.3 cells 
+             lines 2.7 cells 
+             id 24
+             title "01"
+             .
+          03 screen-1-la-8 Label
+             line 43.5
+             column 75.7
+             size 4.3 cells 
+             lines 2.7 cells 
+             id 25
+             title "02"
+             .
+          03 screen-1-la-9 Label
+             line 43.5
+             column 81.7
+             size 4.3 cells 
+             lines 2.7 cells 
+             id 26
+             title "03"
+             .
+          03 screen-1-la-10 Label
+             line 43.5
+             column 86.9
+             size 4.3 cells 
+             lines 2.7 cells 
+             id 27
+             title "04"
+             .
+          03 screen-1-ef-13 Entry-Field
+             line 47.0
+             column 71.1
+             size 3.5 cells 
+             lines 2.6 cells 
+             id 28
+             3-d
+             read-only
+             .
+          03 screen-1-ef-14 Entry-Field
+             line 47.0
+             column 75.7
+             size 3.5 cells 
+             lines 2.6 cells 
+             id 29
+             3-d
+             read-only
+             .
+          03 screen-1-ef-15 Entry-Field
+             line 47.0
+             column 81.7
+             size 3.5 cells 
+             lines 2.6 cells 
+             id 30
+             3-d
+             read-only
+             .
+          03 screen-1-ef-16 Entry-Field
+             line 47.0
+             column 86.9
+             size 3.5 cells 
+             lines 2.6 cells 
+             id 31
+             3-d
+             read-only
+             .
+          03 screen-1-ef-17 Entry-Field
+             line 50.5
+             column 71.1
+             size 3.5 cells 
+             lines 2.6 cells 
+             id 32
+             3-d
+             read-only
+             .
+          03 screen-1-ef-18 Entry-Field
+             line 50.5
+             column 75.7
+             size 3.5 cells 
+             lines 2.6 cells 
+             id 33
+             3-d
+             read-only
+             .
+          03 screen-1-ef-19 Entry-Field
+             line 50.5
+             column 81.7
+             size 3.5 cells 
+             lines 2.6 cells 
+             id 34
+             3-d
+             read-only
+             .
+          03 screen-1-ef-20 Entry-Field
+             line 50.5
+             column 86.9
+             size 3.5 cells 
+             lines 2.6 cells 
+             id 35
+             3-d
+             read-only
+             .

@@ -1,0 +1,6 @@
+       STEP-IN-RTN.
+           if start-row = 0 or start-col = 0
+              move "You have to set Start-Cell!!" to result-msg
+              modify screen-1-ef-4 value result-msg
+              exit paragaraph
+           end-if.

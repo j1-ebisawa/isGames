@@ -1,0 +1,37 @@
+      *Janken.wrk is generated from C:\Github\isGames\Janken\screen\Janken.isp
+       77 key-status is special-names crt status pic 9(4) value 0.
+          88 exit-pushed value 27.
+          88 message-received value 95.
+          88 event-occurred value 96.
+          88 screen-no-input-field value 97.
+          88 screen-time-out value 99.
+       77 quit-mode-flag pic s9(5) comp-4 value 0.
+       77 window-handle handle of window.
+       77 Arial-15v0 handle of font.
+       77 Arial-18v0 handle of font.
+       77 gu-png pic s9(9) comp-4.
+       01 pcHand pic 9(01).
+       01 myHand pic 9(01).
+       01 winLose-tbl.
+          05 winLose-def pic x(09) value "123312231".
+          05 filler redefines winLose-def.
+             10 filler occurs 3.
+                15 winLose occurs 3 pic 9(01).
+       01 draws pic 9(02).
+       01 myWins pic 9(02).
+       01 pcWins pic 9(02).
+       01 result-msg-tbl.
+          05 result-msg-def pic x(12) value "DrowWin Lose".
+          05 filler redefines result-msg-def.
+             10 result-msg occurs 3 pic x(4).
+       01 result-v pic 9(01).
+       01 msg-val pic x(30).
+       01 icons-tbl.
+          05 icons-def.
+             10 GOO-handle handle of bitmap.
+             10 CHOKI-handle handle of bitmap.
+             10 PAA-handle handle of bitmap.
+          05 filler redefines icons-def.
+             10 icons occurs 3 handle of bitmap.
+       01 my-percent pic 9(03).
+       01 pc-percent pic 9(03).

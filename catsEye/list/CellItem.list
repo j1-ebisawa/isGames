@@ -1,0 +1,61 @@
+*>(c) 2005 - 2021 Veryant
+*>compiler version: isCOBOL release 2022 R2 build#1074.6-20220909-34620
+*>source file name:  C:\Github\isGames\catsEye\source\CellItem.cbl
+*>date generated  :  Thu Oct 20 13:46:06 GMT+09:00 2022
+*>compiler options:  -dx -eo=C:/Github/isGames/catsEye/errs -sp=cpy;screenpgm;fdsl -esme=100 -d -smat -g -lo=C:/Github/isGames/catsEye/list -tasks -od=C:/Github/isGames/catsEye/output -jj
+IDENTIFICATION DIVISION.                                         
+                                                                 
+CLASS-ID. CellItem AS "CellItem".                                
+AUTHOR. user.                                                    
+                                                                 
+ENVIRONMENT DIVISION.                                            
+                                                                 
+CONFIGURATION SECTION.                                           
+                                                                 
+REPOSITORY.                                                      
+     class JObject    as "java.lang.Object"                      
+.                                                                
+                                                                 
+IDENTIFICATION DIVISION.                                         
+OBJECT.                                                          
+WORKING-STORAGE SECTION.                                         
+01  row-pos     pic 99.                                          
+01  col-pos     pic 99.                                          
+PROCEDURE DIVISION.                                              
+                                                                 
+IDENTIFICATION DIVISION.                                         
+METHOD-ID. newCEllItem as "new".                                 
+DATA DIVISION.                                                   
+LINKAGE SECTION.                                                 
+01  lk-row         pic 99.                                       
+01  lk-col         pic 99.                                       
+PROCEDURE DIVISION using lk-row lk-col.                          
+begin-here.                                                      
+    *>display "lk-row=" lk-row " lk-col=" lk-col.                
+    move lk-row  to row-pos.                                     
+    move lk-col  to col-pos.                                     
+    goback.                                                      
+END METHOD.                                                      
+                                                                 
+IDENTIFICATION DIVISION.                                         
+METHOD-ID. getRow as "getRow".                                   
+DATA DIVISION.                                                   
+LINKAGE SECTION.                                                 
+01  lk-row         pic 99.                                       
+PROCEDURE DIVISION using lk-row.                                 
+begin-here.                                                      
+    move row-pos to lk-row.                                      
+    goback.                                                      
+END METHOD.                                                      
+                                                                 
+IDENTIFICATION DIVISION.                                         
+METHOD-ID. getCol as "getCol".                                   
+DATA DIVISION.                                                   
+LINKAGE SECTION.                                                 
+01  lk-col         pic 99.                                       
+PROCEDURE DIVISION using lk-col.                                 
+begin-here.                                                      
+    move col-pos to lk-col.                                      
+    goback.                                                      
+END METHOD.                                                      
+END OBJECT.                                                      

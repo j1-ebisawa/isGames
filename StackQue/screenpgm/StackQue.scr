@@ -1,0 +1,135 @@
+      *StackQue.scr is generated from C:\Github\isGames\StackQue\screen\StackQue.isp
+       01 screen-1
+       .
+          03 screen-1-la-1 Label
+             line 3.2
+             column 23.3
+             size 24.8 cells 
+             lines 4.8 cells 
+             font Arial-14v0
+             id 1
+             title "Stack_Queue Test"
+             .
+          03 screen-1-gr-1 Grid
+             line 19.7
+             column 26.7
+             size 21.7 cells 
+             lines 34.0 cells 
+             id 2
+             boxed
+             row-dividers 1
+             divider-color rgb x#000000
+             cursor-frame-width 3
+             num-row-headings 1
+             num-rows 11
+             border-color rgb x#000000
+             .
+          03 screen-1-gr-2 Grid
+             line 12.1
+             column 3.1
+             size 72.5 cells 
+             lines 5.1 cells 
+             id 3
+             boxed
+             hscroll
+             row-dividers 1
+             divider-color rgb x#000000
+             cursor-frame-width 3
+             num-rows 1
+             .
+          03 screen-1-ef-1 Entry-Field
+             line 21.3
+             column 7.6
+             size 9.9 cells 
+             lines 3.6 cells 
+             id 5
+             3-d
+             .
+          03 screen-1-ef-2 Entry-Field
+             line 21.3
+             column 56.5
+             size 9.9 cells 
+             lines 3.6 cells 
+             id 6
+             3-d
+             .
+          03 screen-1-pb-4 Push-Button
+             exception-value 11
+             line 67.5
+             column 33.6
+             size 12.0 cells 
+             lines 3.2 cells 
+             id 12
+             self-act
+             title "Stack/Queue"
+             .
+          03 screen-1-pb-6 Push-Button
+             exception-value 12
+             line 67.5
+             column 4.4
+             size 12.0 cells 
+             lines 3.2 cells 
+             id 14
+             self-act
+             title "Push"
+             .
+          03 screen-1-pb-7 Push-Button
+             exception-value 13
+             line 67.5
+             column 19.0
+             size 12.0 cells 
+             lines 3.2 cells 
+             id 15
+             self-act
+             title "Pop"
+             .
+          03 screen-1-pb-8 Push-Button
+             exception-value 27
+             line 67.5
+             column 62.8
+             size 12.0 cells 
+             lines 3.2 cells 
+             id 16
+             self-act
+             title "Quit"
+             .
+          03 screen-1-la-2 Label
+             line 7.9
+             column 3.1
+             size 11.6 cells 
+             lines 2.9 cells 
+             id 18
+             title "In_Data"
+             .
+          03 screen-1-la-3 Label
+             line 55.3
+             column 3.1
+             size 10.3 cells 
+             lines 2.6 cells 
+             id 19
+             title "Out_Data"
+             .
+          03 screen-1-gr-3 Grid
+             line 59.3
+             column 3.2
+             size 72.5 cells 
+             lines 5.1 cells 
+             id 4
+             boxed
+             column-headings
+             hscroll
+             row-dividers 1
+             divider-color rgb x#000000
+             cursor-frame-width 3
+             num-rows 1
+             .
+          03 screen-1-pb-5 Push-Button
+             exception-value 4
+             line 67.5
+             column 48.2
+             size 12.0 cells 
+             lines 3.2 cells 
+             id 13
+             self-act
+             title "Reset"
+             .

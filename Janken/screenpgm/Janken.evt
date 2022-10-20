@@ -1,0 +1,108 @@
+      *Janken.evt is generated from C:\Github\isGames\Janken\screen\Janken.isp
+      *start event editor code
+       screen-1-bef-create.
+           move 0 to pcWins myWins draws. 
+           move 0 to pc-percent my-percent .
+           move 1 to pcHand myHand.
+           move "Let's start Janken Game" to msg-val
+           CALL "W$BITMAP" USING WBITMAP-LOAD   "..\img\gu.png"
+                           GIVING goo-Handle
+           CALL "W$BITMAP" USING WBITMAP-LOAD   "..\img\ch.png"
+                           GIVING choki-Handle
+           CALL "W$BITMAP" USING WBITMAP-LOAD   "..\img\pa.png"
+                           GIVING paa-Handle
+            
+           .
+ 
+       screen-1-aft-init-data.
+           .
+ 
+       screen-1-aft-end-acc.
+             
+            evaluate key-status
+              when  101     *>START
+                  perform START-RTN
+              when  102   *>Reset
+                  perform RESET-RTN
+              when  201   *>GOO
+                  move 1 to myHand
+                  modify screen-1-bi-1 bitmap-handle = goo-handle
+                  perform COUNT-RTN
+              when  202   *>CHOKI
+                  move 2 to myHand
+                  modify screen-1-bi-1 bitmap-handle = choki-handle
+                  perform COUNT-RTN                  
+              when 203    *>PAA
+                  move 3 to myHand
+                  modify screen-1-bi-1 bitmap-handle = paa-handle
+                  perform COUNT-RTN
+            end-evaluate
+            if pcWins > 9 OR myWins > 9
+               move "Game End!" to msg-val
+               modify screen-1-ef-4 value msg-val color red
+               if pcWins >9
+                  modify screen-1-ef-1 color 417
+               else
+                  modify screen-1-ef-2 color 321
+               end-if   
+               
+            end-if.
+           .
+            
+       START-RTN.
+           move "start with GOO" to msg-val
+           modify screen-1-ef-4 value msg-val 
+           
+       .
+       
+       RESET-RTN.
+           move 0 to pcWins myWins draws. 
+           move 1 to pcHand myHand.
+           move "Let's start Janken Game" to msg-val
+           modify screen-1-ef-1 value pcWins 
+           modify screen-1-ef-2 value myWins
+           modify screen-1-ef-3 value draws 
+           
+           compute pc-percent = pcWins * 10
+           compute my-percent = myWins * 10
+           modify screen-1-fr-1 fill-percent pc-percent 
+           modify screen-1-fr-2 fill-percent my-percent
+           
+           modify screen-1-bi-1 bitmap-handle = icons(pcHand)
+           modify screen-1-bi-2 bitmap-handle = icons(myHand)
+           modify screen-1-ef-4 value msg-val color black
+       
+          
+       .
+       
+       COUNT-RTN.
+       
+           compute pcHand = function random() * 3 + 1
+           evaluate winLose(myHand, pcHand)
+              when 1 
+                  add 1 to draws
+              when 2
+                  add 1 to myWins
+              when 3
+                  add 1 to pcWins
+           end-evaluate.
+           
+           move winLose(myHand, pcHand) to result-v
+           move result-msg(result-v) to msg-val
+           
+           modify screen-1-ef-4 value msg-val 
+           modify screen-1-ef-1 value pcWins 
+           modify screen-1-ef-2 value myWins
+           modify screen-1-ef-3 value draws 
+           
+           compute pc-percent = pcWins * 10
+           compute my-percent = myWins * 10
+           modify screen-1-fr-1 fill-percent pc-percent 
+           modify screen-1-fr-2 fill-percent my-percent
+           
+           modify screen-1-bi-1 bitmap-handle = icons(pcHand)
+           modify screen-1-bi-2 bitmap-handle = icons(myHand)
+       
+           .   
+
+      *end event editor code

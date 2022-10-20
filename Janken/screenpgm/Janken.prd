@@ -1,0 +1,75 @@
+      *Janken.prd is generated from C:\Github\isGames\Janken\screen\Janken.isp
+       is-initial-routine.
+           accept system-information from system-info.
+           accept terminal-abilities from terminal-info.
+           perform is-load-fonts.
+           perform is-load-bitmaps.
+       is-load-fonts.
+           initialize wfont-data arial-18v0.
+           move 18 to wfont-size.
+           move "Arial" to wfont-name.
+           set wfont-bold to false.
+           set wfont-italic to false.
+           set wfont-underline to false.
+           set wfont-strikeout to false.
+           set wfont-fixed-pitch to false.
+           call "w$font" using wfont-get-font arial-18v0 wfont-data.
+       is-load-bitmaps.
+           call "w$bitmap" using wbitmap-load "C:\ISLAB\isGames\Janken\i
+      -    "mg\gu.png" giving gu-png.
+       is-exit-rtn.
+           perform is-destroy-fonts.
+           perform is-destroy-bitmaps.
+           exit program.
+           stop run.
+       is-destroy-fonts.
+           destroy arial-18v0.
+       is-destroy-bitmaps.
+           call "w$bitmap" using wbitmap-destroy gu-png.
+       is-screen-1-routine.
+           perform is-screen-1-scrn
+           perform is-screen-1-proc.
+       is-screen-1-scrn.
+           perform is-screen-1-create
+           perform is-screen-1-init-data.
+       is-screen-1-create.
+           perform screen-1-bef-create.
+           display standard window background-low
+              screen line 41
+              screen column 91
+              size 90.5
+              lines 63.3
+              cell width 10
+              cell height 10
+              label-offset 20
+              color 257
+              modeless
+              title-bar
+              no wrap
+              title "Screen"
+              handle window-handle
+           .
+           display screen-1.
+       is-screen-1-init-data.
+           perform screen-1-aft-init-data.
+       is-screen-1-proc.
+           perform until exit-pushed
+              accept screen-1 on exception 
+                 perform is-screen-1-evaluate-func
+              end-accept
+           perform screen-1-aft-end-acc
+           end-perform.
+           destroy window-handle.
+           initialize key-status.
+       is-screen-1-evaluate-func.
+           evaluate true
+           when exit-pushed
+              perform is-screen-1-exit
+           when event-occurred
+              if event-type = msg-close
+                 perform is-screen-1-exit
+              end-if
+           end-evaluate.
+           move 1 to accept-control.
+       is-screen-1-exit.
+           set exit-pushed to true.

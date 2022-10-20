@@ -1,0 +1,172 @@
+      *Janken.scr is generated from C:\Github\isGames\Janken\screen\Janken.isp
+       01 screen-1
+       .
+          03 screen-1-la-1 Label
+             line 4.9
+             column 26.2
+             size 27.6 cells 
+             lines 4.8 cells 
+             font Arial-18v0
+             id 1
+             title "Janken Game"
+             .
+          03 screen-1-bi-1 Bitmap
+             line 21.0
+             column 9.9
+             size 183 pixels 
+             lines 182 pixels 
+             id 2
+             bitmap-handle gu-png
+             bitmap-number 1
+             .
+          03 screen-1-bi-2 Bitmap
+             line 20.3
+             column 37.8
+             size 183 pixels 
+             lines 182 pixels 
+             id 3
+             bitmap-handle gu-png
+             bitmap-number 1
+             .
+          03 screen-1-rb-1 Radio-Button
+             exception-value 201
+             line 21.3
+             column 62.2
+             size 9.0 cells 
+             lines 3.3 cells 
+             id 5
+             title "GOO"
+             group 1
+             group-value "0"
+             value "0"
+             .
+          03 screen-1-rb-2 Radio-Button
+             exception-value 202
+             line 28.1
+             column 62.2
+             size 9.0 cells 
+             lines 3.3 cells 
+             id 6
+             title "CHOKI"
+             group 1
+             group-value "0"
+             value "0"
+             .
+          03 screen-1-rb-3 Radio-Button
+             exception-value 203
+             line 34.4
+             column 62.2
+             size 9.0 cells 
+             lines 3.3 cells 
+             id 7
+             title "PAA"
+             group 1
+             group-value "0"
+             value "0"
+             .
+          03 screen-1-la-2 Label
+             line 11.9
+             column 2.5
+             size 8.1 cells 
+             lines 4.1 cells 
+             id 9
+             title "PCWins"
+             .
+          03 screen-1-la-3 Label
+             line 11.9
+             column 34.3
+             size 8.1 cells 
+             lines 4.1 cells 
+             id 10
+             title "yourWins"
+             .
+          03 screen-1-ef-2 Entry-Field
+             line 11.9
+             column 43.9
+             size 8.1 cells 
+             lines 4.1 cells 
+             id 11
+             3-d
+             value myWins
+             .
+          03 screen-1-la-4 Label
+             line 11.9
+             column 62.1
+             size 8.1 cells 
+             lines 4.1 cells 
+             id 12
+             title "Draws"
+             .
+          03 screen-1-ef-3 Entry-Field
+             line 11.9
+             column 73.0
+             size 8.1 cells 
+             lines 4.1 cells 
+             id 13
+             3-d
+             value draws
+             .
+          03 screen-1-ef-1 Entry-Field
+             line 11.9
+             column 12.4
+             size 8.1 cells 
+             lines 4.1 cells 
+             id 8
+             3-d
+             value pcWins
+             .
+          03 screen-1-ef-4 Entry-Field
+             line 53.6
+             column 7.9
+             size 31.6 cells 
+             lines 3.7 cells 
+             id 14
+             3-d
+             value msg-val
+             .
+          03 screen-1-pb-1 Push-Button
+             exception-value 101
+             line 53.0
+             column 47.9
+             size 7.7 cells 
+             lines 4.9 cells 
+             id 15
+             title "Start"
+             .
+          03 screen-1-pb-2 Push-Button
+             exception-value 102
+             line 53.0
+             column 61.9
+             size 7.7 cells 
+             lines 4.9 cells 
+             id 16
+             title "Reset"
+             .
+          03 screen-1-pb-3 Push-Button
+             exception-value 27
+             line 53.0
+             column 75.2
+             size 7.7 cells 
+             lines 4.9 cells 
+             id 17
+             self-act
+             title "Quit"
+             .
+          03 screen-1-fr-1 Frame
+             line 44.5
+             column 8.2
+             size 17.8 cells 
+             lines 3.4 cells 
+             id 19
+             fill-color rgb x#ff0000
+             fill-percent 0
+             .
+          03 screen-1-fr-2 Frame
+             line 44.5
+             column 37.8
+             size 17.8 cells 
+             lines 3.4 cells 
+             id 20
+             fill-color rgb x#0080ff
+             fill-percent 0
+             .

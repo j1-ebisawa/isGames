@@ -1,0 +1,343 @@
+      *HitBlow.evt is generated from C:\Github\isGames\HitBlow\screen\HitBlow.isp
+      *start event editor code
+        screen-1-aft-create.
+           move 1 to grid-idx
+           move "INIT" to pc-func.
+           move 3 to p-digit.
+           call "pcSide" using pc-param. 
+           
+           set list_no  to HashSet:>new().
+           set list_ok  to HashSet:>new().
+           set list-chance to HashSet:>new().
+           .      
+           
+       screen-1-aft-init-data.
+           modify screen-1-gr-1(1, 1) cell-data = "No"
+           modify screen-1-gr-1(1, 2) cell-data = "Number"
+           modify screen-1-gr-1(1, 3) cell-data = "Hit"
+           modify screen-1-gr-1(1, 4) cell-data = "Blow"
+           
+            
+           .
+           
+       screen-1-aft-end-acc.
+            evaluate key-status
+              when  12     *>Check
+                  perform Check-RTN
+              when  11    *>Reset
+                  perform RESET-RTN
+            end-evaluate           
+           .
+       Check-RTN. 
+           inquire screen-1-ef-2 value my-string.
+           perform Input-check.
+           if err-flg = 1
+              exit paragraph
+           end-if.
+           modify screen-1-ef-21 value " " color  1
+           
+           move "CHECK" to pc-func.
+           move my-string to chk-string
+           call "pcSide"  using pc-param
+           add 1 to grid-idx
+           compute try-no = grid-idx - 1
+           modify screen-1-gr-1(grid-idx, 1) cell-data = try-no
+           modify screen-1-gr-1(grid-idx, 2) cell-data = my-string
+           modify screen-1-gr-1(grid-idx, 3) cell-data = hit-cnt
+           modify screen-1-gr-1(grid-idx, 4) cell-data= blow-cnt
+           modify screen-1-gr-1 cursor-y = grid-idx
+           
+           if hit-cnt = p-digit
+              modify screen-1-ef-21 value msg5 color  5
+              perform varying wk-i from 1 by 1 until wk-i > p-digit
+                 move my-String(wk-i:1) to wk-char
+                 move 417 to wk-BGcolor   *>Black+Red
+                 perform Set-BGcolor
+              end-perform
+              
+           else
+              move hit-cnt to msg-hit
+              move blow-cnt to msg-blow
+              modify screen-1-ef-21 value msg6 color  1
+           end-if.   
+           
+           if hit-cnt not = p-digit
+              initialize change-cnt
+              perform Set-change-cnt 
+              perform Anal-01
+              perform Anal-02
+              perform Anal-03
+              perform Anal-04
+              perform Set-change-cnt 
+           end-if.
+                    
+           .
+       Input-check.
+           move 0 to err-flg.
+           move function byte-length(my-String) to wk-L.
+           if wk-L = 0
+              modify screen-1-ef-21 value msg1 color  5
+              move 1 to err-flg
+              exit paragraph
+           end-if.
+           perform varying wk-i from 1 by 1 until wk-i > wk-L
+             if my-String(wk-i:1) < "0" or > "9"
+                modify screen-1-ef-21 value msg2 color  5
+                move 1 to err-flg
+                exit paragraph
+             end-if
+           end-perform.
+           if wk-L not = p-digit
+              modify screen-1-ef-21 value msg3 color  5
+              move 1 to err-flg
+              exit paragraph
+           end-if.
+           perform varying wk-i from 1 by 1 until wk-i > p-digit - 1
+              compute wk-j = wk-i + 1
+              perform until wk-j > p-digit 
+                 if my-String(wk-i:1) = my-String(wk-j:1)
+                    modify screen-1-ef-21 value msg4 color  5
+                    move 1 to err-flg
+                    exit paragraph
+                 end-if
+                 add 1 to wk-j
+              end-perform
+           end-perform
+           .
+       Set-change-cnt.
+           modify screen-1-ef-13 value gray-cnt(1)
+           modify screen-1-ef-14 value gray-cnt(2)
+           modify screen-1-ef-15 value gray-cnt(3)
+           modify screen-1-ef-16 value gray-cnt(4)
+           modify screen-1-ef-17 value cyan-cnt(1)
+           modify screen-1-ef-18 value cyan-cnt(2)
+           modify screen-1-ef-19 value cyan-cnt(3)
+           modify screen-1-ef-20 value cyan-cnt(4)
+       
+           .    
+       Anal-01.
+           if hit-cnt + blow-cnt = 0
+              perform varying wk-i from 1 by 1 until wk-i > p-digit
+                 move my-String(wk-i:1) to wk-char
+                 if (list_no:>contains(wk-char as JCharacter ))
+                    exit perform cycle
+                 end-if
+                 move 289 to wk-BGcolor   *>Black+Gray
+                 perform Set-BGcolor
+                 perform Add-list-no
+                 add 1 to gray-cnt(1)
+              end-perform
+              exit paragraph
+           end-if.
+           if hit-cnt + blow-cnt = p-digit
+              perform varying wk-i from 1 by 1 until wk-i > p-digit
+                 move my-String(wk-i:1) to wk-char
+                 if (list_ok:>contains(wk-char as JCharacter ))
+                    exit perform cycle
+                 end-if
+                 move 385 to wk-BGcolor  *>Black+Cyan
+                 perform Set-BGcolor
+                 perform Add-list-ok
+                 add 1 to cyan-cnt(1)
+              end-perform
+              perform varying wk-i from 1 by 1 until wk-i > 10
+                 move Num-INIT(wk-i:1) to wk-char
+                 if NOT(list-ok:>contains(wk-char as JCharacter))
+                    if (list_no:>contains(wk-char as JCharacter ))
+                        exit perform cycle
+                    end-if                    
+                    move 289 to wk-BGcolor   *>Black+Gray
+                    perform Set-BGcolor
+                    perform Add-list-no
+                    add 1 to gray-cnt(1)
+                 end-if
+              end-perform
+           end-if.
+           
+           .
+       Anal-02.
+           move 0 to chance, noChance.
+           perform varying wk-i from 1 by 1 until wk-i > p-digit
+              move my-String(wk-i:1) to wk-char
+              if list_no:>contains(wk-char as JCharacter )
+                 add 1 to noChance
+              end-if
+              if list-ok:>contains(wk-char as JCharacter )
+                 add 1 to chance
+              end-if
+           end-perform
+    	     if p-digit - noChance = hit-cnt + blow-cnt 
+    	        perform varying wk-i from 1 by 1 until wk-i > p-digit
+                 move my-String(wk-i:1) to wk-char
+                 if NOT(list_no:>contains(wk-char as JCharacter ))
+                     if (list_ok:>contains(wk-char as JCharacter ))
+                        exit perform cycle
+                    end-if                    
+                    move 385 to wk-BGcolor  *>Black+Cyan
+                    perform Set-BGcolor
+                    perform Add-list-ok
+                    add 1 to cyan-cnt(2)
+                 end-if
+             end-perform
+           end-if.
+          
+           if hit-cnt + blow-cnt - chance = 0
+          	   perform varying wk-i from 1 by 1 until wk-i > p-digit
+          	      move my-String(wk-i:1) to wk-char
+                  if NOT(list-ok:>contains(wk-char as JCharacter))
+                     if (list_no:>contains(wk-char as JCharacter ))
+                        exit perform cycle
+                     end-if                    
+    			           move 289 to wk-BGcolor   *>Black+Gray
+                     perform Set-BGcolor
+                     perform Add-list-no
+                     add 1 to gray-cnt(2)
+                  end-if
+              end-perform
+           end-if.
+           .
+        Anal-03.
+           inquire screen-1-gr-1(grid-idx,2) cell-data wk-str1
+           inquire screen-1-gr-1(grid-idx,3) cell-data wk-X2
+           move function numval(wk-X2) to wk-hit1
+           inquire screen-1-gr-1(grid-idx,4) cell-data wk-X2
+           move function numval(wk-X2) to wk-blow1
+           
+           perform varying wk-i from 2 by 1 until wk-i >= grid-idx
+              inquire screen-1-gr-1(wk-i,2) cell-data wk-X2
+              move function numval(wk-X2) to wk-hit2
+              inquire screen-1-gr-1(wk-i,3) cell-data wk-X2
+              move function numval(wk-X2) to wk-blow2
+              
+              inquire screen-1-gr-1(wk-i,4) cell-data wk-blow2
+              compute wk-total = wk-hit1 + wk-blow1 + wk-hit2 + wk-blow2
+              list-chance:>clear()              
+              perform varying wk-j from 1 by 1 until wk-j > p-digit
+                move wk-str1(wk-j:1) to wk-char
+                perform Add-list-chance
+                move wk-str2(wk-j:1) to wk-char
+                perform Add-list-chance
+              end-perform
+              
+              if wk-total = p-digit 
+                 if list-chance:>size() = p-digit * 2
+                    perform varying wk-j from 1 by 1 until wk-j > 10
+                       move NUM-INIT(wk-j:1) to wk-char
+                       if NOT(
+                          list-chance:>contains(wk-char as JCharacter ))
+                          if (list_no:>contains(wk-char as JCharacter ))
+                             exit perform cycle
+                          end-if                    
+                          move 289 to wk-BGcolor   *>Black+Gray
+                          perform Set-BGcolor
+                          perform Add-list-no
+                          add 1 to gray-cnt(3)
+                       end-if
+                    end-perform
+                 end-if
+              end-if
+              
+              if wk-total = 0
+                 perform varying wk-j from 1 by 1 until wk-j > 10
+                    move NUM-INIT(wk-j:1) to wk-char
+                    if list-chance:>contains(wk-char as JCharacter )
+                       if (list_no:>contains(wk-char as JCharacter ))
+                           exit perform cycle
+                       end-if                    
+                       move 289 to wk-BGcolor   *>Black+Gray
+                       perform Set-BGcolor
+                       perform Add-list-no
+                       add 1 to cyan-cnt(3)
+                    end-if
+                 end-perform
+              end-if
+           end-perform
+           .
+       Anal-04.
+           if list-no:>size() = 10 - p-digit
+              perform varying wk-i from 1 by 1 until wk-i > 10
+                 move NUM-INIT(wk-i:1) to wk-char 
+                 if NOT(list-no:>contains(wk-char as JCharacter ))
+                    if (list_ok:>contains(wk-char as JCharacter ))
+                        exit perform cycle
+                    end-if                    
+                    move 385 to wk-BGcolor  *>Black+Cyan
+                    perform Set-BGcolor
+                    perform Add-list-ok
+                    add 1 to cyan-cnt(4)
+                 end-if
+              end-perform
+           end-if.
+                 
+           if list-ok:>size() = p_digit
+              perform varying wk-i from 1 by 1 until wk-i > 10
+                 move NUM-INIT(wk-i:1) to wk-char 
+                 if NOT(list-ok:>contains(wk-char as JCharacter ))
+                    if (list_no:>contains(wk-char as JCharacter ))
+                        exit perform cycle
+                    end-if                    
+                    move 289 to wk-BGcolor   *>Black+Gray
+                    perform Set-BGcolor
+                    perform Add-list-no
+                    add 1 to gray-cnt(4)
+                 end-if
+              end-perform
+           end-if.
+            .
+       Set-BGcolor.
+           move function numval(wk-char) to wk-NUM
+           evaluate wk-NUM
+             when 0
+                  modify screen-1-ef-3 color wk-BGcolor
+             when 1
+                  modify screen-1-ef-4 color wk-BGcolor
+             when 2
+                  modify screen-1-ef-5 color wk-BGcolor
+             when 3
+                  modify screen-1-ef-6 color wk-BGcolor
+             when 4
+                  modify screen-1-ef-7 color wk-BGcolor
+             when 5
+                  modify screen-1-ef-8 color wk-BGcolor
+             when 6
+                  modify screen-1-ef-9 color wk-BGcolor
+             when 7
+                  modify screen-1-ef-10 color wk-BGcolor
+             when 8
+                  modify screen-1-ef-11 color wk-BGcolor
+             when 9
+                  modify screen-1-ef-12 color wk-BGcolor
+           end-evaluate    
+           . 
+       Add-list-ok.
+           list-ok:>add(wk-char as JCharacter)
+           .
+       Add-list-no.
+           list-no:>add(wk-char as JCharacter)
+           .
+       Add-list-chance.
+           list-chance:>add(wk-char as JCharacter)
+           .
+               
+       RESET-RTN.
+           modify screen-1-gr-1 reset-grid 2
+           modify screen-1-ef-2 value ""
+           perform varying wk-i from 1 by 1 until wk-i > 10
+             move NUM-INIT(wk-i:1) to wk-char
+             move 257 to wk-BGcolor
+             perform set-BGcolor
+           end-perform.
+           list-no:>clear()
+           list-ok:>clear()
+           list-chance:>clear
+           
+           
+           move 1 to grid-idx
+           move "INIT" to pc-func.
+           inquire screen-1-ef-1 value p-digit
+           call "pcSide" using pc-param. 
+        
+           .
+
+
+      *end event editor code

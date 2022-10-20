@@ -1,0 +1,221 @@
+      *StarPilot.scr is generated from C:\Github\isGames\starPilot\screen\StarPilot.isp
+       01 screen-1
+       .
+          03 screen-1-bi-1 Bitmap
+             line wrk-y
+             column wrk-x
+             size 5.57 cells 
+             lines 2.56 cells 
+             id 2
+             bitmap-handle star-jpg
+             bitmap-number 1
+             .
+          03 screen-1-pb-1 Push-Button
+             line 32.56
+             column 4.71
+             size 7.86 cells 
+             lines 1.81 cells 
+             id 3
+             event procedure screen-1-pb-1-evt-proc
+             title "Å©"
+             .
+          03 screen-1-la-1 Label
+             line 1.56
+             column 17.0
+             size 21.0 cells 
+             lines 1.95 cells 
+             font Arial-16v0
+             id 1
+             title "Star Pilot"
+             .
+          03 screen-1-pb-2 Push-Button
+             line 32.56
+             column 14.0
+             size 7.86 cells 
+             lines 1.81 cells 
+             id 6
+             event procedure screen-1-pb-1-evt-proc
+             title "Å™"
+             .
+          03 screen-1-pb-3 Push-Button
+             line 32.42
+             column 22.73
+             size 10.86 cells 
+             lines 1.81 cells 
+             id 7
+             event procedure screen-1-pb-1-evt-proc
+             title "Home"
+             .
+          03 screen-1-pb-4 Push-Button
+             line 32.44
+             column 34.43
+             size 7.86 cells 
+             lines 1.81 cells 
+             id 8
+             event procedure screen-1-pb-1-evt-proc
+             title "Å´"
+             .
+          03 screen-1-pb-5 Push-Button
+             line 32.56
+             column 44.86
+             size 7.86 cells 
+             lines 1.81 cells 
+             id 9
+             event procedure screen-1-pb-1-evt-proc
+             title "Å®"
+             .
+          03 screen-1-ef-1 Entry-Field
+             line 29.0
+             column 59.86
+             size 7.57 cells 
+             lines 1.75 cells 
+             id 5
+             3-d
+             .
+          03 screen-1-co-1 Combo-Box
+             line 29.0
+             column 70.29
+             size 18.57 cells 
+             lines 4.0 cells 
+             id 10
+             3-d
+             drop-down
+             item-height 1.4
+             .
+          03 screen-1-ef-2 Entry-Field
+             line 29.0
+             column 91.0
+             size 8.43 cells 
+             lines 1.75 cells 
+             id 11
+             3-d
+             .
+          03 screen-1-pb-6 Push-Button
+             line 32.8
+             column 57.88
+             size 10.62 cells 
+             lines 1.55 cells 
+             id 13
+             event procedure screen-1-pb-1-evt-proc
+             title "Insert"
+             .
+          03 screen-1-pb-7 Push-Button
+             line 32.8
+             column 71.62
+             size 10.62 cells 
+             lines 1.55 cells 
+             id 14
+             event procedure screen-1-pb-1-evt-proc
+             title "Delete"
+             .
+          03 screen-1-pb-8 Push-Button
+             line 32.8
+             column 84.75
+             size 10.62 cells 
+             lines 1.55 cells 
+             id 18
+             event procedure screen-1-pb-1-evt-proc
+             title "Reset"
+             .
+          03 screen-1-pb-9 Push-Button
+             line 32.8
+             column 97.0
+             size 10.62 cells 
+             lines 1.55 cells 
+             id 19
+             event procedure screen-1-pb-1-evt-proc
+             title "Run"
+             .
+          03 screen-1-gr-1 Grid
+             line 4.94
+             column 62.14
+             size 56.57 cells 
+             lines 21.75 cells 
+             id 4
+             event-list ( cmd-goto msg-heading-clicked )
+             event procedure screen-1-gr-1-evt-proc
+             after procedure SCREEN-1-AFT-INIT-DATA
+             boxed
+             vscroll
+             row-headings
+             tiled-headings
+             row-dividers 1
+             heading-background-color rgb x#c0c0c0
+             divider-color rgb x#000000
+             cursor-frame-width 3
+             num-rows 50
+             selection-mode 9
+             row-selected-background-color rgb x#ffff80 
+             row-selected-foreground-color rgb x#000000
+             .
+          03 screen-1-pb-10 Push-Button
+             line 2.05
+             column 51.62
+             size 10.62 cells 
+             lines 1.7 cells 
+             id 15
+             event procedure screen-1-pb-10-evt-proc
+             title "File"
+             .
+          03 screen-1-ef-4 Entry-Field
+             line 2.2
+             column 63.25
+             size 32.14 cells 
+             lines 1.44 cells 
+             id 16
+             3-d
+             .
+          03 screen-1-pb-11 Push-Button
+             line 2.2
+             column 109.12
+             size 10.62 cells 
+             lines 1.7 cells 
+             id 17
+             event procedure screen-1-pb-11-evt-proc
+             title "Save"
+             .
+          03 screen-1-pb-12 Push-Button
+             line 2.2
+             column 97.0
+             size 10.62 cells 
+             lines 1.7 cells 
+             id 12
+             event procedure screen-1-pb-12-evt-proc
+             title "Load"
+             .
+          03 screen-1-ef-3 Entry-Field
+             line 29.0
+             column 100.71
+             size 8.57 cells 
+             lines 1.75 cells 
+             id 20
+             3-d
+             .
+          03 screen-1-ef-5 Entry-Field
+             line 29.0
+             column 112.0
+             size 6.57 cells 
+             lines 1.75 cells 
+             id 21
+             3-d
+             .
+          03 screen-1-ef-6 Entry-Field
+             line 29.0
+             column 4.71
+             size 45.29 cells 
+             lines 1.75 cells 
+             background-color rgb x#ffff80 foreground-color rgb x#ff0000
+             visible 0
+             id 22
+             3-d
+             read-only
+             .
+          03 screen-1-pb-13 Push-Button
+             exception-value 27
+             line 32.8
+             column 109.12
+             size 10.62 cells 
+             lines 1.55 cells 
+             id 23
+             title "Quit"
+             .

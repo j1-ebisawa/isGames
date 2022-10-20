@@ -1,0 +1,412 @@
+      *MineSweeper.evt is generated from C:\Github\isGames\MineSweeper\screen\MineSweeper.isp
+       screen-1-gr-1-evt-proc.
+           evaluate event-type
+           when msg-grid-rbutton-down
+              perform screen-1-gr-1-evt-msg-grid-rbutton-down
+           when msg-gd-dblclick
+              perform screen-1-gr-1-evt-msg-gd-dblclick
+           when other
+           end-evaluate
+           .
+      *start event editor code
+       screen-1-aft-init-data.
+           modify screen-1-gr-1 reset-grid 1
+           *>modify screen-1-gr-1 mass-update = 0
+           perform varying wk-row from 1 by 1  until wk-row > 12
+              perform varying wk-col from 1 by 1 until wk-col > 12
+                 modify screen-1-gr-1(wk-row, wk-col) CELL-DATA = " "
+                 modify screen-1-gr-1(wk-row, wk-col) cell-color = 289
+              end-perform
+           end-perform           
+           *>modify screen-1-gr-1 mass-update = 1
+           modify screen-1-gr-1 cursor-Y 6 cursor-X 6
+           move 0 to num-bombs, num-cleared, timer-sw, ret-cd
+           .
+
+       screen-1-aft-create.
+            set bombList to ArrayList:>new
+            set clist-a to arraylist:>new()
+            set clist-t to arraylist:>new()            
+           .
+       screen-1-aft-end-acc.
+            
+            evaluate key-status
+              when  1     *>file
+                  perform FILE-CHOOSE-RTN
+              when  2     *>Load
+                  perform FILE-LOAD-RTN
+              when  3     *>Save
+                  perform FILE-SAVE-RTN
+              when  5     *>Mode Changerow
+                  perform CHANGE-MODE-RTN                  
+              when 13     *>Reset
+                  perform STOP-TIMER
+                  perform RESET-RTN
+            end-evaluate
+            .
+        screen-1-gr-1-evt-msg-gd-dblclick.
+           inquire screen-1-gr-1 X ws-X Y ws-Y
+           move ws-x to wk-col
+           move ws-y to wk-row
+           if mode-sw = 0
+                  perform START-TIMER
+                  perform OPEN-CELL-RTN
+                  if ret-cd = -1
+                     perform STOP-TIMER
+                     move "Bomb Game over!!" to wk-msg
+                     modify screen-1-la-7 value wk-msg 
+                     perform SHOW-BOMBS-RTN
+                  end-if                     
+           else
+               inquire screen-1-gr-1 cell-data wk-cell
+               evaluate wk-cell
+                  when " "
+                      perform SET-BOMB
+                  when "B"
+                      perform CLEAR-BOMB
+               end-evaluate  
+           end-if
+           .
+       screen-1-gr-1-evt-msg-grid-rbutton-down.
+           inquire screen-1-gr-1 X ws-X Y ws-Y
+           move ws-x to wk-col
+           move ws-y to wk-row
+           if mode-sw = 0
+                  perform START-TIMER
+                  inquire screen-1-gr-1 cell-data wk-cell
+                  if wk-cell = "B" OR " "    
+                     perform SET-FLAG                     
+                  else
+                     if wk-cell = "F"
+                        perform CLEAR-FLAG
+                     end-if
+                  end-if                
+                  if num-cleared = bombList:>size()
+                     perform STOP-TIMER 
+                     move "Congratulations!! All cleared" to wk-msg
+                     modify screen-1-la-7 value wk-msg
+                  end-if
+           end-if
+            
+           .
+            
+       RESET-RTN.
+           move 0 to num-bombs num-cleared timer-sw
+           modify screen-1-gr-1 reset-grid 1
+           perform screen-1-aft-init-data.
+           perform screen-1-aft-create.
+           modify screen-1-ef-2 value " "
+           move "00:00:00" to time-disp
+           modify screen-1-la-5 title time-disp
+           move space to wk-msg
+           modify screen-1-la-7 value wk-msg
+           modify screen-1-ef-2 value num-bombs
+           modify screen-1-ef-3 value num-cleared
+
+           .       
+       FILE-CHOOSE-RTN.  
+           initialize opensave-data
+           move "Choose a file" to opnsav-title
+           move "../data/"      to opnsav-default-dir
+
+           call "C$OPENSAVEBOX" using opensave-open-box, 
+                                      opensave-data
+                               giving opensave-status
+
+           if opensave-status > 0
+              move opnsav-filename to map-file-name
+              modify screen-1-ef-1 value map-file-name
+           end-if
+           .
+       FILE-SAVE-RTN.
+           inquire screen-1-ef-1 value map-file-name
+           open output map-file
+           initialize  map-record
+           perform varying wk-i from 0 by 1 
+                   until   wk-i >= bombList:>size()
+              set cell-item to bombList:>get(wk-i) as Cellitem 
+              cell-item:>getRow(wk-row)
+              cell-item:>getCol(wk-col)
+              move wk-row to map-row
+              move wk-col to map-col
+              write map-record
+           end-perform
+           close  map-file 
+           .
+       FILE-LOAD-RTN.
+           bombList:>clear()
+           move 0 to num-bombs num-cleared 
+           modify screen-1-gr-1 mass-update = 1
+           modify screen-1-gr-1 reset-grid 1
+           perform screen-1-aft-init-data.
+           inquire screen-1-ef-1 value map-file-name
+           open input map-file
+           perform until 1 = 0
+             read map-file at end exit perform
+             end-read
+             move map-row to wk-row
+             move map-col to wk-col
+             modify screen-1-gr-1(wk-row, wk-col) cell-data = "B"   
+             add 1 to num-bombs
+             set cell-item to CellItem:>new(wk-row, wk-col)
+             bombList:>add(cell-item)
+                   
+           end-perform
+           modify screen-1-ef-2 value num-bombs
+           close map-file.     
+           if mode-sw = 0
+              perform Hide-BOMBS-RTN
+           else
+              perform Show-BOMBS-RTN
+           end-if  
+           modify screen-1-gr-1 mass-update = 0
+           .
+           
+       CHANGE-MODE-RTN.
+           if mode-sw = 0
+              move 1 to mode-sw
+              modify screen-1-pb-5 value "Cell setting"
+              modify screen-1-la-8 title "Double click: Bomb Set/Clear" 
+              modify screen-1-la-9 visible false
+              perform Show-BOMBS-RTN
+           else
+              move 0 to mode-sw
+              modify screen-1-pb-5 value "Play Game"
+              modify screen-1-la-8 title "Double click: Open Cell" 
+              modify screen-1-la-9 visible true
+              modify screen-1-la-9 title "Right  click: Flag Set/Clear"
+              perform HIDE-BOMBS-RTN                     
+           end-if
+           .
+                  
+       SET-BOMB.
+           modify  screen-1-gr-1(wk-row, wk-col)  CELL-DATA = "B" 
+                   cell-color = 257
+           add 1 to num-bombs
+           modify screen-1-ef-2 value num-bombs
+           set cell-item to CellItem:>new(wk-row, wk-col)
+           bombList:>add(cell-item)
+           .
+           
+       CLEAR-BOMB.
+           subtract 1 from num-bombs
+           modify screen-1-ef-2 value num-bombs
+           modify  screen-1-gr-1(wk-row, wk-col) CELL-DATA = " "
+                                                 cell-color = 297
+           perform check-CONTAINS
+           if hit = 1
+              bombList:>remove(wk-k)
+           end-if                
+           .
+       
+       SET-FLAG.
+           subtract 1 from num-bombs 
+           modify screen-1-ef-2 value num-bombs
+           perform check-CONTAINS
+           if hit = 1
+              add 1 to num-cleared
+              modify screen-1-ef-3 value num-cleared
+           end-if
+           modify screen-1-gr-1 cell-data = "F"
+           modify screen-1-gr-1 cell-color = 365
+           .
+       CLEAR-FLAG.
+           add 1 to num-bombs                     
+           modify screen-1-ef-2 value num-bombs
+           perform check-CONTAINS
+           if hit = 1
+              modify screen-1-gr-1 cell-data = "B"
+              subtract 1 from num-cleared  
+              modify screen-1-ef-3 value num-cleared                    
+           else
+              modify screen-1-gr-1 cell-data = " "
+           end-if
+           modify screen-1-gr-1 cell-color = 257           
+           .       
+       check-CONTAINS.
+           move 0 to hit.
+           perform varying wk-k from 0 by 1 
+                   until wk-k >= bombList:>size()
+              set cell-item to bombList:>get(wk-k) as CellItem
+              cell-item:>getRow(wk-y)
+              cell-item:>getCol(wk-x)
+              if wk-row = wk-y and wk-col = wk-x
+                 move 1 to hit
+                 exit perform
+              end-if
+           end-perform
+       
+           .    
+       Show-BOMBS-RTN.
+           perform varying wk-i from 0 by 1  
+                   until   wk-i >= bombList:>size() 
+              set cell-item to  bombList:>get(wk-i) as CellItem
+              cell-item:>getRow(wk-row)
+              cell-item:>getCol(wk-col)
+              modify  screen-1-gr-1 x = wk-col y = wk-row
+              modify  screen-1-gr-1 cell-data = "B"
+              if ret-cd = -1
+                 modify  screen-1-gr-1 cell-color = 417
+              else
+                 modify  screen-1-gr-1 cell-color = 257
+              end-if
+           end-perform           
+           .
+       HIDE-BOMBS-RTN.
+           perform varying wk-i from 0 by 1  
+                   until   wk-i >= bombList:>size() 
+              set cell-item to  bombList:>get(wk-i) as CellItem
+              cell-item:>getRow(wk-row)
+              cell-item:>getCol(wk-col)
+              modify  screen-1-gr-1 x = wk-col y = wk-row
+              modify  screen-1-gr-1 cell-color = 297
+           end-perform           
+       
+           .
+       OPEN-CELL-RTN.
+           move 0 to ret-cd
+           modify  screen-1-gr-1 x = ws-X, y = ws-Y
+           inquire screen-1-gr-1 cell-data wk-cell
+           if wk-cell = "B"
+              move -1 to ret-cd
+           end-if
+           if wk-cell = " "
+              clist_a:>clear()
+              clist_t:>clear()
+              set cell-item to CellItem:>new(ws-Y, ws-X)
+              clist_a:>add(cell-item)
+              perform until clist-a:>size() < 1
+                 move 0 to wk-j
+                 perform until wk-j >= clist-a:>size()
+                    set cell-item to  clist-a:>get(wk-j) as CellItem
+                    cell-item:>getRow(ws-Y)
+                    cell-item:>getCol(ws-X)                 
+                    perform CELL-CHECK-RTN
+                    add 1 to wk-j 
+                 end-perform
+                 perform COPY-CLIST-RTN
+              end-perform              
+           end-if
+           
+           .
+       CELL-CHECK-RTN.
+           move 0 to bomb-cnt.
+           perform varying wk-i from 1 by 1 until wk-i > 8
+           
+              compute wk-row = ws-y + function numval(dev-y(wk-i))
+              compute wk-col = ws-x + function numval(dev-x(wk-i))
+              if wk-row < 1 or wk-row > 12 or wk-col < 1 or wk-col > 12
+                 exit perform cycle
+              end-if              
+              modify  screen-1-gr-1 x = wk-col, y = wk-row
+              inquire screen-1-gr-1 cell-data wk-cell
+              if wk-cell = "B"
+                 add 1 to bomb-cnt
+              end-if              
+           end-perform
+           if bomb-cnt > 0
+              modify  screen-1-gr-1 x = ws-X, y = ws-Y
+              move  bomb-cnt to wk-cell
+              modify  screen-1-gr-1 cell-data = wk-cell
+              evaluate bomb-cnt
+                 when 1
+                    modify screen-1-gr-1  cell-color = 481
+                 when 2
+                    modify screen-1-gr-1  cell-color = 385
+                 when  3
+                    modify screen-1-gr-1  cell-color = 417
+                 when other              
+                    modify screen-1-gr-1  cell-color = 417
+              end-evaluate
+           else
+              perform varying wk-i from 1 by 1 until wk-i > 8
+                 compute wk-row = ws-y + function numval(dev-y(wk-i))
+                 compute wk-col = ws-x + function numval(dev-x(wk-i))
+                 if wk-row < 1 or wk-row > 12 or 
+                    wk-col < 1 or wk-col > 12
+                    exit perform cycle
+                 end-if  
+                modify  screen-1-gr-1 x = wk-col, y = wk-row
+                inquire screen-1-gr-1 cell-data wk-cell
+                if wk-cell = " "  
+                   modify screen-1-gr-1 cell-data = "C" 
+                   modify screen-1-gr-1 cell-color = 16        
+                   set cell-item to CellItem:>new(wk-row, wk-col)
+                   clist-t:>add(cell-item)
+                end-if
+              end-perform
+           end-if
+           .
+       COPY-CLIST-RTN.    
+           clist-a:>clear() .               
+           perform varying wk-i from 0 by 1 
+                   until   wk-i >= clist-t:>size()
+               set cell-item to  clist-t:>get(wk-i) as CellItem
+               clist-a:>add(cell-item)                 
+           end-perform
+           clist-t:>clear()
+           .
+            
+        SHOW-TIMER.
+           perform until 1 = 2
+              yield
+              accept system-time from time
+              perform CALC-TIME
+              modify screen-1-la-5 title time-disp
+              receive msg-string from hMain
+                 before time 100
+                 not on exception  
+                    if msg-string = stop-msg
+                       exit perform
+                    end-if
+              end-receive
+           end-perform
+           . 
+              
+       START-TIMER.
+           if timer-sw = 1
+              exit paragraph
+           end-if
+           move 1 to timer-sw
+           ACCEPT SYNC-TIME-1 FROM TIME.
+           PERFORM WITH TEST AFTER UNTIL SYNC-TIME-1 NOT = SYNC-TIME-2
+               ACCEPT SYNC-TIME-2 FROM TIME
+           END-PERFORM.
+           ACCEPT BEGIN-TIME FROM TIME
+      *
+           ACCEPT hMain from thread
+           perform thread SHOW-TIMER handle hTime
+           *>send stop-msg to hTime
+           
+           .
+           
+       STOP-TIMER.
+           if timer-sw = 0
+              exit paragraph
+           end-if
+           move 0 to timer-sw.
+           perform CALC-TIME           
+           stop thread hTime.
+           move 0 to hTime. 
+                             
+           .       
+           
+       CALC-TIME.
+           ACCEPT END-TIME FROM TIME.
+           COMPUTE BEGIN-SECS = (BEGIN-HOURS * 3600) +
+               (BEGIN-MINUTES * 60) + (BEGIN-SECONDS) +
+               (BEGIN-HUNDRETHS / 100).
+           COMPUTE END-SECS = (END-HOURS * 3600) +
+               (END-MINUTES * 60) + (END-SECONDS) +
+               (END-HUNDRETHS / 100).
+           IF (END-SECS < BEGIN-SECS) THEN
+               ADD 86400 TO END-SECS
+           END-IF.
+           COMPUTE TIME-DIFF = END-SECS - BEGIN-SECS
+           DIVIDE  TIME-DIFF by 3600 giving h-disp remainder TIME-DIFF
+           DIVIDE  TIME-DIFF by 60   giving m-disp remainder s-disp
+           .   
+                         
+           
+
+      *end event editor code
