@@ -1,8 +1,0 @@
-       fd  code-f.
-       01  code-f-rec.
-           05  code-lineno      pic 9(03).
-           05  code-statement   pic x(20).
-           05  code-p1          pic x(10).
-           05  code-p2          pic x(10).
-           05  code-p3          pic x(10).
-          
