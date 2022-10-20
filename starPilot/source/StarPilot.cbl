@@ -7,7 +7,7 @@
        identification division.
       *begin {iscobol}progid
        program-id. StarPilot.
-       author. Žõˆê.
+       author. j1_eb.
        remarks.
       *end {iscobol}progid
        environment division.
@@ -121,7 +121,7 @@
              lines 1.75 cells 
              font Arial-16v0
              id 1
-             title "COBOL Star Pilot"
+             title "COBOL Star Pilot X"
              .
           03 screen-1-pb-2 Push-Button
              line 32.56
@@ -175,7 +175,7 @@
              id 10
              3-d
              drop-down
-             item-height 1.4
+             item-height 1.75
              .
           03 screen-1-ef-2 Entry-Field
              line 29.0
@@ -370,8 +370,8 @@
            perform is-screen-1-init-data.
        is-screen-1-create.
            display standard window background-low
-              screen line 81
-              screen column 73
+              screen line 65
+              screen column 64
               size 121.28571
               lines 34.4375
               cell size is label font Default-Font

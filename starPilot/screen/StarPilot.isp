@@ -14,6 +14,9 @@
       <int>1</int>
      </object>
     </void>
+    <void id="BackgroundIntensity0" property="backgroundIntensity">
+     <void id="Integer0" property="selection"/>
+    </void>
     <void property="components">
      <array class="com.iscobol.screenpainter.beans.AbstractBeanControl" length="23">
       <void index="0">
@@ -32,7 +35,7 @@
          <string>3.142857</string>
         </void>
         <void property="columnPixels">
-         <float>18.0</float>
+         <float>16.0</float>
         </void>
         <void property="columnVariable">
          <string>wrk-x</string>
@@ -44,7 +47,7 @@
          <string>1.75</string>
         </void>
         <void property="linePixels">
-         <float>16.0</float>
+         <float>13.0</float>
         </void>
         <void property="lineVariable">
          <string>wrk-y</string>
@@ -53,11 +56,11 @@
          <float>2.5625</float>
         </void>
         <void property="linesPixels">
-         <float>51.25</float>
+         <float>41.0</float>
         </void>
         <void property="linesUnit">
          <object class="com.iscobol.screenpainter.beans.types.DimensionUnit">
-          <int>2</int>
+          <object idref="Integer0"/>
          </object>
         </void>
         <void property="name">
@@ -70,11 +73,11 @@
          <float>5.571429</float>
         </void>
         <void property="sizePixels">
-         <float>44.57143</float>
+         <float>39.0</float>
         </void>
         <void property="sizeUnit">
          <object class="com.iscobol.screenpainter.beans.types.DimensionUnit">
-          <int>2</int>
+          <object idref="Integer0"/>
          </object>
         </void>
         <void property="tabOrder">
@@ -94,7 +97,7 @@
          <string>4.714286</string>
         </void>
         <void property="columnPixels">
-         <float>31.0</float>
+         <float>27.0</float>
         </void>
         <void property="id">
          <int>3</int>
@@ -103,13 +106,13 @@
          <string>32.5625</string>
         </void>
         <void property="linePixels">
-         <float>632.0</float>
+         <float>506.0</float>
         </void>
         <void property="lines">
          <float>1.8125</float>
         </void>
         <void property="linesPixels">
-         <float>36.25</float>
+         <float>29.0</float>
         </void>
         <void property="name">
          <string>screen-1-pb-1</string>
@@ -121,7 +124,7 @@
          <float>7.857143</float>
         </void>
         <void property="sizePixels">
-         <float>62.857143</float>
+         <float>55.0</float>
         </void>
         <void property="tabOrder">
          <int>2</int>
@@ -130,7 +133,7 @@
          <string>←</string>
         </void>
         <void id="PushButtonAlignment0" property="alignment">
-         <void id="Integer0" property="selection"/>
+         <void id="Integer1" property="selection"/>
         </void>
        </object>
       </void>
@@ -140,7 +143,7 @@
          <string>9.625</string>
         </void>
         <void property="columnPixels">
-         <float>70.0</float>
+         <float>61.0</float>
         </void>
         <void property="font">
          <object class="com.iscobol.screenpainter.beans.types.FontType">
@@ -160,13 +163,13 @@
          <string>1.75</string>
         </void>
         <void property="linePixels">
-         <float>16.0</float>
+         <float>13.0</float>
         </void>
         <void property="lines">
          <float>1.75</float>
         </void>
         <void property="linesPixels">
-         <float>35.0</float>
+         <float>28.0</float>
         </void>
         <void property="name">
          <string>screen-1-la-1</string>
@@ -178,13 +181,13 @@
          <float>32.5</float>
         </void>
         <void property="sizePixels">
-         <float>260.0</float>
+         <float>227.5</float>
         </void>
         <void property="tabOrder">
          <int>3</int>
         </void>
         <void property="title">
-         <string>COBOL Star Pilot</string>
+         <string>COBOL Star Pilot X</string>
         </void>
        </object>
       </void>
@@ -200,7 +203,7 @@
          <string>14.0</string>
         </void>
         <void property="columnPixels">
-         <float>105.0</float>
+         <float>92.0</float>
         </void>
         <void property="id">
          <int>6</int>
@@ -209,13 +212,13 @@
          <string>32.5625</string>
         </void>
         <void property="linePixels">
-         <float>632.0</float>
+         <float>506.0</float>
         </void>
         <void property="lines">
          <float>1.8125</float>
         </void>
         <void property="linesPixels">
-         <float>36.25</float>
+         <float>29.0</float>
         </void>
         <void property="name">
          <string>screen-1-pb-2</string>
@@ -227,10 +230,10 @@
          <float>7.857143</float>
         </void>
         <void property="sizePixels">
-         <float>62.857143</float>
+         <float>55.0</float>
         </void>
         <void property="tabOrder">
-         <object idref="Integer0"/>
+         <int>4</int>
         </void>
         <void property="title">
          <string>↑</string>
@@ -249,7 +252,7 @@
          <string>22.727272</string>
         </void>
         <void property="columnPixels">
-         <float>175.0</float>
+         <float>153.0</float>
         </void>
         <void property="id">
          <int>7</int>
@@ -258,13 +261,13 @@
          <string>32.416664</string>
         </void>
         <void property="linePixels">
-         <float>629.0</float>
+         <float>504.0</float>
         </void>
         <void property="lines">
          <float>1.8125</float>
         </void>
         <void property="linesPixels">
-         <float>36.25</float>
+         <float>29.0</float>
         </void>
         <void property="name">
          <string>screen-1-pb-3</string>
@@ -276,7 +279,7 @@
          <float>10.857142</float>
         </void>
         <void property="sizePixels">
-         <float>86.85714</float>
+         <float>76.0</float>
         </void>
         <void property="tabOrder">
          <int>5</int>
@@ -298,7 +301,7 @@
          <string>34.42857</string>
         </void>
         <void property="columnPixels">
-         <float>268.0</float>
+         <float>235.0</float>
         </void>
         <void property="id">
          <int>8</int>
@@ -307,13 +310,13 @@
          <string>32.4375</string>
         </void>
         <void property="linePixels">
-         <float>630.0</float>
+         <float>504.0</float>
         </void>
         <void property="lines">
          <float>1.8125</float>
         </void>
         <void property="linesPixels">
-         <float>36.25</float>
+         <float>29.0</float>
         </void>
         <void property="name">
          <string>screen-1-pb-4</string>
@@ -325,7 +328,7 @@
          <float>7.857143</float>
         </void>
         <void property="sizePixels">
-         <float>62.857143</float>
+         <float>55.0</float>
         </void>
         <void property="tabOrder">
          <int>6</int>
@@ -347,7 +350,7 @@
          <string>44.857143</string>
         </void>
         <void property="columnPixels">
-         <float>352.0</float>
+         <float>308.0</float>
         </void>
         <void property="id">
          <int>9</int>
@@ -356,13 +359,13 @@
          <string>32.5625</string>
         </void>
         <void property="linePixels">
-         <float>632.0</float>
+         <float>506.0</float>
         </void>
         <void property="lines">
          <float>1.8125</float>
         </void>
         <void property="linesPixels">
-         <float>36.25</float>
+         <float>29.0</float>
         </void>
         <void property="name">
          <string>screen-1-pb-5</string>
@@ -374,7 +377,7 @@
          <float>7.857143</float>
         </void>
         <void property="sizePixels">
-         <float>62.857143</float>
+         <float>55.0</float>
         </void>
         <void property="tabOrder">
          <int>7</int>
@@ -391,7 +394,7 @@
          <string>59.857143</string>
         </void>
         <void property="columnPixels">
-         <float>472.0</float>
+         <float>413.0</float>
         </void>
         <void property="id">
          <int>5</int>
@@ -400,13 +403,13 @@
          <string>29.0</string>
         </void>
         <void property="linePixels">
-         <float>561.0</float>
+         <float>449.0</float>
         </void>
         <void property="lines">
          <float>1.75</float>
         </void>
         <void property="linesPixels">
-         <float>35.0</float>
+         <float>28.0</float>
         </void>
         <void property="name">
          <string>screen-1-ef-1</string>
@@ -424,7 +427,7 @@
          <float>7.571429</float>
         </void>
         <void property="sizePixels">
-         <float>60.57143</float>
+         <float>53.0</float>
         </void>
         <void property="tabOrder">
          <int>8</int>
@@ -437,13 +440,13 @@
          <string>70.28571</string>
         </void>
         <void property="columnPixels">
-         <float>555.0</float>
+         <float>486.0</float>
         </void>
         <void property="id">
          <int>10</int>
         </void>
         <void property="itemHeight">
-         <float>1.4</float>
+         <float>1.75</float>
         </void>
         <void property="itemHeightPixels">
          <int>28</int>
@@ -500,13 +503,13 @@
          <string>29.0</string>
         </void>
         <void property="linePixels">
-         <float>561.0</float>
+         <float>449.0</float>
         </void>
         <void property="lines">
          <float>4.0</float>
         </void>
         <void property="linesPixels">
-         <float>80.0</float>
+         <float>64.0</float>
         </void>
         <void property="name">
          <string>screen-1-co-1</string>
@@ -518,11 +521,11 @@
          <float>18.571428</float>
         </void>
         <void property="sizePixels">
-         <float>148.57143</float>
+         <float>130.0</float>
         </void>
         <void property="sizeUnit">
          <object class="com.iscobol.screenpainter.beans.types.DimensionUnit">
-          <int>2</int>
+          <object idref="Integer0"/>
          </object>
         </void>
         <void property="tabOrder">
@@ -536,7 +539,7 @@
          <string>91.0</string>
         </void>
         <void property="columnPixels">
-         <float>721.0</float>
+         <float>631.0</float>
         </void>
         <void property="id">
          <int>11</int>
@@ -545,13 +548,13 @@
          <string>29.0</string>
         </void>
         <void property="linePixels">
-         <float>561.0</float>
+         <float>449.0</float>
         </void>
         <void property="lines">
          <float>1.75</float>
         </void>
         <void property="linesPixels">
-         <float>35.0</float>
+         <float>28.0</float>
         </void>
         <void property="name">
          <string>screen-1-ef-2</string>
@@ -569,7 +572,7 @@
          <float>8.428572</float>
         </void>
         <void property="sizePixels">
-         <float>67.42857</float>
+         <float>59.0</float>
         </void>
         <void property="tabOrder">
          <int>10</int>
@@ -588,7 +591,7 @@
          <string>57.875</string>
         </void>
         <void property="columnPixels">
-         <float>456.0</float>
+         <float>399.0</float>
         </void>
         <void property="id">
          <int>13</int>
@@ -597,13 +600,13 @@
          <string>32.8</string>
         </void>
         <void property="linePixels">
-         <float>637.0</float>
+         <float>510.0</float>
         </void>
         <void property="lines">
          <float>1.55</float>
         </void>
         <void property="linesPixels">
-         <float>31.0</float>
+         <float>24.8</float>
         </void>
         <void property="name">
          <string>screen-1-pb-6</string>
@@ -615,7 +618,7 @@
          <float>10.625</float>
         </void>
         <void property="sizePixels">
-         <float>85.0</float>
+         <float>74.375</float>
         </void>
         <void property="tabOrder">
          <int>11</int>
@@ -637,7 +640,7 @@
          <string>71.625</string>
         </void>
         <void property="columnPixels">
-         <float>566.0</float>
+         <float>495.0</float>
         </void>
         <void property="id">
          <int>14</int>
@@ -646,13 +649,13 @@
          <string>32.8</string>
         </void>
         <void property="linePixels">
-         <float>637.0</float>
+         <float>510.0</float>
         </void>
         <void property="lines">
          <float>1.55</float>
         </void>
         <void property="linesPixels">
-         <float>31.0</float>
+         <float>24.8</float>
         </void>
         <void property="name">
          <string>screen-1-pb-7</string>
@@ -664,7 +667,7 @@
          <float>10.625</float>
         </void>
         <void property="sizePixels">
-         <float>85.0</float>
+         <float>74.375</float>
         </void>
         <void property="tabOrder">
          <int>12</int>
@@ -686,7 +689,7 @@
          <string>84.75</string>
         </void>
         <void property="columnPixels">
-         <float>671.0</float>
+         <float>587.0</float>
         </void>
         <void property="id">
          <int>18</int>
@@ -695,13 +698,13 @@
          <string>32.8</string>
         </void>
         <void property="linePixels">
-         <float>637.0</float>
+         <float>510.0</float>
         </void>
         <void property="lines">
          <float>1.55</float>
         </void>
         <void property="linesPixels">
-         <float>31.0</float>
+         <float>24.8</float>
         </void>
         <void property="name">
          <string>screen-1-pb-8</string>
@@ -713,7 +716,7 @@
          <float>10.625</float>
         </void>
         <void property="sizePixels">
-         <float>85.0</float>
+         <float>74.375</float>
         </void>
         <void property="tabOrder">
          <int>13</int>
@@ -735,7 +738,7 @@
          <string>97.0</string>
         </void>
         <void property="columnPixels">
-         <float>769.0</float>
+         <float>673.0</float>
         </void>
         <void property="id">
          <int>19</int>
@@ -744,13 +747,13 @@
          <string>32.8</string>
         </void>
         <void property="linePixels">
-         <float>637.0</float>
+         <float>510.0</float>
         </void>
         <void property="lines">
          <float>1.55</float>
         </void>
         <void property="linesPixels">
-         <float>31.0</float>
+         <float>24.8</float>
         </void>
         <void property="name">
          <string>screen-1-pb-9</string>
@@ -762,7 +765,7 @@
          <float>10.625</float>
         </void>
         <void property="sizePixels">
-         <float>85.0</float>
+         <float>74.375</float>
         </void>
         <void property="tabOrder">
          <int>14</int>
@@ -801,7 +804,7 @@
          <boolean>false</boolean>
         </void>
         <void property="columnPixels">
-         <float>490.0</float>
+         <float>429.0</float>
         </void>
         <void id="GridColumnSettingList0" property="columnSettings">
          <void id="SettingItemArray3" property="settings">
@@ -887,19 +890,19 @@
          </object>
         </void>
         <void property="id">
-         <object idref="Integer0"/>
+         <object idref="Integer1"/>
         </void>
         <void property="line">
          <string>4.9375</string>
         </void>
         <void property="linePixels">
-         <float>80.0</float>
+         <float>64.0</float>
         </void>
         <void property="lines">
          <float>21.75</float>
         </void>
         <void property="linesPixels">
-         <float>435.0</float>
+         <float>348.0</float>
         </void>
         <void property="msgGotoCellMouseEv">
          <string>is-destroy-bitmaps</string>
@@ -958,7 +961,7 @@
          <float>56.57143</float>
         </void>
         <void property="sizePixels">
-         <float>452.57144</float>
+         <float>396.0</float>
         </void>
         <void property="tabOrder">
          <int>15</int>
@@ -983,7 +986,7 @@
          <string>51.625</string>
         </void>
         <void property="columnPixels">
-         <float>406.0</float>
+         <float>355.0</float>
         </void>
         <void property="id">
          <int>15</int>
@@ -992,13 +995,13 @@
          <string>2.05</string>
         </void>
         <void property="linePixels">
-         <float>22.0</float>
+         <float>18.0</float>
         </void>
         <void property="lines">
          <float>1.7</float>
         </void>
         <void property="linesPixels">
-         <float>34.0</float>
+         <float>27.2</float>
         </void>
         <void property="name">
          <string>screen-1-pb-10</string>
@@ -1010,7 +1013,7 @@
          <float>10.625</float>
         </void>
         <void property="sizePixels">
-         <float>85.0</float>
+         <float>74.375</float>
         </void>
         <void property="tabOrder">
          <int>16</int>
@@ -1026,7 +1029,7 @@
          <string>63.25</string>
         </void>
         <void property="columnPixels">
-         <float>499.0</float>
+         <float>437.0</float>
         </void>
         <void property="id">
          <int>16</int>
@@ -1035,13 +1038,13 @@
          <string>2.2</string>
         </void>
         <void property="linePixels">
-         <float>25.0</float>
+         <float>20.0</float>
         </void>
         <void property="lines">
          <float>1.4375</float>
         </void>
         <void property="linesPixels">
-         <float>28.75</float>
+         <float>23.0</float>
         </void>
         <void property="name">
          <string>screen-1-ef-4</string>
@@ -1059,7 +1062,7 @@
          <float>32.142857</float>
         </void>
         <void property="sizePixels">
-         <float>257.14285</float>
+         <float>225.0</float>
         </void>
         <void property="tabOrder">
          <int>17</int>
@@ -1078,7 +1081,7 @@
          <string>109.125</string>
         </void>
         <void property="columnPixels">
-         <float>866.0</float>
+         <float>758.0</float>
         </void>
         <void property="id">
          <int>17</int>
@@ -1087,13 +1090,13 @@
          <string>2.2</string>
         </void>
         <void property="linePixels">
-         <float>25.0</float>
+         <float>20.0</float>
         </void>
         <void property="lines">
          <float>1.7</float>
         </void>
         <void property="linesPixels">
-         <float>34.0</float>
+         <float>27.2</float>
         </void>
         <void property="name">
          <string>screen-1-pb-11</string>
@@ -1105,7 +1108,7 @@
          <float>10.625</float>
         </void>
         <void property="sizePixels">
-         <float>85.0</float>
+         <float>74.375</float>
         </void>
         <void property="tabOrder">
          <int>18</int>
@@ -1127,7 +1130,7 @@
          <string>97.0</string>
         </void>
         <void property="columnPixels">
-         <float>769.0</float>
+         <float>673.0</float>
         </void>
         <void property="id">
          <int>12</int>
@@ -1136,13 +1139,13 @@
          <string>2.2</string>
         </void>
         <void property="linePixels">
-         <float>25.0</float>
+         <float>20.0</float>
         </void>
         <void property="lines">
          <float>1.7</float>
         </void>
         <void property="linesPixels">
-         <float>34.0</float>
+         <float>27.2</float>
         </void>
         <void property="name">
          <string>screen-1-pb-12</string>
@@ -1154,7 +1157,7 @@
          <float>10.625</float>
         </void>
         <void property="sizePixels">
-         <float>85.0</float>
+         <float>74.375</float>
         </void>
         <void property="tabOrder">
          <int>19</int>
@@ -1170,7 +1173,7 @@
          <string>100.71429</string>
         </void>
         <void property="columnPixels">
-         <float>799.0</float>
+         <float>699.0</float>
         </void>
         <void property="id">
          <int>20</int>
@@ -1179,13 +1182,13 @@
          <string>29.0</string>
         </void>
         <void property="linePixels">
-         <float>561.0</float>
+         <float>449.0</float>
         </void>
         <void property="lines">
          <float>1.75</float>
         </void>
         <void property="linesPixels">
-         <float>35.0</float>
+         <float>28.0</float>
         </void>
         <void property="name">
          <string>screen-1-ef-3</string>
@@ -1203,7 +1206,7 @@
          <float>8.571428</float>
         </void>
         <void property="sizePixels">
-         <float>68.57143</float>
+         <float>60.0</float>
         </void>
         <void property="tabOrder">
          <int>20</int>
@@ -1216,7 +1219,7 @@
          <string>112.0</string>
         </void>
         <void property="columnPixels">
-         <float>889.0</float>
+         <float>778.0</float>
         </void>
         <void property="id">
          <int>21</int>
@@ -1225,13 +1228,13 @@
          <string>29.0</string>
         </void>
         <void property="linePixels">
-         <float>561.0</float>
+         <float>449.0</float>
         </void>
         <void property="lines">
          <float>1.75</float>
         </void>
         <void property="linesPixels">
-         <float>35.0</float>
+         <float>28.0</float>
         </void>
         <void property="name">
          <string>screen-1-ef-5</string>
@@ -1249,7 +1252,7 @@
          <float>6.571429</float>
         </void>
         <void property="sizePixels">
-         <float>52.57143</float>
+         <float>46.0</float>
         </void>
         <void property="tabOrder">
          <int>21</int>
@@ -1269,7 +1272,7 @@
          <string>4.714286</string>
         </void>
         <void property="columnPixels">
-         <float>31.0</float>
+         <float>27.0</float>
         </void>
         <void property="id">
          <int>22</int>
@@ -1278,13 +1281,13 @@
          <string>29.0</string>
         </void>
         <void property="linePixels">
-         <float>561.0</float>
+         <float>449.0</float>
         </void>
         <void property="lines">
          <float>1.75</float>
         </void>
         <void property="linesPixels">
-         <float>35.0</float>
+         <float>28.0</float>
         </void>
         <void property="name">
          <string>screen-1-ef-6</string>
@@ -1305,7 +1308,7 @@
          <float>45.285713</float>
         </void>
         <void property="sizePixels">
-         <float>362.2857</float>
+         <float>317.0</float>
         </void>
         <void property="tabOrder">
          <int>22</int>
@@ -1323,7 +1326,7 @@
          <string>109.125</string>
         </void>
         <void property="columnPixels">
-         <float>866.0</float>
+         <float>758.0</float>
         </void>
         <void property="exceptionValue">
          <int>27</int>
@@ -1335,13 +1338,13 @@
          <string>32.8</string>
         </void>
         <void property="linePixels">
-         <float>637.0</float>
+         <float>510.0</float>
         </void>
         <void property="lines">
          <float>1.55</float>
         </void>
         <void property="linesPixels">
-         <float>31.0</float>
+         <float>24.8</float>
         </void>
         <void property="name">
          <string>screen-1-pb-13</string>
@@ -1353,7 +1356,7 @@
          <float>10.625</float>
         </void>
         <void property="sizePixels">
-         <float>85.0</float>
+         <float>74.375</float>
         </void>
         <void property="tabOrder">
          <int>23</int>
