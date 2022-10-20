@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="ASCII"?>
 <application:Application xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:advanced="http://www.eclipse.org/ui/2010/UIModel/application/ui/advanced" xmlns:application="http://www.eclipse.org/ui/2010/UIModel/application" xmlns:basic="http://www.eclipse.org/ui/2010/UIModel/application/ui/basic" xmlns:menu="http://www.eclipse.org/ui/2010/UIModel/application/ui/menu" xmi:id="_OWOIcVAwEe2evdif3qtWag" elementId="org.eclipse.e4.legacy.ide.application" contributorURI="platform:/plugin/org.eclipse.ui.workbench" selectedElement="_OWOIclAwEe2evdif3qtWag" bindingContexts="_OWOIe1AwEe2evdif3qtWag">
-  <persistedState key="memento" value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xD;&#xA;&lt;workbench>&#xD;&#xA;&lt;mruList>&#xD;&#xA;&lt;file factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; id=&quot;iscobolscreenpainter.MultipageScreenSectionEditor&quot; name=&quot;StarPilot.isp&quot; tooltip=&quot;starPilot/screen/StarPilot.isp&quot;>&#xD;&#xA;&lt;persistable path=&quot;/starPilot/screen/StarPilot.isp&quot;/>&#xD;&#xA;&lt;/file>&#xD;&#xA;&lt;/mruList>&#xD;&#xA;&lt;/workbench>"/>
+  <persistedState key="memento" value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xD;&#xA;&lt;workbench>&#xD;&#xA;&lt;mruList>&#xD;&#xA;&lt;file factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; id=&quot;com.iscobol.plugins.editor.IscobolEditor&quot; name=&quot;StarPilot.cbl&quot; tooltip=&quot;starPilot/source/StarPilot.cbl&quot;>&#xD;&#xA;&lt;persistable path=&quot;/starPilot/source/StarPilot.cbl&quot;/>&#xD;&#xA;&lt;/file>&#xD;&#xA;&lt;file factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; id=&quot;iscobolscreenpainter.MultipageScreenSectionEditor&quot; name=&quot;StarPilot.isp&quot; tooltip=&quot;starPilot/screen/StarPilot.isp&quot;>&#xD;&#xA;&lt;persistable path=&quot;/starPilot/screen/StarPilot.isp&quot;/>&#xD;&#xA;&lt;/file>&#xD;&#xA;&lt;/mruList>&#xD;&#xA;&lt;/workbench>"/>
   <tags>activeSchemeId:org.eclipse.ui.defaultAcceleratorConfiguration</tags>
   <children xsi:type="basic:TrimmedWindow" xmi:id="_OWOIclAwEe2evdif3qtWag" elementId="IDEWindow" contributorURI="platform:/plugin/org.eclipse.ui.workbench" selectedElement="_UNMi41AwEe2evdif3qtWag" x="324" y="68" width="1024" height="768">
     <persistedState key="coolBarVisible" value="true"/>
@@ -84,7 +84,7 @@
                 </children>
               </children>
             </children>
-            <children xsi:type="basic:PartSashContainer" xmi:id="_Usyo-VAwEe2evdif3qtWag" containerData="8000" selectedElement="_UsypCVAwEe2evdif3qtWag" horizontal="true">
+            <children xsi:type="basic:PartSashContainer" xmi:id="_Usyo-VAwEe2evdif3qtWag" containerData="8000" selectedElement="_Usyo-lAwEe2evdif3qtWag" horizontal="true">
               <children xsi:type="basic:PartSashContainer" xmi:id="_Usyo-lAwEe2evdif3qtWag" containerData="7500" selectedElement="_Usyo-1AwEe2evdif3qtWag">
                 <children xsi:type="advanced:Placeholder" xmi:id="_Usyo-1AwEe2evdif3qtWag" elementId="org.eclipse.ui.editorss" containerData="7500" ref="_UqjNQFAwEe2evdif3qtWag"/>
                 <children xsi:type="basic:PartStack" xmi:id="_Usyo_FAwEe2evdif3qtWag" elementId="bottom" containerData="2500" selectedElement="_Usyo_VAwEe2evdif3qtWag">
@@ -149,13 +149,13 @@
                     <tags>categoryTag:General</tags>
                   </children>
                 </children>
-                <children xsi:type="basic:PartStack" xmi:id="_UsypDVAwEe2evdif3qtWag" elementId="bottomRight" containerData="7007" selectedElement="_S5JSUVA2Ee2vyq3biTZyrQ">
+                <children xsi:type="basic:PartStack" xmi:id="_UsypDVAwEe2evdif3qtWag" elementId="bottomRight" containerData="7007" selectedElement="_UsypDlAwEe2evdif3qtWag">
                   <tags>Git</tags>
                   <children xsi:type="advanced:Placeholder" xmi:id="_UsypDlAwEe2evdif3qtWag" elementId="org.eclipse.ui.views.PropertySheet" ref="_Ur5RGFAwEe2evdif3qtWag" closeable="true">
                     <tags>View</tags>
                     <tags>categoryTag:General</tags>
                   </children>
-                  <children xsi:type="advanced:Placeholder" xmi:id="_S5JSUVA2Ee2vyq3biTZyrQ" elementId="org.eclipse.egit.ui.StagingView" ref="_S5JSUFA2Ee2vyq3biTZyrQ" closeable="true">
+                  <children xsi:type="advanced:Placeholder" xmi:id="_S5JSUVA2Ee2vyq3biTZyrQ" elementId="org.eclipse.egit.ui.StagingView" toBeRendered="false" ref="_S5JSUFA2Ee2vyq3biTZyrQ" closeable="true">
                     <tags>View</tags>
                     <tags>categoryTag:Git</tags>
                   </children>
@@ -199,10 +199,16 @@
       <tags>categoryTag:Help</tags>
     </sharedElements>
     <sharedElements xsi:type="advanced:Area" xmi:id="_UqjNQFAwEe2evdif3qtWag" elementId="org.eclipse.ui.editorss" selectedElement="_UqjNQVAwEe2evdif3qtWag">
-      <children xsi:type="basic:PartStack" xmi:id="_UqjNQVAwEe2evdif3qtWag" elementId="org.eclipse.e4.primaryDataStack" selectedElement="_869jwFA1Ee2vyq3biTZyrQ">
+      <children xsi:type="basic:PartStack" xmi:id="_UqjNQVAwEe2evdif3qtWag" elementId="org.eclipse.e4.primaryDataStack" selectedElement="_KBN9cFA4Ee2wJ76kVZSJPg">
         <tags>org.eclipse.e4.primaryDataStack</tags>
         <tags>EditorStack</tags>
-        <children xsi:type="basic:Part" xmi:id="_869jwFA1Ee2vyq3biTZyrQ" elementId="org.eclipse.e4.ui.compatibility.editor" contributionURI="bundleclass://org.eclipse.ui.workbench/org.eclipse.ui.internal.e4.compatibility.CompatibilityEditor" label="StarPilot" iconURI="platform:/plugin/com.iscobol.plugins.screenpainter.IscobolScreenPainter/icons/program.png" closeable="true">
+        <children xsi:type="basic:Part" xmi:id="_KBN9cFA4Ee2wJ76kVZSJPg" elementId="org.eclipse.e4.ui.compatibility.editor" contributionURI="bundleclass://org.eclipse.ui.workbench/org.eclipse.ui.internal.e4.compatibility.CompatibilityEditor" label="StarPilot.cbl" iconURI="platform:/plugin/com.iscobol.plugins.editor.IscobolEditor/icons/source.gif" closeable="true">
+          <persistedState key="memento" value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xD;&#xA;&lt;editor id=&quot;com.iscobol.plugins.editor.IscobolEditor&quot; name=&quot;StarPilot.cbl&quot; partName=&quot;StarPilot.cbl&quot; title=&quot;StarPilot.cbl&quot; tooltip=&quot;starPilot/source/StarPilot.cbl&quot;>&#xD;&#xA;&lt;input factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; path=&quot;/starPilot/source/StarPilot.cbl&quot;/>&#xD;&#xA;&lt;editorState selectionHorizontalPixel=&quot;0&quot; selectionLength=&quot;0&quot; selectionOffset=&quot;0&quot; selectionTopPixel=&quot;2100&quot;/>&#xD;&#xA;&lt;/editor>"/>
+          <tags>Editor</tags>
+          <tags>removeOnHide</tags>
+          <tags>com.iscobol.plugins.editor.IscobolEditor</tags>
+        </children>
+        <children xsi:type="basic:Part" xmi:id="_NMnicFA4Ee2wJ76kVZSJPg" elementId="org.eclipse.e4.ui.compatibility.editor" contributionURI="bundleclass://org.eclipse.ui.workbench/org.eclipse.ui.internal.e4.compatibility.CompatibilityEditor" label="StarPilot" iconURI="platform:/plugin/com.iscobol.plugins.screenpainter.IscobolScreenPainter/icons/program.png" closeable="true">
           <persistedState key="memento" value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xD;&#xA;&lt;editor id=&quot;iscobolscreenpainter.MultipageScreenSectionEditor&quot; name=&quot;StarPilot.isp&quot; partName=&quot;StarPilot&quot; title=&quot;StarPilot&quot; tooltip=&quot;starPilot/screen/StarPilot.isp&quot;>&#xD;&#xA;&lt;input factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; path=&quot;/starPilot/screen/StarPilot.isp&quot;/>&#xD;&#xA;&lt;/editor>"/>
           <tags>Editor</tags>
           <tags>removeOnHide</tags>
@@ -213,7 +219,7 @@
     <sharedElements xsi:type="basic:Part" xmi:id="_UrmWIFAwEe2evdif3qtWag" elementId="com.iscobol.plugins.screenpainter.views.IscobolStructuralView" contributionURI="bundleclass://org.eclipse.ui.workbench/org.eclipse.ui.internal.e4.compatibility.CompatibilityView" label="Structural" iconURI="platform:/plugin/com.iscobol.plugins.screenpainter.IscobolScreenPainter/icons/programlist.png" tooltip="" closeable="true">
       <persistedState key="originalCompatibilityViewClass" value="com.iscobol.screenpainter.views.StructuralView"/>
       <persistedState key="originalCompatibilityViewBundle" value="com.iscobol.plugins.screenpainter.IscobolScreenPainter"/>
-      <persistedState key="memento" value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xD;&#xA;&lt;view LINK_NAVIGATOR_TO_EDITOR=&quot;0&quot; sorter=&quot;1&quot;>&#xD;&#xA;&lt;filters>&#xD;&#xA;&lt;filter element=&quot;*.class&quot; isEnabled=&quot;false&quot;/>&#xD;&#xA;&lt;filter element=&quot;RemoteSystemsConnections&quot; isEnabled=&quot;true&quot;/>&#xD;&#xA;&lt;filter element=&quot;RemoteSystemsTempFiles&quot; isEnabled=&quot;true&quot;/>&#xD;&#xA;&lt;filter element=&quot;.*&quot; isEnabled=&quot;false&quot;/>&#xD;&#xA;&lt;filter element=&quot;*.cbl&quot; isEnabled=&quot;false&quot;/>&#xD;&#xA;&lt;filter element=&quot;*.list&quot; isEnabled=&quot;false&quot;/>&#xD;&#xA;&lt;filter element=&quot;*.def&quot; isEnabled=&quot;false&quot;/>&#xD;&#xA;&lt;filter element=&quot;*.cpy&quot; isEnabled=&quot;false&quot;/>&#xD;&#xA;&lt;filter element=&quot;*.cl2&quot; isEnabled=&quot;false&quot;/>&#xD;&#xA;&lt;/filters>&#xD;&#xA;&lt;expanded/>&#xD;&#xA;&lt;/view>"/>
+      <persistedState key="memento" value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xD;&#xA;&lt;view LINK_NAVIGATOR_TO_EDITOR=&quot;0&quot; sorter=&quot;1&quot;>&#xD;&#xA;&lt;filters>&#xD;&#xA;&lt;filter element=&quot;*.class&quot; isEnabled=&quot;false&quot;/>&#xD;&#xA;&lt;filter element=&quot;RemoteSystemsConnections&quot; isEnabled=&quot;true&quot;/>&#xD;&#xA;&lt;filter element=&quot;RemoteSystemsTempFiles&quot; isEnabled=&quot;true&quot;/>&#xD;&#xA;&lt;filter element=&quot;.*&quot; isEnabled=&quot;false&quot;/>&#xD;&#xA;&lt;filter element=&quot;*.cbl&quot; isEnabled=&quot;false&quot;/>&#xD;&#xA;&lt;filter element=&quot;*.list&quot; isEnabled=&quot;false&quot;/>&#xD;&#xA;&lt;filter element=&quot;*.def&quot; isEnabled=&quot;false&quot;/>&#xD;&#xA;&lt;filter element=&quot;*.cpy&quot; isEnabled=&quot;false&quot;/>&#xD;&#xA;&lt;filter element=&quot;*.cl2&quot; isEnabled=&quot;false&quot;/>&#xD;&#xA;&lt;/filters>&#xD;&#xA;&lt;expanded>&#xD;&#xA;&lt;element path=&quot;/starPilot&quot;/>&#xD;&#xA;&lt;/expanded>&#xD;&#xA;&lt;/view>"/>
       <tags>View</tags>
       <tags>categoryTag:isCOBOL</tags>
       <menus xmi:id="_VMYH8FAwEe2evdif3qtWag" elementId="com.iscobol.plugins.screenpainter.views.IscobolStructuralView">
@@ -225,7 +231,7 @@
     <sharedElements xsi:type="basic:Part" xmi:id="_UrmWIVAwEe2evdif3qtWag" elementId="com.iscobol.plugins.editor.views.IscobolFileView" contributionURI="bundleclass://org.eclipse.ui.workbench/org.eclipse.ui.internal.e4.compatibility.CompatibilityView" label="File" iconURI="platform:/plugin/com.iscobol.plugins.editor.IscobolEditor/icons/file_list.gif" tooltip="" closeable="true">
       <persistedState key="originalCompatibilityViewClass" value="com.iscobol.plugins.editor.views.FileView"/>
       <persistedState key="originalCompatibilityViewBundle" value="com.iscobol.plugins.editor.IscobolEditor"/>
-      <persistedState key="memento" value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xD;&#xA;&lt;view LINK_NAVIGATOR_TO_EDITOR=&quot;0&quot; sorter=&quot;1&quot;>&#xD;&#xA;&lt;filters>&#xD;&#xA;&lt;filter element=&quot;*.class&quot; isEnabled=&quot;false&quot;/>&#xD;&#xA;&lt;filter element=&quot;RemoteSystemsConnections&quot; isEnabled=&quot;true&quot;/>&#xD;&#xA;&lt;filter element=&quot;RemoteSystemsTempFiles&quot; isEnabled=&quot;true&quot;/>&#xD;&#xA;&lt;filter element=&quot;.*&quot; isEnabled=&quot;false&quot;/>&#xD;&#xA;&lt;filter element=&quot;*.cbl&quot; isEnabled=&quot;false&quot;/>&#xD;&#xA;&lt;filter element=&quot;*.list&quot; isEnabled=&quot;false&quot;/>&#xD;&#xA;&lt;filter element=&quot;*.def&quot; isEnabled=&quot;false&quot;/>&#xD;&#xA;&lt;filter element=&quot;*.cpy&quot; isEnabled=&quot;false&quot;/>&#xD;&#xA;&lt;filter element=&quot;*.cl2&quot; isEnabled=&quot;false&quot;/>&#xD;&#xA;&lt;/filters>&#xD;&#xA;&lt;expanded>&#xD;&#xA;&lt;element path=&quot;/starPilot&quot;/>&#xD;&#xA;&lt;element path=&quot;/starPilot/source&quot;/>&#xD;&#xA;&lt;/expanded>&#xD;&#xA;&lt;selection>&#xD;&#xA;&lt;element path=&quot;/starPilot&quot;/>&#xD;&#xA;&lt;/selection>&#xD;&#xA;&lt;/view>"/>
+      <persistedState key="memento" value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xD;&#xA;&lt;view LINK_NAVIGATOR_TO_EDITOR=&quot;0&quot; sorter=&quot;1&quot;>&#xD;&#xA;&lt;filters>&#xD;&#xA;&lt;filter element=&quot;*.class&quot; isEnabled=&quot;false&quot;/>&#xD;&#xA;&lt;filter element=&quot;RemoteSystemsConnections&quot; isEnabled=&quot;true&quot;/>&#xD;&#xA;&lt;filter element=&quot;RemoteSystemsTempFiles&quot; isEnabled=&quot;true&quot;/>&#xD;&#xA;&lt;filter element=&quot;.*&quot; isEnabled=&quot;false&quot;/>&#xD;&#xA;&lt;filter element=&quot;*.cbl&quot; isEnabled=&quot;false&quot;/>&#xD;&#xA;&lt;filter element=&quot;*.list&quot; isEnabled=&quot;false&quot;/>&#xD;&#xA;&lt;filter element=&quot;*.def&quot; isEnabled=&quot;false&quot;/>&#xD;&#xA;&lt;filter element=&quot;*.cpy&quot; isEnabled=&quot;false&quot;/>&#xD;&#xA;&lt;filter element=&quot;*.cl2&quot; isEnabled=&quot;false&quot;/>&#xD;&#xA;&lt;/filters>&#xD;&#xA;&lt;expanded>&#xD;&#xA;&lt;element path=&quot;/starPilot&quot;/>&#xD;&#xA;&lt;element path=&quot;/starPilot/source&quot;/>&#xD;&#xA;&lt;/expanded>&#xD;&#xA;&lt;selection>&#xD;&#xA;&lt;element path=&quot;/starPilot/source/StarPilot.cbl&quot;/>&#xD;&#xA;&lt;/selection>&#xD;&#xA;&lt;/view>"/>
       <tags>View</tags>
       <tags>categoryTag:isCOBOL</tags>
       <tags>active</tags>
@@ -381,7 +387,7 @@
       </children>
       <children xsi:type="menu:ToolBar" xmi:id="_UTwd4lAwEe2evdif3qtWag" elementId="org.eclipse.ui.workbench.file">
         <tags>Draggable</tags>
-        <children xsi:type="menu:HandledToolItem" xmi:id="_3J3H0FA1Ee2vyq3biTZyrQ" elementId="print" visible="false" iconURI="platform:/plugin/org.eclipse.ui/icons/full/etool16/print_edit.png" tooltip="Print" command="_OdhDyFAwEe2evdif3qtWag"/>
+        <children xsi:type="menu:HandledToolItem" xmi:id="_sRBrIFA3Ee2wJ76kVZSJPg" elementId="print" visible="false" iconURI="platform:/plugin/org.eclipse.ui/icons/full/etool16/print_edit.png" tooltip="Print" command="_OdhDyFAwEe2evdif3qtWag"/>
       </children>
       <children xsi:type="menu:ToolBar" xmi:id="_UTwd41AwEe2evdif3qtWag" elementId="group.edit" toBeRendered="false">
         <tags>toolbarSeparator</tags>
@@ -409,7 +415,7 @@
       </children>
       <children xsi:type="menu:ToolBar" xmi:id="_UT5n1VAwEe2evdif3qtWag" elementId="org.eclipse.ui.workbench.navigate">
         <tags>Draggable</tags>
-        <children xsi:type="menu:HandledToolItem" xmi:id="_3KKCwFA1Ee2vyq3biTZyrQ" elementId="org.eclipse.ui.window.pinEditor" iconURI="platform:/plugin/org.eclipse.ui/icons/full/etool16/pin_editor.png" tooltip="Pin Editor" enabled="false" type="Check" command="_OdhDX1AwEe2evdif3qtWag"/>
+        <children xsi:type="menu:HandledToolItem" xmi:id="_sRUmEFA3Ee2wJ76kVZSJPg" elementId="org.eclipse.ui.window.pinEditor" iconURI="platform:/plugin/org.eclipse.ui/icons/full/etool16/pin_editor.png" tooltip="Pin Editor" enabled="false" type="Check" command="_OdhDX1AwEe2evdif3qtWag"/>
       </children>
       <children xsi:type="menu:ToolBar" xmi:id="_UT5n1lAwEe2evdif3qtWag" elementId="group.editor" toBeRendered="false">
         <tags>toolbarSeparator</tags>
@@ -3310,7 +3316,7 @@
   <addons xmi:id="_OWXSa1AwEe2evdif3qtWag" elementId="MinMax Addon" contributorURI="platform:/plugin/org.eclipse.ui.workbench" contributionURI="bundleclass://org.eclipse.e4.ui.workbench.addons.swt/org.eclipse.e4.ui.workbench.addons.minmax.MinMaxAddon"/>
   <addons xmi:id="_OWXSbFAwEe2evdif3qtWag" elementId="org.eclipse.ui.workbench.addon.0" contributorURI="platform:/plugin/org.eclipse.ui.workbench" contributionURI="bundleclass://org.eclipse.e4.ui.workbench/org.eclipse.e4.ui.internal.workbench.addons.HandlerProcessingAddon"/>
   <addons xmi:id="_OXjlMFAwEe2evdif3qtWag" elementId="SplitterAddon" contributionURI="bundleclass://org.eclipse.e4.ui.workbench.addons.swt/org.eclipse.e4.ui.workbench.addons.splitteraddon.SplitterAddon"/>
-  <addons xmi:id="_16ZrEVA1Ee2vyq3biTZyrQ" elementId="org.eclipse.ui.ide.addon.0" contributionURI="bundleclass://org.eclipse.ui.ide/org.eclipse.ui.internal.ide.addons.SaveAllDirtyPartsAddon"/>
+  <addons xmi:id="_IYS0IKimEeS11vbz3f9ezw" elementId="org.eclipse.ui.ide.addon.0" contributorURI="platform:/plugin/org.eclipse.ui.ide" contributionURI="bundleclass://org.eclipse.ui.ide/org.eclipse.ui.internal.ide.addons.SaveAllDirtyPartsAddon"/>
   <addons xmi:id="_dz0JgGOlEeSMMaPQU2nlzw" elementId="org.eclipse.ui.ide.application.addon.0" contributorURI="platform:/plugin/org.eclipse.ui.ide.application" contributionURI="bundleclass://org.eclipse.ui.ide.application/org.eclipse.ui.internal.ide.application.addons.ModelCleanupAddon"/>
   <categories xmi:id="_OcUwcFAwEe2evdif3qtWag" elementId="org.eclipse.ui.category.edit" name="Edit"/>
   <categories xmi:id="_OcUwcVAwEe2evdif3qtWag" elementId="org.tigris.subversion.subclipse.commandCategory" name="SVN" description="SVN &#x30ea;&#x30dd;&#x30b8;&#x30c8;&#x30ea;&#x30fc;&#x306e;&#x64cd;&#x4f5c;&#x306b;&#x95a2;&#x3059;&#x308b;&#x30a2;&#x30af;&#x30b7;&#x30e7;&#x30f3;"/>

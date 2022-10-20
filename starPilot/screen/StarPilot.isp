@@ -137,10 +137,10 @@
       <void index="2">
        <object class="com.iscobol.screenpainter.beans.swing.SwingLabel">
         <void property="column">
-         <string>17.0</string>
+         <string>9.625</string>
         </void>
         <void property="columnPixels">
-         <float>129.0</float>
+         <float>70.0</float>
         </void>
         <void property="font">
          <object class="com.iscobol.screenpainter.beans.types.FontType">
@@ -157,16 +157,16 @@
          <int>1</int>
         </void>
         <void property="line">
-         <string>1.5625</string>
+         <string>1.75</string>
         </void>
         <void property="linePixels">
-         <float>12.0</float>
+         <float>16.0</float>
         </void>
         <void property="lines">
-         <float>1.95</float>
+         <float>1.75</float>
         </void>
         <void property="linesPixels">
-         <float>39.0</float>
+         <float>35.0</float>
         </void>
         <void property="name">
          <string>screen-1-la-1</string>
@@ -175,16 +175,16 @@
          <int>3</int>
         </void>
         <void property="size">
-         <float>21.0</float>
+         <float>32.5</float>
         </void>
         <void property="sizePixels">
-         <float>168.0</float>
+         <float>260.0</float>
         </void>
         <void property="tabOrder">
          <int>3</int>
         </void>
         <void property="title">
-         <string>Star Pilot</string>
+         <string>COBOL Star Pilot</string>
         </void>
        </object>
       </void>
@@ -230,7 +230,7 @@
          <float>62.857143</float>
         </void>
         <void property="tabOrder">
-         <int>4</int>
+         <object idref="Integer0"/>
         </void>
         <void property="title">
          <string>↑</string>
@@ -336,7 +336,7 @@
        </object>
       </void>
       <void index="6">
-       <object class="com.iscobol.screenpainter.beans.swing.SwingPushButton">
+       <object class="com.iscobol.screenpainter.beans.swing.SwingPushButton" id="SwingPushButton1">
         <void property="eventProcedure">
          <string>screen-1-pb-1-evt-proc</string>
         </void>
@@ -382,6 +382,7 @@
         <void property="title">
          <string>→</string>
         </void>
+        <void id="Boolean0" method="isBitmapSquare"/>
        </object>
       </void>
       <void index="7">
@@ -576,7 +577,7 @@
        </object>
       </void>
       <void index="10">
-       <object class="com.iscobol.screenpainter.beans.swing.SwingPushButton" id="SwingPushButton1">
+       <object class="com.iscobol.screenpainter.beans.swing.SwingPushButton">
         <void property="eventProcedure">
          <string>screen-1-pb-1-evt-proc</string>
         </void>
@@ -622,7 +623,6 @@
         <void property="title">
          <string>Insert</string>
         </void>
-        <void id="Boolean0" method="isBitmapSquare"/>
        </object>
       </void>
       <void index="11">
