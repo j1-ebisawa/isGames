@@ -397,7 +397,7 @@
              lines 6.5 cells 
              font Arial-20v0
              id 25
-             title "CatsEye Gold"
+             title "CatsEye Gold X"
              .
           03 screen-1-pb-11 Push-Button
              exception-value 6
