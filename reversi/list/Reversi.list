@@ -1,7 +1,7 @@
 *>(c) 2005 - 2021 Veryant
 *>compiler version: isCOBOL release 2022 R2 build#1074.6-20220909-34620
 *>source file name:  C:\Github\isGames\reversi\source\Reversi.cbl
-*>date generated  :  Thu Oct 20 13:48:13 GMT+09:00 2022
+*>date generated  :  Sun Oct 23 10:10:43 GMT+09:00 2022
 *>compiler options:  -dx -eo=C:/Github/isGames/reversi/errs -sp=cpy;screenpgm;fdsl -esme=100 -d -smat -g -lo=C:/Github/isGames/reversi/list -tasks -od=C:/Github/isGames/reversi/output -jj
 *>begin {iscobol}compiler-directives                               
 *>end {iscobol}compiler-directives                                 
@@ -1081,9 +1081,6 @@ working-storage section.
 *>^^^-> file: C:\Github\isGames\reversi\cpy\ismsg.def
 *>end {iscobol}is-def                                              
 *>begin {iscobol}copy-working                                      
-*>copy "Reversi.wrk".                                              
-*>vvv-> file: C:\Github\isGames\reversi\screenpgm\Reversi.wrk
-*>Reversi.wrk is generated from C:\Github\isGames\reversi\screen\Re
 77 key-status is special-names crt status pic 9(4) value 0.      
    88 exit-pushed value 27.                                      
    88 message-received value 95.                                 
@@ -1186,7 +1183,6 @@ working-storage section.
       10 dev-x occurs 8 pic x(02).                               
                                                                  
 *>end working-storage editor code                                  
-*>^^^-> file: C:\Github\isGames\reversi\screenpgm\Reversi.wrk
 *>end {iscobol}copy-working                                        
 *>begin {iscobol}external-definitions                              
 *>end {iscobol}external-definitions                                
@@ -1199,9 +1195,6 @@ linkage section.
 *>end {iscobol}copy-linkage                                        
 screen section.                                                  
 *>begin {iscobol}copy-screen                                       
-*>copy "Reversi.scr".                                              
-*>vvv-> file: C:\Github\isGames\reversi\screenpgm\Reversi.scr
-*>Reversi.scr is generated from C:\Github\isGames\reversi\screen\Re
 01 screen-1                                                      
 .                                                                
    03 screen-1-la-1 Label                                        
@@ -1388,7 +1381,6 @@ screen section.
       id 10                                                      
       title "Z  |   œ"                                           
       .                                                          
-*>^^^-> file: C:\Github\isGames\reversi\screenpgm\Reversi.scr
 *>end {iscobol}copy-screen                                         
 *>begin {iscobol}procedure-using                                   
 procedure division.                                              
@@ -1540,9 +1532,6 @@ is-message-box.
 
 *>       >>SOURCE FORMAT PREVIOUS
 *>^^^-> file: C:\Github\isGames\reversi\cpy\ismsg.cpy
-*>copy "Reversi.prd".                                              
-*>vvv-> file: C:\Github\isGames\reversi\screenpgm\Reversi.prd
-*>Reversi.prd is generated from C:\Github\isGames\reversi\screen\Re
 is-initial-routine.                                              
     accept system-information from system-info.                  
     accept terminal-abilities from terminal-info.                
@@ -1622,10 +1611,6 @@ is-screen-1-evaluate-func.
     move 1 to accept-control.                                    
 is-screen-1-exit.                                                
     set exit-pushed to true.                                     
-*>^^^-> file: C:\Github\isGames\reversi\screenpgm\Reversi.prd
-*>copy "Reversi.evt".                                              
-*>vvv-> file: C:\Github\isGames\reversi\screenpgm\Reversi.evt
-*>Reversi.evt is generated from C:\Github\isGames\reversi\screen\Re
 screen-1-gr-1-evt-proc.                                          
     evaluate event-type                                          
     when msg-gd-dblclick                                         
@@ -1880,7 +1865,6 @@ RESET-RTN.
                                                                  
                                                                  
 *>end event editor code                                            
-*>^^^-> file: C:\Github\isGames\reversi\screenpgm\Reversi.evt
 *>end {iscobol}copy-procedure                                      
 report-composer section.                                         
 *>begin {iscobol}external-copyfiles                                

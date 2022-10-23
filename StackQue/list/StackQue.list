@@ -1,7 +1,7 @@
 *>(c) 2005 - 2021 Veryant
 *>compiler version: isCOBOL release 2022 R2 build#1074.6-20220909-34620
 *>source file name:  C:\Github\isGames\StackQue\source\StackQue.cbl
-*>date generated  :  Thu Oct 20 13:47:43 GMT+09:00 2022
+*>date generated  :  Sun Oct 23 10:12:23 GMT+09:00 2022
 *>compiler options:  -dx -eo=C:/Github/isGames/StackQue/errs -sp=cpy;screenpgm;fdsl -esme=100 -d -smat -g -lo=C:/Github/isGames/StackQue/list -tasks -od=C:/Github/isGames/StackQue/output -jj
 *>begin {iscobol}compiler-directives                               
 *>end {iscobol}compiler-directives                                 
@@ -1067,9 +1067,6 @@ working-storage section.
 *>^^^-> file: C:\Github\isGames\StackQue\cpy\ismsg.def
 *>end {iscobol}is-def                                              
 *>begin {iscobol}copy-working                                      
-*>copy "StackQue.wrk".                                             
-*>vvv-> file: C:\Github\isGames\StackQue\screenpgm\StackQue.wrk
-*>StackQue.wrk is generated from C:\Github\isGames\StackQue\screen\
 77 key-status is special-names crt status pic 9(4) value 0.      
    88 exit-pushed value 27.                                      
    88 message-received value 95.                                 
@@ -1100,7 +1097,6 @@ working-storage section.
     05  wk-alpha-red redefines wk-alpha-def.                     
       10  wk-alpha pic x occurs 26.                              
 *>end working-storage editor code                                  
-*>^^^-> file: C:\Github\isGames\StackQue\screenpgm\StackQue.wrk
 *>end {iscobol}copy-working                                        
 *>begin {iscobol}external-definitions                              
 *>end {iscobol}external-definitions                                
@@ -1113,9 +1109,6 @@ linkage section.
 *>end {iscobol}copy-linkage                                        
 screen section.                                                  
 *>begin {iscobol}copy-screen                                       
-*>copy "StackQue.scr".                                             
-*>vvv-> file: C:\Github\isGames\StackQue\screenpgm\StackQue.scr
-*>StackQue.scr is generated from C:\Github\isGames\StackQue\screen\
 01 screen-1                                                      
 .                                                                
    03 screen-1-la-1 Label                                        
@@ -1250,7 +1243,6 @@ screen section.
       self-act                                                   
       title "Reset"                                              
       .                                                          
-*>^^^-> file: C:\Github\isGames\StackQue\screenpgm\StackQue.scr
 *>end {iscobol}copy-screen                                         
 *>begin {iscobol}procedure-using                                   
 procedure division.                                              
@@ -1402,9 +1394,6 @@ is-message-box.
 
 *>       >>SOURCE FORMAT PREVIOUS
 *>^^^-> file: C:\Github\isGames\StackQue\cpy\ismsg.cpy
-*>copy "StackQue.prd".                                             
-*>vvv-> file: C:\Github\isGames\StackQue\screenpgm\StackQue.prd
-*>StackQue.prd is generated from C:\Github\isGames\StackQue\screen\
 is-initial-routine.                                              
     accept system-information from system-info.                  
     accept terminal-abilities from terminal-info.                
@@ -1515,10 +1504,6 @@ is-screen-1-evaluate-func.
     move 1 to accept-control.                                    
 is-screen-1-exit.                                                
     set exit-pushed to true.                                     
-*>^^^-> file: C:\Github\isGames\StackQue\screenpgm\StackQue.prd
-*>copy "StackQue.evt".                                             
-*>vvv-> file: C:\Github\isGames\StackQue\screenpgm\StackQue.evt
-*>StackQue.evt is generated from C:\Github\isGames\StackQue\screen\
 *>start event editor code                                          
 screen-1-aft-init-data.                                          
     modify screen-1-gr-1 reset-grid 1.                           
@@ -1741,7 +1726,6 @@ DEQUE-RTN.
     modify screen-1-gr-1 cell-data "<-rp"                        
     .                                                            
 *>end event editor code                                            
-*>^^^-> file: C:\Github\isGames\StackQue\screenpgm\StackQue.evt
 *>end {iscobol}copy-procedure                                      
 report-composer section.                                         
 *>begin {iscobol}external-copyfiles                                

@@ -1,7 +1,7 @@
 *>(c) 2005 - 2021 Veryant
 *>compiler version: isCOBOL release 2022 R2 build#1074.6-20220909-34620
 *>source file name:  C:\Github\isGames\MonoChrome\source\MonoChrome.cbl
-*>date generated  :  Thu Oct 20 13:47:31 GMT+09:00 2022
+*>date generated  :  Sun Oct 23 10:08:59 GMT+09:00 2022
 *>compiler options:  -dx -eo=C:/Github/isGames/MonoChrome/errs -sp=cpy;screenpgm;fdsl -esme=100 -d -smat -g -lo=C:/Github/isGames/MonoChrome/list -tasks -od=C:/Github/isGames/MonoChrome/output -jj
 *>begin {iscobol}compiler-directives                               
 *>end {iscobol}compiler-directives                                 
@@ -1070,9 +1070,6 @@ working-storage section.
 *>^^^-> file: C:\Github\isGames\MonoChrome\cpy\ismsg.def
 *>end {iscobol}is-def                                              
 *>begin {iscobol}copy-working                                      
-*>copy "MonoChrome.wrk".                                           
-*>vvv-> file: C:\Github\isGames\MonoChrome\screenpgm\MonoChrome.wrk
-*>MonoChrome.wrk is generated from C:\Github\isGames\MonoChrome\scr
 77 key-status is special-names crt status pic 9(4) value 0.      
    88 exit-pushed value 27.                                      
    88 message-received value 95.                                 
@@ -1152,7 +1149,6 @@ working-storage section.
 *>^^^-> file: C:\Github\isGames\MonoChrome\cpy\isopensave.def
                                                                  
 *>end working-storage editor code                                  
-*>^^^-> file: C:\Github\isGames\MonoChrome\screenpgm\MonoChrome.wrk
 *>end {iscobol}copy-working                                        
 *>begin {iscobol}external-definitions                              
 *>end {iscobol}external-definitions                                
@@ -1165,9 +1161,6 @@ linkage section.
 *>end {iscobol}copy-linkage                                        
 screen section.                                                  
 *>begin {iscobol}copy-screen                                       
-*>copy "MonoChrome.scr".                                           
-*>vvv-> file: C:\Github\isGames\MonoChrome\screenpgm\MonoChrome.scr
-*>MonoChrome.scr is generated from C:\Github\isGames\MonoChrome\scr
 01 screen-1                                                      
 .                                                                
    03 screen-1-la-1 Label                                        
@@ -1286,7 +1279,6 @@ screen section.
       id 7                                                       
       title "deCode"                                             
       .                                                          
-*>^^^-> file: C:\Github\isGames\MonoChrome\screenpgm\MonoChrome.scr
 *>end {iscobol}copy-screen                                         
 *>begin {iscobol}procedure-using                                   
 procedure division.                                              
@@ -1438,9 +1430,6 @@ is-message-box.
 
 *>       >>SOURCE FORMAT PREVIOUS
 *>^^^-> file: C:\Github\isGames\MonoChrome\cpy\ismsg.cpy
-*>copy "MonoChrome.prd".                                           
-*>vvv-> file: C:\Github\isGames\MonoChrome\screenpgm\MonoChrome.prd
-*>MonoChrome.prd is generated from C:\Github\isGames\MonoChrome\scr
 is-initial-routine.                                              
     accept system-information from system-info.                  
     accept terminal-abilities from terminal-info.                
@@ -1538,10 +1527,6 @@ is-screen-1-evaluate-func.
     move 1 to accept-control.                                    
 is-screen-1-exit.                                                
     set exit-pushed to true.                                     
-*>^^^-> file: C:\Github\isGames\MonoChrome\screenpgm\MonoChrome.prd
-*>copy "MonoChrome.evt".                                           
-*>vvv-> file: C:\Github\isGames\MonoChrome\screenpgm\MonoChrome.evt
-*>MonoChrome.evt is generated from C:\Github\isGames\MonoChrome\scr
 screen-1-gr-1-evt-proc.                                          
     evaluate event-type                                          
     when msg-gd-dblclick                                         
@@ -1711,7 +1696,6 @@ RESET-RTN.
     .                                                            
                                                                  
 *>end event editor code                                            
-*>^^^-> file: C:\Github\isGames\MonoChrome\screenpgm\MonoChrome.evt
 *>end {iscobol}copy-procedure                                      
 report-composer section.                                         
 *>begin {iscobol}external-copyfiles                                

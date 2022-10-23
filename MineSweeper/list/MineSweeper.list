@@ -1,7 +1,7 @@
 *>(c) 2005 - 2021 Veryant
 *>compiler version: isCOBOL release 2022 R2 build#1074.6-20220909-34620
 *>source file name:  C:\Github\isGames\MineSweeper\source\MineSweeper.cbl
-*>date generated  :  Thu Oct 20 13:47:03 GMT+09:00 2022
+*>date generated  :  Sun Oct 23 10:18:22 GMT+09:00 2022
 *>compiler options:  -dx -eo=C:/Github/isGames/MineSweeper/errs -sp=cpy;screenpgm;fdsl -esme=100 -d -smat -g -lo=C:/Github/isGames/MineSweeper/list -tasks -od=C:/Github/isGames/MineSweeper/output -jj
 *>begin {iscobol}compiler-directives                               
 *>end {iscobol}compiler-directives                                 
@@ -1082,9 +1082,6 @@ working-storage section.
 *>^^^-> file: C:\Github\isGames\MineSweeper\cpy\ismsg.def
 *>end {iscobol}is-def                                              
 *>begin {iscobol}copy-working                                      
-*>copy "MineSweeper.wrk".                                          
-*>vvv-> file: C:\Github\isGames\MineSweeper\screenpgm\MineSweeper.wrk
-*>MineSweeper.wrk is generated from C:\Github\isGames\MineSweeper\s
 77 key-status is special-names crt status pic 9(4) value 0.      
    88 exit-pushed value 27.                                      
    88 message-received value 95.                                 
@@ -1212,7 +1209,6 @@ working-storage section.
                                                                  
                                                                  
 *>end working-storage editor code                                  
-*>^^^-> file: C:\Github\isGames\MineSweeper\screenpgm\MineSweeper.wrk
 *>end {iscobol}copy-working                                        
 *>begin {iscobol}external-definitions                              
 *>end {iscobol}external-definitions                                
@@ -1225,9 +1221,6 @@ linkage section.
 *>end {iscobol}copy-linkage                                        
 screen section.                                                  
 *>begin {iscobol}copy-screen                                       
-*>copy "MineSweeper.scr".                                          
-*>vvv-> file: C:\Github\isGames\MineSweeper\screenpgm\MineSweeper.scr
-*>MineSweeper.scr is generated from C:\Github\isGames\MineSweeper\s
 01 screen-1                                                      
 .                                                                
    03 screen-1-la-1 Label                                        
@@ -1430,7 +1423,6 @@ screen section.
       id 19                                                      
       title "Flags"                                              
       .                                                          
-*>^^^-> file: C:\Github\isGames\MineSweeper\screenpgm\MineSweeper.scr
 *>end {iscobol}copy-screen                                         
 *>begin {iscobol}procedure-using                                   
 procedure division.                                              
@@ -1582,9 +1574,6 @@ is-message-box.
 
 *>       >>SOURCE FORMAT PREVIOUS
 *>^^^-> file: C:\Github\isGames\MineSweeper\cpy\ismsg.cpy
-*>copy "MineSweeper.prd".                                          
-*>vvv-> file: C:\Github\isGames\MineSweeper\screenpgm\MineSweeper.prd
-*>MineSweeper.prd is generated from C:\Github\isGames\MineSweeper\s
 is-initial-routine.                                              
     accept system-information from system-info.                  
     accept terminal-abilities from terminal-info.                
@@ -1684,10 +1673,6 @@ is-screen-1-evaluate-func.
     move 1 to accept-control.                                    
 is-screen-1-exit.                                                
     set exit-pushed to true.                                     
-*>^^^-> file: C:\Github\isGames\MineSweeper\screenpgm\MineSweeper.prd
-*>copy "MineSweeper.evt".                                          
-*>vvv-> file: C:\Github\isGames\MineSweeper\screenpgm\MineSweeper.evt
-*>MineSweeper.evt is generated from C:\Github\isGames\MineSweeper\s
 screen-1-gr-1-evt-proc.                                          
     evaluate event-type                                          
     when msg-grid-rbutton-down                                   
@@ -2099,9 +2084,8 @@ CALC-TIME.
                                                                  
                                                                  
 *>end event editor code                                            
-*>^^^-> file: C:\Github\isGames\MineSweeper\screenpgm\MineSweeper.evt
 *>end {iscobol}copy-procedure                                      
 report-composer section.                                         
 *>begin {iscobol}external-copyfiles                                
 *>end {iscobol}external-copyfiles                                  
-*> --W: #222 The method signature might be ambiguous: remove; file = MineSweeper.evt, line = 198, col 7
+*> --W: #222 The method signature might be ambiguous: remove; file = MineSweeper.cbl, line = 670, col 7

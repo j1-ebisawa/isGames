@@ -1,7 +1,7 @@
 *>(c) 2005 - 2021 Veryant
 *>compiler version: isCOBOL release 2022 R2 build#1074.6-20220909-34620
 *>source file name:  C:\Github\isGames\starPilot\source\StarPilot.cbl
-*>date generated  :  Thu Oct 20 21:28:35 JST 2022
+*>date generated  :  Sun Oct 23 10:13:54 GMT+09:00 2022
 *>compiler options:  -dx -eo=C:/Github/isGames/starPilot/errs -sp=cpy;screenpgm;fdsl -esme=100 -d -smat -g -lo=C:/Github/isGames/starPilot/list -tasks -od=C:/Github/isGames/starPilot/output -jj
 *>begin {iscobol}compiler-directives                               
 *>end {iscobol}compiler-directives                                 
@@ -12,7 +12,7 @@
 identification division.                                         
 *>begin {iscobol}progid                                            
 program-id. StarPilot.                                           
-author. j1_eb.                                                   
+author. Žõˆê.                                                      
 remarks.                                                         
 *>end {iscobol}progid                                              
 environment division.                                            
@@ -1262,7 +1262,7 @@ screen section.
       id 10                                                      
       3-d                                                        
       drop-down                                                  
-      item-height 1.75                                           
+      item-height 1.4                                            
       .                                                          
    03 screen-1-ef-2 Entry-Field                                  
       line 29.0                                                  
@@ -1644,8 +1644,8 @@ is-screen-1-scrn.
     perform is-screen-1-init-data.                               
 is-screen-1-create.                                              
     display standard window background-low                       
-       screen line 65                                            
-       screen column 64                                          
+       screen line 81                                            
+       screen column 73                                          
        size 121.28571                                            
        lines 34.4375                                             
        cell size is label font Default-Font                      
