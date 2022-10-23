@@ -1,7 +1,7 @@
 *>(c) 2005 - 2021 Veryant
 *>compiler version: isCOBOL release 2022 R2 build#1074.6-20220909-34620
 *>source file name:  C:\Github\isGames\MineSweeper\source\MineSweeper.cbl
-*>date generated  :  Sun Oct 23 10:18:22 GMT+09:00 2022
+*>date generated  :  Sun Oct 23 11:58:30 GMT+09:00 2022
 *>compiler options:  -dx -eo=C:/Github/isGames/MineSweeper/errs -sp=cpy;screenpgm;fdsl -esme=100 -d -smat -g -lo=C:/Github/isGames/MineSweeper/list -tasks -od=C:/Github/isGames/MineSweeper/output -jj
 *>begin {iscobol}compiler-directives                               
 *>end {iscobol}compiler-directives                                 
@@ -29,6 +29,7 @@ repository.
 *>end {iscobol}repository                                          
     class CellItem  as "CellItem"                                
     class ArrayList as "java.util.ArrayList"                     
+    class jinteger  as "java.lang.Integer"                       
     .                                                            
 input-output section.                                            
 file-control.                                                    
@@ -1129,6 +1130,7 @@ working-storage section.
 01  clist-a    object reference ArrayList.                       
 01  clist-t    object reference ArrayList.                       
 01  cell-item  object reference CellItem.                        
+01  wk-jint    object reference Jinteger.                        
 *>COPY "isopensave.def".                                           
 *>vvv-> file: C:\Github\isGames\MineSweeper\cpy\isopensave.def
 *>>********************************************************************<*
@@ -1869,10 +1871,10 @@ CLEAR-BOMB.
                                           cell-color = 297       
     perform check-CONTAINS                                       
     if hit = 1                                                   
-       bombList:>"remove"(wk-k)                                    
+       set wk-Jint to wk-k                                       
+       bombList:>"remove"(wk-Jint)                                 
     end-if                                                       
     .                                                            
-                                                                 
 SET-FLAG.                                                        
     subtract 1 from num-bombs                                    
     modify screen-1-ef-2 value num-bombs                         
@@ -2088,4 +2090,3 @@ CALC-TIME.
 report-composer section.                                         
 *>begin {iscobol}external-copyfiles                                
 *>end {iscobol}external-copyfiles                                  
-*> --W: #222 The method signature might be ambiguous: remove; file = MineSweeper.cbl, line = 670, col 7

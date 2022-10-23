@@ -18,11 +18,12 @@
     <void property="cellWidth">
      <int>12</int>
     </void>
-    <void id="Boolean0" method="isAutominimize"/>
+    <void id="BackgroundColorType0" property="backgroundColor">
+     <void id="Boolean0" method="isBackHigh"/>
+    </void>
     <void id="BackgroundIntensity0" property="backgroundIntensity">
      <void id="Integer0" property="selection"/>
     </void>
-    <void id="Boolean1" method="isAutoFit"/>
     <void property="components">
      <array class="com.iscobol.screenpainter.beans.AbstractBeanControl" length="20">
       <void index="0">
@@ -122,6 +123,7 @@
         <void property="level">
          <int>3</int>
         </void>
+        <void id="Boolean1" method="isBitmapSquare"/>
         <void property="selfAct">
          <object idref="Boolean1"/>
         </void>
@@ -140,7 +142,6 @@
         <void id="PushButtonAlignment0" property="alignment">
          <void id="Integer1" property="selection"/>
         </void>
-        <void id="Integer2" property="transparentColor"/>
        </object>
       </void>
       <void index="2">
@@ -187,7 +188,7 @@
         <void property="tabOrder">
          <int>3</int>
         </void>
-        <void id="Integer3" property="visibleProposalCount"/>
+        <void id="Integer2" property="visibleProposalCount"/>
        </object>
       </void>
       <void index="3">
@@ -273,7 +274,7 @@
          </object>
         </void>
         <void property="id">
-         <object idref="Integer3"/>
+         <object idref="Integer2"/>
         </void>
         <void property="line">
          <string>9.5</string>
@@ -303,7 +304,7 @@
          <float>100.799995</float>
         </void>
         <void property="tabOrder">
-         <object idref="Integer3"/>
+         <object idref="Integer2"/>
         </void>
         <void property="title">
          <string>Save</string>
@@ -316,10 +317,10 @@
          <string>screen-1-gr-1-evt-proc</string>
         </void>
         <void property="adjustableColumns">
-         <object idref="Boolean1"/>
+         <boolean>true</boolean>
         </void>
         <void property="adjustableRows">
-         <object idref="Boolean1"/>
+         <boolean>true</boolean>
         </void>
         <void property="border">
          <object class="com.iscobol.screenpainter.beans.types.BorderStyle">
@@ -328,7 +329,7 @@
         </void>
         <void property="borderColor">
          <object class="com.iscobol.screenpainter.beans.types.ForegroundColorType">
-          <object idref="Integer2"/>
+          <int>-1</int>
           <int>0</int>
           <int>0</int>
          </object>
@@ -343,7 +344,7 @@
          <string>6.9166665</string>
         </void>
         <void property="columnHeadings">
-         <object idref="Boolean0"/>
+         <boolean>false</boolean>
         </void>
         <void property="columnPixels">
          <float>72.0</float>
@@ -500,7 +501,7 @@
         </void>
         <void property="dividerColor">
          <object class="com.iscobol.screenpainter.beans.types.ForegroundColorType">
-          <object idref="Integer2"/>
+          <int>-1</int>
           <int>0</int>
           <int>0</int>
          </object>
@@ -733,7 +734,7 @@
          <float>647.0</float>
         </void>
         <void property="exceptionValue">
-         <object idref="Integer3"/>
+         <object idref="Integer2"/>
         </void>
         <void property="font">
          <object class="com.iscobol.screenpainter.beans.types.FontType">
@@ -2190,10 +2191,10 @@
                                                  cell-color = 297&#13;
            perform check-CONTAINS&#13;
            if hit = 1&#13;
-              bombList:&gt;remove(wk-k)&#13;
+              set wk-Jint to wk-k&#13;
+              bombList:&gt;remove(wk-Jint)&#13;
            end-if                &#13;
            .&#13;
-       &#13;
        SET-FLAG.&#13;
            subtract 1 from num-bombs &#13;
            modify screen-1-ef-2 value num-bombs&#13;
@@ -2484,6 +2485,7 @@
        01  clist-a    object reference ArrayList.&#13;
        01  clist-t    object reference ArrayList.&#13;
        01  cell-item  object reference CellItem.&#13;
+       01  wk-jint    object reference Jinteger.&#13;
        COPY &quot;isopensave.def&quot;.&#13;
        01  opensave-status pic s9(01).&#13;
       *&#13;

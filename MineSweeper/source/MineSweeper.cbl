@@ -24,6 +24,7 @@
       *end {iscobol}repository
            class CellItem  as "CellItem"
            class ArrayList as "java.util.ArrayList"
+           class jinteger  as "java.lang.Integer"
            .
        input-output section.
        file-control.
@@ -102,6 +103,7 @@
        01  clist-a    object reference ArrayList.
        01  clist-t    object reference ArrayList.
        01  cell-item  object reference CellItem.
+       01  wk-jint    object reference Jinteger.
        COPY "isopensave.def".
        01  opensave-status pic s9(01).
       *
@@ -667,10 +669,10 @@
                                                  cell-color = 297
            perform check-CONTAINS
            if hit = 1
-              bombList:>remove(wk-k)
+              set wk-Jint to wk-k
+              bombList:>remove(wk-Jint)
            end-if                
            .
-       
        SET-FLAG.
            subtract 1 from num-bombs 
            modify screen-1-ef-2 value num-bombs
