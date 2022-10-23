@@ -18,16 +18,10 @@
     <void property="cellWidth">
      <int>12</int>
     </void>
-    <void id="BackgroundColorType0" property="backgroundColor">
-     <void id="Boolean0" method="isBackHigh"/>
-    </void>
-    <void id="BackgroundIntensity0" property="backgroundIntensity">
-     <void id="Integer0" property="selection"/>
-    </void>
     <void property="components">
      <array class="com.iscobol.screenpainter.beans.AbstractBeanControl" length="20">
       <void index="0">
-       <object class="com.iscobol.screenpainter.beans.swing.SwingLabel">
+       <object class="com.iscobol.screenpainter.beans.swing.SwingLabel" id="SwingLabel0">
         <void property="column">
          <string>6.9166665</string>
         </void>
@@ -42,7 +36,7 @@
           <int>0</int>
           <string>Arial-20v0</string>
           <null/>
-          <object idref="Boolean0"/>
+          <boolean>false</boolean>
          </object>
         </void>
         <void property="id">
@@ -76,8 +70,9 @@
          <int>1</int>
         </void>
         <void property="title">
-         <string>MIne Sweeper</string>
+         <string>MIne Sweeper1</string>
         </void>
+        <void id="Boolean0" property="heightInCells"/>
        </object>
       </void>
       <void index="1">
@@ -99,11 +94,11 @@
           <int>0</int>
           <string>Arial-9v0</string>
           <null/>
-          <object idref="Boolean0"/>
+          <boolean>false</boolean>
          </object>
         </void>
         <void property="id">
-         <object idref="Integer0"/>
+         <int>2</int>
         </void>
         <void property="line">
          <string>5.0833335</string>
@@ -123,9 +118,8 @@
         <void property="level">
          <int>3</int>
         </void>
-        <void id="Boolean1" method="isBitmapSquare"/>
         <void property="selfAct">
-         <object idref="Boolean1"/>
+         <boolean>true</boolean>
         </void>
         <void property="size">
          <float>8.4</float>
@@ -134,13 +128,13 @@
          <float>100.799995</float>
         </void>
         <void property="tabOrder">
-         <object idref="Integer0"/>
+         <int>2</int>
         </void>
         <void property="title">
          <string>file:</string>
         </void>
         <void id="PushButtonAlignment0" property="alignment">
-         <void id="Integer1" property="selection"/>
+         <void id="Integer0" property="selection"/>
         </void>
        </object>
       </void>
@@ -188,7 +182,6 @@
         <void property="tabOrder">
          <int>3</int>
         </void>
-        <void id="Integer2" property="visibleProposalCount"/>
        </object>
       </void>
       <void index="3">
@@ -200,7 +193,7 @@
          <float>625.0</float>
         </void>
         <void property="exceptionValue">
-         <object idref="Integer0"/>
+         <int>2</int>
         </void>
         <void property="font">
          <object class="com.iscobol.screenpainter.beans.types.FontType">
@@ -210,11 +203,11 @@
           <int>0</int>
           <string>Arial-9v0</string>
           <null/>
-          <object idref="Boolean0"/>
+          <boolean>false</boolean>
          </object>
         </void>
         <void property="id">
-         <object idref="Integer1"/>
+         <int>4</int>
         </void>
         <void property="line">
          <string>9.5</string>
@@ -235,7 +228,7 @@
          <int>3</int>
         </void>
         <void property="selfAct">
-         <object idref="Boolean1"/>
+         <boolean>true</boolean>
         </void>
         <void property="size">
          <float>8.4</float>
@@ -244,7 +237,7 @@
          <float>100.799995</float>
         </void>
         <void property="tabOrder">
-         <object idref="Integer1"/>
+         <int>4</int>
         </void>
         <void property="title">
          <string>Load</string>
@@ -270,11 +263,11 @@
           <int>0</int>
           <string>Arial-9v0</string>
           <null/>
-          <object idref="Boolean0"/>
+          <boolean>false</boolean>
          </object>
         </void>
         <void property="id">
-         <object idref="Integer2"/>
+         <int>5</int>
         </void>
         <void property="line">
          <string>9.5</string>
@@ -295,7 +288,7 @@
          <int>3</int>
         </void>
         <void property="selfAct">
-         <object idref="Boolean1"/>
+         <boolean>true</boolean>
         </void>
         <void property="size">
          <float>8.4</float>
@@ -304,7 +297,7 @@
          <float>100.799995</float>
         </void>
         <void property="tabOrder">
-         <object idref="Integer2"/>
+         <int>5</int>
         </void>
         <void property="title">
          <string>Save</string>
@@ -358,7 +351,7 @@
               <int>3</int>
              </void>
              <void property="displayColumn">
-              <object idref="Integer1"/>
+              <int>4</int>
              </void>
              <void property="picture">
               <string>X(03)</string>
@@ -371,7 +364,7 @@
               <int>3</int>
              </void>
              <void property="displayColumn">
-              <object idref="Integer1"/>
+              <int>4</int>
              </void>
              <void property="picture">
               <string>X(03)</string>
@@ -384,7 +377,7 @@
               <int>3</int>
              </void>
              <void property="displayColumn">
-              <object idref="Integer1"/>
+              <int>4</int>
              </void>
              <void property="picture">
               <string>X(03)</string>
@@ -397,7 +390,7 @@
               <int>3</int>
              </void>
              <void property="displayColumn">
-              <object idref="Integer1"/>
+              <int>4</int>
              </void>
              <void property="picture">
               <string>X(03)</string>
@@ -410,7 +403,7 @@
               <int>3</int>
              </void>
              <void property="displayColumn">
-              <object idref="Integer1"/>
+              <int>4</int>
              </void>
              <void property="picture">
               <string>X(03)</string>
@@ -423,7 +416,7 @@
               <int>3</int>
              </void>
              <void property="displayColumn">
-              <object idref="Integer1"/>
+              <int>4</int>
              </void>
              <void property="picture">
               <string>X(03)</string>
@@ -436,7 +429,7 @@
               <int>3</int>
              </void>
              <void property="displayColumn">
-              <object idref="Integer1"/>
+              <object idref="Integer0"/>
              </void>
              <void property="picture">
               <string>X(03)</string>
@@ -449,7 +442,7 @@
               <int>3</int>
              </void>
              <void property="displayColumn">
-              <object idref="Integer1"/>
+              <object idref="Integer0"/>
              </void>
              <void property="picture">
               <string>X(03)</string>
@@ -462,7 +455,7 @@
               <int>3</int>
              </void>
              <void property="displayColumn">
-              <object idref="Integer1"/>
+              <object idref="Integer0"/>
              </void>
              <void property="picture">
               <string>X(03)</string>
@@ -475,7 +468,7 @@
               <int>3</int>
              </void>
              <void property="displayColumn">
-              <object idref="Integer1"/>
+              <object idref="Integer0"/>
              </void>
              <void property="picture">
               <string>X(03)</string>
@@ -485,14 +478,14 @@
            <void index="10">
             <object class="com.iscobol.screenpainter.beans.types.GridColumnSetting">
              <void property="displayColumn">
-              <object idref="Integer1"/>
+              <object idref="Integer0"/>
              </void>
             </object>
            </void>
            <void index="11">
             <object class="com.iscobol.screenpainter.beans.types.GridColumnSetting">
              <void property="displayColumn">
-              <object idref="Integer1"/>
+              <object idref="Integer0"/>
              </void>
             </object>
            </void>
@@ -514,11 +507,11 @@
           <int>0</int>
           <string>Arial-10v0</string>
           <null/>
-          <object idref="Boolean0"/>
+          <boolean>false</boolean>
          </object>
         </void>
         <void property="heightInCells">
-         <object idref="Boolean1"/>
+         <boolean>true</boolean>
         </void>
         <void property="id">
          <int>3</int>
@@ -540,7 +533,7 @@
         </void>
         <void property="linesUnit">
          <object class="com.iscobol.screenpainter.beans.types.DimensionUnit">
-          <object idref="Integer0"/>
+          <int>2</int>
          </object>
         </void>
         <void property="msgGdDblclickEv">
@@ -598,14 +591,14 @@
         </void>
         <void property="sizeUnit">
          <object class="com.iscobol.screenpainter.beans.types.DimensionUnit">
-          <object idref="Integer0"/>
+          <int>2</int>
          </object>
         </void>
         <void property="tabOrder">
          <int>6</int>
         </void>
         <void property="widthInCells">
-         <object idref="Boolean1"/>
+         <boolean>true</boolean>
         </void>
        </object>
       </void>
@@ -628,7 +621,7 @@
           <int>0</int>
           <string>Arial-9v0</string>
           <null/>
-          <object idref="Boolean0"/>
+          <boolean>false</boolean>
          </object>
         </void>
         <void property="id">
@@ -682,7 +675,7 @@
           <int>0</int>
           <string>Arial-9v0</string>
           <null/>
-          <object idref="Boolean0"/>
+          <boolean>false</boolean>
          </object>
         </void>
         <void property="id">
@@ -734,7 +727,7 @@
          <float>647.0</float>
         </void>
         <void property="exceptionValue">
-         <object idref="Integer2"/>
+         <int>5</int>
         </void>
         <void property="font">
          <object class="com.iscobol.screenpainter.beans.types.FontType">
@@ -744,7 +737,7 @@
           <int>0</int>
           <string>Arial-9v0</string>
           <null/>
-          <object idref="Boolean0"/>
+          <boolean>false</boolean>
          </object>
         </void>
         <void property="id">
@@ -798,7 +791,7 @@
           <int>0</int>
           <string>Arial-9v0</string>
           <null/>
-          <object idref="Boolean0"/>
+          <boolean>false</boolean>
          </object>
         </void>
         <void property="id">
@@ -852,7 +845,7 @@
           <int>0</int>
           <string>Arial-9v0</string>
           <null/>
-          <object idref="Boolean0"/>
+          <boolean>false</boolean>
          </object>
         </void>
         <void property="id">
@@ -906,7 +899,7 @@
           <int>0</int>
           <string>Arial-20v0</string>
           <null/>
-          <object idref="Boolean0"/>
+          <boolean>false</boolean>
          </object>
         </void>
         <void property="id">
@@ -969,7 +962,7 @@
           <int>0</int>
           <string>Arial-9v0</string>
           <null/>
-          <object idref="Boolean0"/>
+          <boolean>false</boolean>
          </object>
         </void>
         <void property="id">
@@ -1023,7 +1016,7 @@
           <int>0</int>
           <string>Arial-20v0</string>
           <null/>
-          <object idref="Boolean0"/>
+          <boolean>false</boolean>
          </object>
         </void>
         <void property="id">
@@ -1083,7 +1076,7 @@
           <int>0</int>
           <string>Arial-20v0</string>
           <null/>
-          <object idref="Boolean0"/>
+          <boolean>false</boolean>
          </object>
         </void>
         <void property="id">
@@ -1137,7 +1130,7 @@
           <int>0</int>
           <string>Arial-20v0</string>
           <null/>
-          <object idref="Boolean0"/>
+          <boolean>false</boolean>
          </object>
         </void>
         <void property="id">
@@ -1191,7 +1184,7 @@
           <int>0</int>
           <string>Arial-9v0</string>
           <null/>
-          <object idref="Boolean0"/>
+          <boolean>false</boolean>
          </object>
         </void>
         <void property="id">
@@ -1840,7 +1833,7 @@
             </void>
             <void property="occurs">
              <void property="occurs">
-              <object idref="Boolean1"/>
+              <boolean>true</boolean>
              </void>
              <void property="times">
               <int>8</int>
@@ -1865,7 +1858,7 @@
             </void>
             <void property="occurs">
              <void property="occurs">
-              <object idref="Boolean1"/>
+              <boolean>true</boolean>
              </void>
              <void property="times">
               <int>8</int>

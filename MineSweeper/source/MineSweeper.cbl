@@ -161,7 +161,7 @@
              lines 4.25 cells 
              font Arial-20v0
              id 25
-             title "MIne Sweeper"
+             title "MIne Sweeper1"
              .
           03 screen-1-pb-1 Push-Button
              exception-value 1
