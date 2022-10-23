@@ -18,6 +18,9 @@
     <void property="cellWidth">
      <int>12</int>
     </void>
+    <void id="BackgroundIntensity0" property="backgroundIntensity">
+     <void id="Integer0" property="selection"/>
+    </void>
     <void property="components">
      <array class="com.iscobol.screenpainter.beans.AbstractBeanControl" length="20">
       <void index="0">
@@ -70,7 +73,7 @@
          <int>1</int>
         </void>
         <void property="title">
-         <string>MIne Sweeper1</string>
+         <string>MIne Sweeper2</string>
         </void>
         <void id="Boolean0" property="heightInCells"/>
        </object>
@@ -134,7 +137,7 @@
          <string>file:</string>
         </void>
         <void id="PushButtonAlignment0" property="alignment">
-         <void id="Integer0" property="selection"/>
+         <void id="Integer1" property="selection"/>
         </void>
        </object>
       </void>
@@ -429,7 +432,7 @@
               <int>3</int>
              </void>
              <void property="displayColumn">
-              <object idref="Integer0"/>
+              <object idref="Integer1"/>
              </void>
              <void property="picture">
               <string>X(03)</string>
@@ -442,7 +445,7 @@
               <int>3</int>
              </void>
              <void property="displayColumn">
-              <object idref="Integer0"/>
+              <object idref="Integer1"/>
              </void>
              <void property="picture">
               <string>X(03)</string>
@@ -455,7 +458,7 @@
               <int>3</int>
              </void>
              <void property="displayColumn">
-              <object idref="Integer0"/>
+              <object idref="Integer1"/>
              </void>
              <void property="picture">
               <string>X(03)</string>
@@ -468,7 +471,7 @@
               <int>3</int>
              </void>
              <void property="displayColumn">
-              <object idref="Integer0"/>
+              <object idref="Integer1"/>
              </void>
              <void property="picture">
               <string>X(03)</string>
@@ -478,14 +481,14 @@
            <void index="10">
             <object class="com.iscobol.screenpainter.beans.types.GridColumnSetting">
              <void property="displayColumn">
-              <object idref="Integer0"/>
+              <object idref="Integer1"/>
              </void>
             </object>
            </void>
            <void index="11">
             <object class="com.iscobol.screenpainter.beans.types.GridColumnSetting">
              <void property="displayColumn">
-              <object idref="Integer0"/>
+              <object idref="Integer1"/>
              </void>
             </object>
            </void>
@@ -533,7 +536,7 @@
         </void>
         <void property="linesUnit">
          <object class="com.iscobol.screenpainter.beans.types.DimensionUnit">
-          <int>2</int>
+          <object idref="Integer0"/>
          </object>
         </void>
         <void property="msgGdDblclickEv">
@@ -591,7 +594,7 @@
         </void>
         <void property="sizeUnit">
          <object class="com.iscobol.screenpainter.beans.types.DimensionUnit">
-          <int>2</int>
+          <object idref="Integer0"/>
          </object>
         </void>
         <void property="tabOrder">

@@ -7,7 +7,7 @@
        identification division.
       *begin {iscobol}progid
        program-id. MineSweeper.
-       author. Žõˆê.
+       author. user.
        remarks.
       *end {iscobol}progid
        environment division.
@@ -161,7 +161,7 @@
              lines 4.25 cells 
              font Arial-20v0
              id 25
-             title "MIne Sweeper1"
+             title "MIne Sweeper2"
              .
           03 screen-1-pb-1 Push-Button
              exception-value 1
