@@ -7,7 +7,11 @@
        identification division.
       *begin {iscobol}progid
        program-id. MonoChrome.
+<<<<<<< HEAD
        author. user.
+=======
+       author. j1_eb.
+>>>>>>> branch 'master' of https://github.com/j1-ebisawa/isGames
        remarks.
       *end {iscobol}progid
        environment division.

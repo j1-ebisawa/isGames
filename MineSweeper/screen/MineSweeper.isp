@@ -73,7 +73,7 @@
          <int>1</int>
         </void>
         <void property="title">
-         <string>MIne Sweeper2</string>
+         <string>MIne Sweeper3</string>
         </void>
         <void id="Boolean0" property="heightInCells"/>
        </object>
