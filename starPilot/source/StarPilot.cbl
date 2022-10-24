@@ -7,11 +7,7 @@
        identification division.
       *begin {iscobol}progid
        program-id. StarPilot.
-<<<<<<< HEAD
        author. user.
-=======
-       author. j1_eb.
->>>>>>> branch 'master' of https://github.com/j1-ebisawa/isGames
        remarks.
       *end {iscobol}progid
        environment division.
@@ -179,7 +175,7 @@
              id 10
              3-d
              drop-down
-             item-height 1.75
+             item-height 1.4
              .
           03 screen-1-ef-2 Entry-Field
              line 29.0
@@ -374,8 +370,8 @@
            perform is-screen-1-init-data.
        is-screen-1-create.
            display standard window background-low
-              screen line 65
-              screen column 64
+              screen line 81
+              screen column 73
               size 121.28571
               lines 34.4375
               cell size is label font Default-Font

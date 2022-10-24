@@ -7,11 +7,7 @@
        identification division.
       *begin {iscobol}progid
        program-id. MonoChrome.
-<<<<<<< HEAD
        author. user.
-=======
-       author. j1_eb.
->>>>>>> branch 'master' of https://github.com/j1-ebisawa/isGames
        remarks.
       *end {iscobol}progid
        environment division.
@@ -72,7 +68,7 @@
        01 ws-y pic S9(02).
        01 wk-i pic 9(02).
        01 wk-j pic 9(02).
-       01 wk-k pic 9(02).
+       01 wk-k pic 9(04).
        01 runLeng-x.
           05 runLeng pic 9(2).
        01 wrk-item0 pic x(10).
@@ -331,6 +327,8 @@
            set exit-pushed to true.
        screen-1-gr-1-evt-proc.
            evaluate event-type
+           when msg-goto-cell-mouse
+              perform screen-1-gr-1-evt-msg-goto-cell-mouse
            when msg-gd-dblclick
               perform screen-1-gr-1-evt-msg-gd-dblclick
            when other
@@ -497,6 +495,13 @@
            end-perform           
            .
 
+       screen-1-gr-1-evt-msg-goto-cell-mouse.
+           inquire screen-1-gr-1 X ws-X Y ws-Y
+           move ws-x to wk-col
+           move ws-y to wk-row
+           perform DBL-CLICKED-RTN
+            
+           .
       *end event editor code
       *end {iscobol}copy-procedure
        report-composer section.

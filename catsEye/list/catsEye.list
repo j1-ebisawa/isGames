@@ -1,7 +1,7 @@
 *>(c) 2005 - 2021 Veryant
 *>compiler version: isCOBOL release 2022 R2 build#1074.6-20220909-34620
 *>source file name:  C:\Github\isGames\catsEye\source\catsEye.cbl
-*>date generated  :  Mon Oct 24 13:35:34 JST 2022
+*>date generated  :  Mon Oct 24 13:40:14 JST 2022
 *>compiler options:  -dx -eo=C:/Github/isGames/catsEye/errs -sp=cpy;screenpgm;fdsl -esme=100 -d -smat -g -lo=C:/Github/isGames/catsEye/list -tasks -od=C:/Github/isGames/catsEye/output -jj
 *>begin {iscobol}compiler-directives                               
 *>end {iscobol}compiler-directives                                 
@@ -12,11 +12,7 @@
 identification division.                                         
 *>begin {iscobol}progid                                            
 program-id. catsEye.                                             
-
 author. user.                                                    
-
-author. j1_eb.                                                   
-> branch 'master' of https://github.com/j1-ebisawa/isGames        
 remarks.                                                         
 *>end {iscobol}progid                                              
 environment division.                                            
@@ -1752,6 +1748,264 @@ is-screen-1-exit.
 screen-1-aft-init-data.                                          
     perform CLEAR-MAP-RTN.                                       
     set clist-a to arraylist:>"new"()                              
-*> --S: #2 Unknown token <<>; file = catsEye.cbl, line = 9, col 7
-*> --S: #2 Unknown token <=>; file = catsEye.cbl, line = 11, col 7
-*> --S: #31 Expected/found token mismatch: PROCEDURE/>; file = catsEye.cbl, line = 14
+    set clist-t to arraylist:>"new"()                              
+    move 0 to step-no                                            
+    .                                                            
+screen-1-aft-end-acc.                                            
+    evaluate key-status                                          
+       when  1     *>file                                        
+           perform FILE-CHOOSE-RTN                               
+       when  2     *>Load                                        
+           perform FILE-LOAD-RTN                                 
+       when  3     *>save                                        
+           perform FILE-SAVE-RTN                                 
+       when  4     *>Reset                                       
+           perform RESET-RTN                                     
+       when  5     *>StepIn                                      
+           perform STEP-IN-RTN                                   
+           perform STEP-IN-AFTER                                 
+       when  6     *>AutoRun                                     
+           perform until 1 = 0                                   
+              perform STEP-IN-RTN                                
+              perform STEP-IN-AFTER                              
+              if ret-cd <= 0                                     
+                 exit perform                                    
+              end-if                                             
+              call "C$SLEEP" using 0.5                           
+           end-perform                                           
+       when 11     *>Block                                       
+           perform SET-BLOCK-RTN                                 
+       when 12     *>Gold                                        
+           perform SET-GOLD-RTN                                  
+       when 13     *>Start                                       
+           perform SET-START-RTN                                 
+       when 14                                                   
+           perform SET-CLEAR-RTN                                 
+    end-evaluate.                                                
+    .                                                            
+                                                                 
+GET-SELECTED-CELLS.                                              
+    inquire screen-1-gr-1 cells-selected selected-cells-list.    
+    move selected-cells-list to wk-string                        
+    move 1 to wk-ptr.                                            
+    move 0 to selected-cell-cnt.                                 
+    perform until 1 = 0                                          
+       move space to wk-pos                                      
+       unstring wk-string delimited by all space                 
+                into wk-pos                                      
+                with pointer wk-ptr                              
+       if wk-pos = space exit perform                            
+       end-if                                                    
+       add 1 to selected-cell-cnt                                
+       unstring wk-pos delimited by ","                          
+                into wk-row-x wk-col-x                           
+       move function numval(wk-row-x) to                         
+            selected-row(selected-cell-cnt)                      
+       move function numval(wk-col-x) to                         
+            selected-col(selected-cell-cnt)                      
+    end-perform                                                  
+    .                                                            
+SET-BLOCK-RTN.                                                   
+    perform GET-SELECTED-CELLS.                                  
+    perform varying wk-i from 1 by 1                             
+            until wk-i > selected-cell-cnt                       
+            move selected-row(wk-i) to wk-row                    
+            move selected-col(wk-i) to wk-col                    
+       modify screen-1-gr-1(wk-row, wk-col) CELL-DATA = "#"      
+    end-perform.                                                 
+    .                                                            
+SET-GOLD-RTN.                                                    
+    perform GET-SELECTED-CELLS.                                  
+    if selected-cell-cnt not = 1                                 
+       move "You can't specify multiple GOLD cell!!" to          
+             result-msg                                          
+       modify  screen-1-ef-4 value result-msg                    
+    else                                                         
+       move selected-row(1) to gold-row                          
+       move selected-col(1) to gold-col                          
+       modify screen-1-gr-1(gold-row, gold-col) CELL-DATA = "G"  
+       compute wk-row = gold-row - 1                             
+       compute wk-col = gold-col - 1                             
+       modify screen-1-ef-2 value wk-row                         
+       modify screen-1-ef-3 value wk-col                         
+    end-if.                                                      
+                                                                 
+SET-START-RTN.                                                   
+    perform GET-SELECTED-CELLS.                                  
+    if selected-cell-cnt not = 1                                 
+       move "You can't specify multiple START cell!!" to         
+             result-msg                                          
+       modify  screen-1-ef-4 value result-msg                    
+    else                                                         
+       move selected-row(1) to start-row                         
+       move selected-col(1) to start-col                         
+       modify screen-1-gr-1(start-row, start-col) CELL-DATA ="S" 
+       compute wk-row = start-row - 1                            
+       compute wk-col = start-col - 1                            
+       modify screen-1-ef-5 value wk-row                         
+       modify screen-1-ef-6 value wk-col                         
+    end-if.                                                      
+                                                                 
+SET-CLEAR-RTN.                                                   
+    perform GET-SELECTED-CELLS.                                  
+    perform varying wk-i from 1 by 1                             
+            until wk-i > selected-cell-cnt                       
+            move selected-row(wk-i) to wk-row                    
+            move selected-col(wk-i) to wk-col                    
+       modify screen-1-gr-1(wk-row, wk-col) CELL-DATA = " "      
+    end-perform.                                                 
+    .                                                            
+                                                                 
+FILE-CHOOSE-RTN.                                                 
+    initialize opensave-data                                     
+    move "Choose a file" to opnsav-title                         
+    move "../data/"      to opnsav-default-dir                   
+                                                                 
+    call "C$OPENSAVEBOX" using opensave-open-box,                
+                               opensave-data                     
+                        giving opensave-status                   
+                                                                 
+    if opensave-status > 0                                       
+       move opnsav-filename to map-file-name                     
+       modify screen-1-ef-1 value map-file-name                  
+    end-if                                                       
+    .                                                            
+FILE-SAVE-RTN.                                                   
+    inquire screen-1-ef-1 value map-file-name                    
+    open output map-file                                         
+    perform varying row-idx from 2 by 1 until row-idx > row-max  
+       inquire screen-1-gr-1(row-idx) record-data map-record     
+       write map-record                                          
+    end-perform                                                  
+    close  map-file                                              
+    .                                                            
+FILE-LOAD-RTN.                                                   
+    inquire screen-1-ef-1 value map-file-name                    
+    open input map-file                                          
+    modify screen-1-gr-1 mass-update = 1                         
+    modify screen-1-gr-1 reset-grid 3                            
+    move 2 to row-idx                                            
+    perform until 1 = 0                                          
+      read map-file at end exit perform                          
+      end-read                                                   
+      modify screen-1-gr-1 record-to-add map-record              
+      add 1 to row-idx                                           
+    end-perform                                                  
+    modify screen-1-gr-1 mass-update = 0                         
+    close map-file.                                              
+    .                                                            
+STEP-IN-RTN.                                                     
+    if start-row = 0 or start-col = 0                            
+       move -2 to ret-cd                                         
+       exit paragraph                                            
+    end-if.                                                      
+    if step-no = 0                                               
+        set cell-item to CellItem:>"new"(start-row, start-col)     
+        clist-a:>"add"(cell-item)                                  
+    end-if                                                       
+    .                                                            
+                clist-t:>"clear"() .                               
+                add 1 to step-no.                                
+                modify screen-1-gr-1 mass-update = 1             
+                                                                 
+    perform varying wk-i from 0 by 1                             
+            until   wk-i >= clist-a:>"size"()                      
+       set cell-item to  clist-a:>"get"(wk-i) as CellItem          
+       cell-item:>"getRow"(wk-row)                                 
+       cell-item:>"getCol"(wk-col)                                 
+       move step-no to pic-99                                    
+       perform varying wk-j from 1 by 1 until wk-j > 4           
+          compute row-idx = wk-row + dev-yy(wk-j)                
+          compute col-idx = wk-col + dev-xx(wk-j)                
+          if  row-idx < 1 OR row-idx > 21 OR                     
+              col-idx < 1 OR col-idx > 21                        
+              exit perform cycle                                 
+          end-if                                                 
+          modify  screen-1-gr-1 X = col-idx Y = row-idx          
+          move space to wk-cell                                  
+          inquire screen-1-gr-1 cell-data wk-cell                
+          if wk-cell = "G"                                       
+             move -1 to ret-cd                                   
+             modify screen-1-gr-1 mass-update = 0                
+             exit paragraph                                      
+          end-if                                                 
+          if wk-cell = "#"                                       
+             exit perform cycle                                  
+          end-if                                                 
+          if wk-cell = " "                                       
+             modify screen-1-gr-1(row-idx, col-idx)              
+                     CELL-DATA pic-99                            
+             set cell-item to CellItem:>"new"(row-idx, col-idx)    
+             clist-t:>"add"(cell-item)                             
+          end-if                                                 
+       end-perform                                               
+    end-perform.                                                 
+    modify screen-1-gr-1 mass-update = 0                         
+    set ret-cd to clist-t:>"size"()                                
+    .                                                            
+                                                                 
+STEP-IN-AFTER.                                                   
+    evaluate ret-cd                                              
+          when -1                                                
+                  move "You got Gold !!" to result-msg           
+                  modify screen-1-ef-4 value result-msg          
+          when -2                                                
+                  move "You have to set Start-Cell!!" to         
+                        result-msg                               
+                  modify screen-1-ef-4 value result-msg          
+          when 0                                                 
+                  move "You missed failure" to result-msg        
+                  modify screen-1-ef-4 value result-msg          
+          when other                                             
+                  perform CLIST-COPY-RTN                         
+    end-evaluate                                                 
+    .                                                            
+CLIST-COPY-RTN.                                                  
+        clist-a:>"clear"() .                                       
+        perform varying wk-i from 0 by 1                         
+                until   wk-i >= clist-t:>"size"()                  
+            set cell-item to  clist-t:>"get"(wk-i) as CellItem     
+            clist-a:>"add"(cell-item)                              
+        end-perform                                              
+        clist-t:>"clear"()                                         
+         .                                                       
+                                                                 
+RESET-RTN.                                                       
+    perform CLEAR-MAP-RTN                                        
+    if gold-row not = 0 or gold-col not = 0                      
+       move 0 to gold-row                                        
+       move 0 to gold-col                                        
+       modify screen-1-ef-2 value "  "                           
+       modify screen-1-ef-3 value "  "                           
+    end-if                                                       
+    if start-row not = 0 or start-col not = 0                    
+       move 0 to start-row                                       
+       move 0 to start-col                                       
+       modify screen-1-ef-5 value "  "                           
+       modify screen-1-ef-6 value "  "                           
+    end-if                                                       
+    .                                                            
+                                                                 
+CLEAR-MAP-RTN.                                                   
+    modify screen-1-gr-1 mass-update = 1                         
+    modify screen-1-gr-1 reset-grid 1                            
+    perform varying row-idx from 1 by 1 until row-idx > row-max  
+       move space to map-row                                     
+       if row-idx = 1                                            
+          perform varying wk-i from 1 by 1 until wk-i >= col-max 
+             move wk-i to pic-99                                 
+             move pic-99 to map-col(wk-i + 1,)                   
+          end-perform                                            
+       else                                                      
+          compute pic-99 = row-idx - 1                           
+          move pic-99 to map-col(1)                              
+       end-if                                                    
+       modify screen-1-gr-1 record-to-add map-row                
+    end-perform.                                                 
+    modify screen-1-gr-1 mass-update = 0                         
+                 .                                               
+*>end event editor code                                            
+*>end {iscobol}copy-procedure                                      
+report-composer section.                                         
+*>begin {iscobol}external-copyfiles                                
+*>end {iscobol}external-copyfiles                                  
