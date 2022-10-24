@@ -1,7 +1,7 @@
 *>(c) 2005 - 2021 Veryant
 *>compiler version: isCOBOL release 2022 R2 build#1074.6-20220909-34620
 *>source file name:  C:\Github\isGames\MonoChrome\source\MonoChrome.cbl
-*>date generated  :  Sun Oct 23 10:08:59 GMT+09:00 2022
+*>date generated  :  Sun Oct 23 21:25:09 JST 2022
 *>compiler options:  -dx -eo=C:/Github/isGames/MonoChrome/errs -sp=cpy;screenpgm;fdsl -esme=100 -d -smat -g -lo=C:/Github/isGames/MonoChrome/list -tasks -od=C:/Github/isGames/MonoChrome/output -jj
 *>begin {iscobol}compiler-directives                               
 *>end {iscobol}compiler-directives                                 
@@ -12,7 +12,7 @@
 identification division.                                         
 *>begin {iscobol}progid                                            
 program-id. MonoChrome.                                          
-author. Žõˆê.                                                      
+author. user.                                                    
 remarks.                                                         
 *>end {iscobol}progid                                              
 environment division.                                            
