@@ -7,7 +7,7 @@
        identification division.
       *begin {iscobol}progid
        program-id. HitBlow.
-       author. Žõˆê.
+       author. j1_eb.
        remarks.
       *end {iscobol}progid
        environment division.
@@ -76,6 +76,7 @@
        01 wk-blow2 pic 9(02).
        01 wk-total pic 9(02).
        01 wk-X2 pic x(02).
+       01 help-checked pic 9(01).
       *start working-storage editor code
        01  list-ok         object reference HashSet.
        01  list-no         object reference HashSet.
@@ -329,14 +330,6 @@
              read-only
              value "9"
              .
-          03 screen-1-la-4 Label
-             line 43.5
-             column 57.0
-             size 7.9 cells 
-             lines 2.7 cells 
-             id 21
-             title "Analyzer"
-             .
           03 screen-1-la-5 Label
              line 47.0
              column 63.5
@@ -457,6 +450,16 @@
              3-d
              read-only
              .
+          03 screen-1-cb-1 Check-Box
+             line 43.5
+             column 55.8
+             size 9.2 cells 
+             lines 2.0 cells 
+             id 21
+             event procedure screen-1-cb-1-evt-proc
+             title "Helper"
+             value "0"
+             .
       *end {iscobol}copy-screen
       *begin {iscobol}procedure-using
        procedure division.
@@ -564,6 +567,13 @@
            move 1 to accept-control.
        is-screen-1-exit.
            set exit-pushed to true.
+       screen-1-cb-1-evt-proc.
+           evaluate event-type
+           when cmd-clicked
+              perform screen-1-cb-1-evt-cmd-clicked
+           when other
+           end-evaluate
+           .
       *start event editor code
         screen-1-aft-create.
            move 1 to grid-idx
@@ -581,6 +591,7 @@
            modify screen-1-gr-1(1, 2) cell-data = "Number"
            modify screen-1-gr-1(1, 3) cell-data = "Hit"
            modify screen-1-gr-1(1, 4) cell-data = "Blow"
+           modify screen-1-cb-1 value=1
            
             
            .
@@ -627,13 +638,16 @@
            end-if.   
            
            if hit-cnt not = p-digit
-              initialize change-cnt
-              perform Set-change-cnt 
-              perform Anal-01
-              perform Anal-02
-              perform Anal-03
-              perform Anal-04
-              perform Set-change-cnt 
+              inquire screen-1-cb-1 value help-checked
+              if help-checked = 1
+                 initialize change-cnt
+                 perform Set-change-cnt 
+                 perform Anal-01
+                 perform Anal-02
+                 perform Anal-03
+                 perform Anal-04
+                 perform Set-change-cnt 
+              end-if
            end-if.
                     
            .
@@ -905,6 +919,32 @@
            .
 
 
+       screen-1-cb-1-evt-cmd-clicked.
+           initialize change-cnt.
+           perform Set-change-cnt 
+           inquire screen-1-cb-1 value help-checked 
+           if help-checked = 0
+              modify screen-1-ef-13 enabled 0
+              modify screen-1-ef-14 enabled 0
+              modify screen-1-ef-15 enabled 0
+              modify screen-1-ef-16 enabled 0
+              modify screen-1-ef-17 enabled 0
+              modify screen-1-ef-18 enabled 0
+              modify screen-1-ef-19 enabled 0
+              modify screen-1-ef-20 enabled 0
+           else
+              modify screen-1-ef-13 ENABLED 1
+              modify screen-1-ef-14 enabled 1
+              modify screen-1-ef-15 enabled 1
+              modify screen-1-ef-16 enabled 1
+              modify screen-1-ef-17 enabled 1
+              modify screen-1-ef-18 enabled 1
+              modify screen-1-ef-19 enabled 1
+              modify screen-1-ef-20 enabled 1
+           end-if.
+
+           . 
+           .
       *end event editor code
       *end {iscobol}copy-procedure
        report-composer section.

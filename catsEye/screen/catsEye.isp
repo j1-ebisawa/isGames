@@ -9,21 +9,27 @@
     <void property="afterInitData">
      <string>screen-1-aft-init-data</string>
     </void>
+    <void id="Boolean0" method="isAutoFit"/>
     <void property="boxed">
-     <boolean>true</boolean>
+     <object idref="Boolean0"/>
     </void>
     <void property="cellHeight">
      <int>6</int>
     </void>
+    <void id="BackgroundIntensity0" property="backgroundIntensity">
+     <void id="Integer0" property="selection"/>
+    </void>
+    <void id="Integer1" property="cellWidth"/>
+    <void id="Boolean1" method="isAutominimize"/>
     <void property="components">
      <array class="com.iscobol.screenpainter.beans.AbstractBeanControl" length="26">
       <void index="0">
        <object class="com.iscobol.screenpainter.beans.swing.SwingGrid" id="SwingGrid0">
         <void property="adjustableColumns">
-         <boolean>true</boolean>
+         <object idref="Boolean0"/>
         </void>
         <void property="adjustableRows">
-         <boolean>true</boolean>
+         <object idref="Boolean0"/>
         </void>
         <void property="border">
          <object class="com.iscobol.screenpainter.beans.types.BorderStyle">
@@ -53,9 +59,9 @@
          <void property="settings">
           <array class="com.iscobol.screenpainter.beans.types.SettingItem" length="21">
            <void index="0">
-            <object class="com.iscobol.screenpainter.beans.types.GridColumnSetting">
+            <object class="com.iscobol.screenpainter.beans.types.GridColumnSetting" id="GridColumnSetting0">
              <void property="dataColumn">
-              <int>2</int>
+              <object idref="Integer0"/>
              </void>
              <void property="displayColumn">
               <int>3</int>
@@ -63,12 +69,13 @@
              <void property="picture">
               <string>xx</string>
              </void>
+             <void id="Integer2" property="separation"/>
             </object>
            </void>
            <void index="1">
             <object class="com.iscobol.screenpainter.beans.types.GridColumnSetting">
              <void property="dataColumn">
-              <int>2</int>
+              <object idref="Integer0"/>
              </void>
              <void property="displayColumn">
               <int>3</int>
@@ -81,7 +88,7 @@
            <void index="2">
             <object class="com.iscobol.screenpainter.beans.types.GridColumnSetting">
              <void property="dataColumn">
-              <int>2</int>
+              <object idref="Integer0"/>
              </void>
              <void property="displayColumn">
               <int>3</int>
@@ -94,7 +101,7 @@
            <void index="3">
             <object class="com.iscobol.screenpainter.beans.types.GridColumnSetting">
              <void property="dataColumn">
-              <int>2</int>
+              <object idref="Integer0"/>
              </void>
              <void property="displayColumn">
               <int>3</int>
@@ -107,7 +114,7 @@
            <void index="4">
             <object class="com.iscobol.screenpainter.beans.types.GridColumnSetting">
              <void property="dataColumn">
-              <int>2</int>
+              <object idref="Integer0"/>
              </void>
              <void property="displayColumn">
               <int>3</int>
@@ -120,7 +127,7 @@
            <void index="5">
             <object class="com.iscobol.screenpainter.beans.types.GridColumnSetting">
              <void property="dataColumn">
-              <int>2</int>
+              <object idref="Integer0"/>
              </void>
              <void property="displayColumn">
               <int>3</int>
@@ -131,9 +138,9 @@
             </object>
            </void>
            <void index="6">
-            <object class="com.iscobol.screenpainter.beans.types.GridColumnSetting" id="GridColumnSetting0">
+            <object class="com.iscobol.screenpainter.beans.types.GridColumnSetting">
              <void property="dataColumn">
-              <int>2</int>
+              <object idref="Integer0"/>
              </void>
              <void property="displayColumn">
               <int>3</int>
@@ -141,13 +148,12 @@
              <void property="picture">
               <string>xx</string>
              </void>
-             <void id="Boolean0" property="editorShowAlways"/>
             </object>
            </void>
            <void index="7">
             <object class="com.iscobol.screenpainter.beans.types.GridColumnSetting">
              <void property="dataColumn">
-              <int>2</int>
+              <object idref="Integer0"/>
              </void>
              <void property="displayColumn">
               <int>3</int>
@@ -160,7 +166,7 @@
            <void index="8">
             <object class="com.iscobol.screenpainter.beans.types.GridColumnSetting">
              <void property="dataColumn">
-              <int>2</int>
+              <object idref="Integer0"/>
              </void>
              <void property="displayColumn">
               <int>3</int>
@@ -173,7 +179,7 @@
            <void index="9">
             <object class="com.iscobol.screenpainter.beans.types.GridColumnSetting">
              <void property="dataColumn">
-              <int>2</int>
+              <object idref="Integer0"/>
              </void>
              <void property="displayColumn">
               <int>3</int>
@@ -186,7 +192,7 @@
            <void index="10">
             <object class="com.iscobol.screenpainter.beans.types.GridColumnSetting">
              <void property="dataColumn">
-              <int>2</int>
+              <object idref="Integer0"/>
              </void>
              <void property="displayColumn">
               <int>3</int>
@@ -199,7 +205,7 @@
            <void index="11">
             <object class="com.iscobol.screenpainter.beans.types.GridColumnSetting">
              <void property="dataColumn">
-              <int>2</int>
+              <object idref="Integer0"/>
              </void>
              <void property="displayColumn">
               <int>3</int>
@@ -212,7 +218,7 @@
            <void index="12">
             <object class="com.iscobol.screenpainter.beans.types.GridColumnSetting">
              <void property="dataColumn">
-              <int>2</int>
+              <object idref="Integer0"/>
              </void>
              <void property="displayColumn">
               <int>3</int>
@@ -225,7 +231,7 @@
            <void index="13">
             <object class="com.iscobol.screenpainter.beans.types.GridColumnSetting">
              <void property="dataColumn">
-              <int>2</int>
+              <object idref="Integer0"/>
              </void>
              <void property="displayColumn">
               <int>3</int>
@@ -238,7 +244,7 @@
            <void index="14">
             <object class="com.iscobol.screenpainter.beans.types.GridColumnSetting">
              <void property="dataColumn">
-              <int>2</int>
+              <object idref="Integer0"/>
              </void>
              <void property="displayColumn">
               <int>3</int>
@@ -251,7 +257,7 @@
            <void index="15">
             <object class="com.iscobol.screenpainter.beans.types.GridColumnSetting">
              <void property="dataColumn">
-              <int>2</int>
+              <object idref="Integer0"/>
              </void>
              <void property="displayColumn">
               <int>3</int>
@@ -264,7 +270,7 @@
            <void index="16">
             <object class="com.iscobol.screenpainter.beans.types.GridColumnSetting">
              <void property="dataColumn">
-              <int>2</int>
+              <object idref="Integer0"/>
              </void>
              <void property="displayColumn">
               <int>3</int>
@@ -277,7 +283,7 @@
            <void index="17">
             <object class="com.iscobol.screenpainter.beans.types.GridColumnSetting">
              <void property="dataColumn">
-              <int>2</int>
+              <object idref="Integer0"/>
              </void>
              <void property="displayColumn">
               <int>3</int>
@@ -290,7 +296,7 @@
            <void index="18">
             <object class="com.iscobol.screenpainter.beans.types.GridColumnSetting">
              <void property="dataColumn">
-              <int>2</int>
+              <object idref="Integer0"/>
              </void>
              <void property="displayColumn">
               <int>3</int>
@@ -303,7 +309,7 @@
            <void index="19">
             <object class="com.iscobol.screenpainter.beans.types.GridColumnSetting">
              <void property="dataColumn">
-              <int>2</int>
+              <object idref="Integer0"/>
              </void>
              <void property="displayColumn">
               <int>3</int>
@@ -316,7 +322,7 @@
            <void index="20">
             <object class="com.iscobol.screenpainter.beans.types.GridColumnSetting">
              <void property="dataColumn">
-              <int>2</int>
+              <object idref="Integer0"/>
              </void>
              <void property="displayColumn">
               <int>3</int>
@@ -344,7 +350,7 @@
           <int>0</int>
           <string>Arial-8v0</string>
           <null/>
-          <boolean>false</boolean>
+          <object idref="Boolean1"/>
          </object>
         </void>
         <void property="headingColor">
@@ -355,7 +361,7 @@
          </object>
         </void>
         <void property="heightInCells">
-         <boolean>true</boolean>
+         <object idref="Boolean0"/>
         </void>
         <void property="id">
          <int>1</int>
@@ -400,7 +406,7 @@
          </void>
         </void>
         <void property="rowHeadings">
-         <boolean>true</boolean>
+         <object idref="Boolean0"/>
         </void>
         <void id="GridRowSettingList0" property="rowSettings">
          <void id="SettingItemArray3" property="settings"/>
@@ -427,7 +433,7 @@
          <int>1</int>
         </void>
         <void property="widthInCells">
-         <boolean>true</boolean>
+         <object idref="Boolean0"/>
         </void>
        </object>
       </void>
@@ -450,11 +456,11 @@
           <int>0</int>
           <string>Arial-9v0</string>
           <null/>
-          <boolean>false</boolean>
+          <object idref="Boolean1"/>
          </object>
         </void>
         <void property="id">
-         <int>2</int>
+         <object idref="Integer0"/>
         </void>
         <void property="line">
          <string>10.833333</string>
@@ -475,7 +481,7 @@
          <int>3</int>
         </void>
         <void property="selfAct">
-         <boolean>true</boolean>
+         <object idref="Boolean0"/>
         </void>
         <void property="size">
          <float>8.4</float>
@@ -484,7 +490,7 @@
          <float>84.0</float>
         </void>
         <void property="tabOrder">
-         <int>2</int>
+         <object idref="Integer0"/>
         </void>
         <void property="title">
          <string>file:</string>
@@ -507,7 +513,7 @@
           <int>0</int>
           <string>Arial-9v0</string>
           <null/>
-          <boolean>false</boolean>
+          <object idref="Boolean1"/>
          </object>
         </void>
         <void property="id">
@@ -563,7 +569,7 @@
          <float>655.0</float>
         </void>
         <void property="exceptionValue">
-         <int>2</int>
+         <object idref="Integer0"/>
         </void>
         <void property="font">
          <object class="com.iscobol.screenpainter.beans.types.FontType">
@@ -573,7 +579,7 @@
           <int>0</int>
           <string>Arial-9v0</string>
           <null/>
-          <boolean>false</boolean>
+          <object idref="Boolean1"/>
          </object>
         </void>
         <void property="id">
@@ -598,7 +604,7 @@
          <int>3</int>
         </void>
         <void property="selfAct">
-         <boolean>true</boolean>
+         <object idref="Boolean0"/>
         </void>
         <void property="size">
          <float>8.4</float>
@@ -633,11 +639,11 @@
           <int>0</int>
           <string>Arial-9v0</string>
           <null/>
-          <boolean>false</boolean>
+          <object idref="Boolean1"/>
          </object>
         </void>
         <void property="id">
-         <int>5</int>
+         <object idref="Integer2"/>
         </void>
         <void property="line">
          <string>27.833334</string>
@@ -658,7 +664,7 @@
          <int>3</int>
         </void>
         <void property="selfAct">
-         <boolean>true</boolean>
+         <object idref="Boolean0"/>
         </void>
         <void property="size">
          <float>8.4</float>
@@ -667,7 +673,7 @@
          <float>84.0</float>
         </void>
         <void property="tabOrder">
-         <int>5</int>
+         <object idref="Integer2"/>
         </void>
         <void property="title">
          <string>Save</string>
@@ -683,7 +689,7 @@
          <float>540.0</float>
         </void>
         <void property="exceptionValue">
-         <int>5</int>
+         <object idref="Integer2"/>
         </void>
         <void property="font">
          <object class="com.iscobol.screenpainter.beans.types.FontType">
@@ -693,7 +699,7 @@
           <int>0</int>
           <string>Arial-9v0</string>
           <null/>
-          <boolean>false</boolean>
+          <object idref="Boolean1"/>
          </object>
         </void>
         <void property="id">
@@ -718,7 +724,7 @@
          <int>3</int>
         </void>
         <void property="selfAct">
-         <boolean>true</boolean>
+         <object idref="Boolean0"/>
         </void>
         <void property="size">
          <float>8.2</float>
@@ -753,7 +759,7 @@
           <int>0</int>
           <string>Arial-9v0</string>
           <null/>
-          <boolean>false</boolean>
+          <object idref="Boolean1"/>
          </object>
         </void>
         <void property="id">
@@ -778,7 +784,7 @@
          <int>3</int>
         </void>
         <void property="selfAct">
-         <boolean>true</boolean>
+         <object idref="Boolean0"/>
         </void>
         <void property="size">
          <float>8.2</float>
@@ -813,11 +819,11 @@
           <int>0</int>
           <string>Arial-9v0</string>
           <null/>
-          <boolean>false</boolean>
+          <object idref="Boolean1"/>
          </object>
         </void>
         <void property="id">
-         <int>10</int>
+         <object idref="Integer1"/>
         </void>
         <void property="line">
          <string>92.0</string>
@@ -838,7 +844,7 @@
          <int>3</int>
         </void>
         <void property="selfAct">
-         <boolean>true</boolean>
+         <object idref="Boolean0"/>
         </void>
         <void property="size">
          <float>8.2</float>
@@ -870,7 +876,7 @@
           <int>0</int>
           <string>Arial-9v0</string>
           <null/>
-          <boolean>false</boolean>
+          <object idref="Boolean1"/>
          </object>
         </void>
         <void property="id">
@@ -924,7 +930,7 @@
           <int>0</int>
           <string>Arial-9v0</string>
           <null/>
-          <boolean>false</boolean>
+          <object idref="Boolean1"/>
          </object>
         </void>
         <void property="id">
@@ -955,7 +961,7 @@
          <float>39.0</float>
         </void>
         <void property="tabOrder">
-         <int>10</int>
+         <object idref="Integer1"/>
         </void>
         <void property="title">
          <string>row</string>
@@ -978,7 +984,7 @@
           <int>0</int>
           <string>Arial-9v0</string>
           <null/>
-          <boolean>false</boolean>
+          <object idref="Boolean1"/>
          </object>
         </void>
         <void property="id">
@@ -1032,7 +1038,7 @@
           <int>0</int>
           <string>Arial-9v0</string>
           <null/>
-          <boolean>false</boolean>
+          <object idref="Boolean1"/>
          </object>
         </void>
         <void property="id">
@@ -1092,7 +1098,7 @@
           <int>0</int>
           <string>Arial-9v0</string>
           <null/>
-          <boolean>false</boolean>
+          <object idref="Boolean1"/>
          </object>
         </void>
         <void property="id">
@@ -1155,7 +1161,7 @@
           <int>0</int>
           <string>Arial-9v0</string>
           <null/>
-          <boolean>false</boolean>
+          <object idref="Boolean1"/>
          </object>
         </void>
         <void property="id">
@@ -1212,7 +1218,7 @@
           <int>0</int>
           <string>Arial-9v0</string>
           <null/>
-          <boolean>false</boolean>
+          <object idref="Boolean1"/>
          </object>
         </void>
         <void property="id">
@@ -1269,7 +1275,7 @@
           <int>0</int>
           <string>Arial-9v0</string>
           <null/>
-          <boolean>false</boolean>
+          <object idref="Boolean1"/>
          </object>
         </void>
         <void property="id">
@@ -1323,7 +1329,7 @@
           <int>0</int>
           <string>Arial-9v0</string>
           <null/>
-          <object idref="Boolean0"/>
+          <object idref="Boolean1"/>
          </object>
         </void>
         <void property="id">
@@ -1351,7 +1357,7 @@
          </void>
         </void>
         <void property="readOnly">
-         <boolean>true</boolean>
+         <object idref="Boolean0"/>
         </void>
         <void property="level">
          <int>3</int>
@@ -1389,7 +1395,7 @@
           <int>0</int>
           <string>Arial-9v0</string>
           <null/>
-          <object idref="Boolean0"/>
+          <object idref="Boolean1"/>
          </object>
         </void>
         <void property="id">
@@ -1446,7 +1452,7 @@
           <int>0</int>
           <string>Arial-9v0</string>
           <null/>
-          <object idref="Boolean0"/>
+          <object idref="Boolean1"/>
          </object>
         </void>
         <void property="id">
@@ -1500,7 +1506,7 @@
           <int>0</int>
           <string>Arial-9v0</string>
           <null/>
-          <object idref="Boolean0"/>
+          <object idref="Boolean1"/>
          </object>
         </void>
         <void property="id">
@@ -1554,7 +1560,7 @@
           <int>0</int>
           <string>Arial-9v0</string>
           <null/>
-          <object idref="Boolean0"/>
+          <object idref="Boolean1"/>
          </object>
         </void>
         <void property="id">
@@ -1608,7 +1614,7 @@
           <int>0</int>
           <string>Arial-9v0</string>
           <null/>
-          <object idref="Boolean0"/>
+          <object idref="Boolean1"/>
          </object>
         </void>
         <void property="id">
@@ -1662,7 +1668,7 @@
           <int>0</int>
           <string>Arial-9v0</string>
           <null/>
-          <object idref="Boolean0"/>
+          <object idref="Boolean1"/>
          </object>
         </void>
         <void property="id">
@@ -1719,7 +1725,7 @@
           <int>0</int>
           <string>Arial-9v0</string>
           <null/>
-          <object idref="Boolean0"/>
+          <object idref="Boolean1"/>
          </object>
         </void>
         <void property="id">
@@ -1776,7 +1782,7 @@
           <int>0</int>
           <string>Arial-20v0</string>
           <null/>
-          <object idref="Boolean0"/>
+          <object idref="Boolean1"/>
          </object>
         </void>
         <void property="id">
@@ -1833,7 +1839,7 @@
           <int>0</int>
           <string>Arial-9v0</string>
           <null/>
-          <object idref="Boolean0"/>
+          <object idref="Boolean1"/>
          </object>
         </void>
         <void property="id">
@@ -1878,10 +1884,10 @@
       <string>ＭＳ-ゴシック-11v0-b</string>
       <string>ＭＳ ゴシック</string>
       <float>11.0</float>
-      <int>2</int>
+      <object idref="Integer0"/>
       <string>ＭＳ-ゴシック-11v0-b</string>
       <null/>
-      <object idref="Boolean0"/>
+      <object idref="Boolean1"/>
      </object>
     </void>
     <void id="DockableList0" property="layout">
@@ -2542,9 +2548,26 @@
            modify screen-1-gr-1 reset-grid 3 &#13;
            move 2 to row-idx&#13;
            perform until 1 = 0&#13;
+             move space to map-record&#13;
              read map-file at end exit perform&#13;
              end-read&#13;
              modify screen-1-gr-1 record-to-add map-record&#13;
+             perform varying col-idx from 1 by 1 &#13;
+                     until col-idx &gt;= col-max&#13;
+                compute wk-col = col-idx * 2 + 1&#13;
+                if map-record(wk-col:1) = &quot;G&quot;&#13;
+                   compute gold-row = row-idx - 1&#13;
+                   compute gold-col = col-idx&#13;
+                   modify screen-1-ef-2 value gold-row&#13;
+                   modify screen-1-ef-3 value gold-col                   &#13;
+                end-if&#13;
+                if map-record(wk-col:1) = &quot;S&quot;&#13;
+                   compute start-row = row-idx - 1&#13;
+                   compute start-col = col-idx&#13;
+                   modify screen-1-ef-5 value start-row&#13;
+                   modify screen-1-ef-6 value start-col                   &#13;
+                end-if&#13;
+             end-perform&#13;
              add 1 to row-idx&#13;
            end-perform&#13;
            modify screen-1-gr-1 mass-update = 0&#13;

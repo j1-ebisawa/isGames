@@ -1287,49 +1287,6 @@
       <void index="20">
        <object class="com.iscobol.screenpainter.beans.swing.SwingLabel">
         <void property="column">
-         <string>57.0</string>
-        </void>
-        <void property="columnPixels">
-         <float>561.0</float>
-        </void>
-        <void property="id">
-         <int>21</int>
-        </void>
-        <void property="line">
-         <string>43.5</string>
-        </void>
-        <void property="linePixels">
-         <float>426.0</float>
-        </void>
-        <void property="lines">
-         <float>2.7</float>
-        </void>
-        <void property="linesPixels">
-         <float>27.0</float>
-        </void>
-        <void property="name">
-         <string>screen-1-la-4</string>
-        </void>
-        <void property="level">
-         <int>3</int>
-        </void>
-        <void property="size">
-         <float>7.9</float>
-        </void>
-        <void property="sizePixels">
-         <float>79.0</float>
-        </void>
-        <void property="tabOrder">
-         <int>21</int>
-        </void>
-        <void property="title">
-         <string>Analyzer</string>
-        </void>
-       </object>
-      </void>
-      <void index="21">
-       <object class="com.iscobol.screenpainter.beans.swing.SwingLabel">
-        <void property="column">
          <string>63.5</string>
         </void>
         <void property="columnPixels">
@@ -1363,14 +1320,14 @@
          <float>59.0</float>
         </void>
         <void property="tabOrder">
-         <int>22</int>
+         <int>21</int>
         </void>
         <void property="title">
          <string>Gray</string>
         </void>
        </object>
       </void>
-      <void index="22">
+      <void index="21">
        <object class="com.iscobol.screenpainter.beans.swing.SwingLabel">
         <void property="column">
          <string>63.5</string>
@@ -1406,14 +1363,14 @@
          <float>52.0</float>
         </void>
         <void property="tabOrder">
-         <int>23</int>
+         <int>22</int>
         </void>
         <void property="title">
          <string>Cyan</string>
         </void>
        </object>
       </void>
-      <void index="23">
+      <void index="22">
        <object class="com.iscobol.screenpainter.beans.swing.SwingLabel">
         <void property="column">
          <string>71.1</string>
@@ -1449,14 +1406,14 @@
          <float>43.0</float>
         </void>
         <void property="tabOrder">
-         <int>24</int>
+         <int>23</int>
         </void>
         <void property="title">
          <string>01</string>
         </void>
        </object>
       </void>
-      <void index="24">
+      <void index="23">
        <object class="com.iscobol.screenpainter.beans.swing.SwingLabel">
         <void property="column">
          <string>75.7</string>
@@ -1492,14 +1449,14 @@
          <float>43.0</float>
         </void>
         <void property="tabOrder">
-         <int>25</int>
+         <int>24</int>
         </void>
         <void property="title">
          <string>02</string>
         </void>
        </object>
       </void>
-      <void index="25">
+      <void index="24">
        <object class="com.iscobol.screenpainter.beans.swing.SwingLabel">
         <void property="column">
          <string>81.7</string>
@@ -1535,14 +1492,14 @@
          <float>43.0</float>
         </void>
         <void property="tabOrder">
-         <int>26</int>
+         <int>25</int>
         </void>
         <void property="title">
          <string>03</string>
         </void>
        </object>
       </void>
-      <void index="26">
+      <void index="25">
        <object class="com.iscobol.screenpainter.beans.swing.SwingLabel">
         <void property="column">
          <string>86.9</string>
@@ -1578,14 +1535,14 @@
          <float>43.0</float>
         </void>
         <void property="tabOrder">
-         <int>27</int>
+         <int>26</int>
         </void>
         <void property="title">
          <string>04</string>
         </void>
        </object>
       </void>
-      <void index="27">
+      <void index="26">
        <object class="com.iscobol.screenpainter.beans.swing.SwingEntryField" id="SwingEntryField13">
         <void property="column">
          <string>71.1</string>
@@ -1630,11 +1587,11 @@
          <float>35.0</float>
         </void>
         <void property="tabOrder">
-         <int>28</int>
+         <int>27</int>
         </void>
        </object>
       </void>
-      <void index="28">
+      <void index="27">
        <object class="com.iscobol.screenpainter.beans.swing.SwingEntryField" id="SwingEntryField14">
         <void property="column">
          <string>75.7</string>
@@ -1679,11 +1636,11 @@
          <float>35.0</float>
         </void>
         <void property="tabOrder">
-         <int>29</int>
+         <int>28</int>
         </void>
        </object>
       </void>
-      <void index="29">
+      <void index="28">
        <object class="com.iscobol.screenpainter.beans.swing.SwingEntryField" id="SwingEntryField15">
         <void property="column">
          <string>81.7</string>
@@ -1728,11 +1685,11 @@
          <float>35.0</float>
         </void>
         <void property="tabOrder">
-         <int>30</int>
+         <int>29</int>
         </void>
        </object>
       </void>
-      <void index="30">
+      <void index="29">
        <object class="com.iscobol.screenpainter.beans.swing.SwingEntryField" id="SwingEntryField16">
         <void property="column">
          <string>86.9</string>
@@ -1777,11 +1734,11 @@
          <float>35.0</float>
         </void>
         <void property="tabOrder">
-         <int>31</int>
+         <int>30</int>
         </void>
        </object>
       </void>
-      <void index="31">
+      <void index="30">
        <object class="com.iscobol.screenpainter.beans.swing.SwingEntryField" id="SwingEntryField17">
         <void property="column">
          <string>71.1</string>
@@ -1826,11 +1783,11 @@
          <float>35.0</float>
         </void>
         <void property="tabOrder">
-         <int>32</int>
+         <int>31</int>
         </void>
        </object>
       </void>
-      <void index="32">
+      <void index="31">
        <object class="com.iscobol.screenpainter.beans.swing.SwingEntryField" id="SwingEntryField18">
         <void property="column">
          <string>75.7</string>
@@ -1875,11 +1832,11 @@
          <float>35.0</float>
         </void>
         <void property="tabOrder">
-         <int>33</int>
+         <int>32</int>
         </void>
        </object>
       </void>
-      <void index="33">
+      <void index="32">
        <object class="com.iscobol.screenpainter.beans.swing.SwingEntryField" id="SwingEntryField19">
         <void property="column">
          <string>81.7</string>
@@ -1924,11 +1881,11 @@
          <float>35.0</float>
         </void>
         <void property="tabOrder">
-         <int>34</int>
+         <int>33</int>
         </void>
        </object>
       </void>
-      <void index="34">
+      <void index="33">
        <object class="com.iscobol.screenpainter.beans.swing.SwingEntryField" id="SwingEntryField20">
         <void property="column">
          <string>86.9</string>
@@ -1973,7 +1930,53 @@
          <float>35.0</float>
         </void>
         <void property="tabOrder">
+         <int>34</int>
+        </void>
+       </object>
+      </void>
+      <void index="34">
+       <object class="com.iscobol.screenpainter.beans.swing.SwingCheckBox">
+        <void property="eventProcedure">
+         <string>screen-1-cb-1-evt-proc</string>
+        </void>
+        <void property="cmdClickedEv">
+         <string>screen-1-cb-1-evt-cmd-clicked</string>
+        </void>
+        <void property="column">
+         <string>55.8</string>
+        </void>
+        <void property="columnPixels">
+         <float>549.0</float>
+        </void>
+        <void property="id">
+         <int>21</int>
+        </void>
+        <void property="line">
+         <string>43.5</string>
+        </void>
+        <void property="linePixels">
+         <float>426.0</float>
+        </void>
+        <void property="linesPixels">
+         <float>20.0</float>
+        </void>
+        <void property="name">
+         <string>screen-1-cb-1</string>
+        </void>
+        <void property="level">
+         <int>3</int>
+        </void>
+        <void property="size">
+         <float>9.2</float>
+        </void>
+        <void property="sizePixels">
+         <float>92.0</float>
+        </void>
+        <void property="tabOrder">
          <int>35</int>
+        </void>
+        <void property="title">
+         <string>Helper</string>
         </void>
        </object>
       </void>
@@ -2008,7 +2011,7 @@
    </object>
   </void>
  </array>
- <array class="com.iscobol.screenpainter.beans.types.VariableType" length="26">
+ <array class="com.iscobol.screenpainter.beans.types.VariableType" length="27">
   <void index="0">
    <object class="com.iscobol.screenpainter.beans.types.VariableType" id="VariableType0">
     <void id="SettingTreeItemArray0" property="children"/>
@@ -2411,6 +2414,20 @@
     </void>
    </object>
   </void>
+  <void index="26">
+   <object class="com.iscobol.screenpainter.beans.types.VariableType" id="VariableType26">
+    <void id="SettingTreeItemArray26" property="children"/>
+    <void property="children">
+     <object idref="SettingTreeItemArray26"/>
+    </void>
+    <void property="name">
+     <string>help-checked</string>
+    </void>
+    <void property="picture">
+     <string>9(01)</string>
+    </void>
+   </object>
+  </void>
  </array>
  <object class="com.iscobol.screenpainter.propertysheet.EventParagraphs">
   <void property="body">
@@ -2430,6 +2447,7 @@
            modify screen-1-gr-1(1, 2) cell-data = &quot;Number&quot;&#13;
            modify screen-1-gr-1(1, 3) cell-data = &quot;Hit&quot;&#13;
            modify screen-1-gr-1(1, 4) cell-data = &quot;Blow&quot;&#13;
+           modify screen-1-cb-1 value=1&#13;
            &#13;
             &#13;
            .&#13;
@@ -2476,13 +2494,16 @@
            end-if.   &#13;
            &#13;
            if hit-cnt not = p-digit&#13;
-              initialize change-cnt&#13;
-              perform Set-change-cnt &#13;
-              perform Anal-01&#13;
-              perform Anal-02&#13;
-              perform Anal-03&#13;
-              perform Anal-04&#13;
-              perform Set-change-cnt &#13;
+              inquire screen-1-cb-1 value help-checked&#13;
+              if help-checked = 1&#13;
+                 initialize change-cnt&#13;
+                 perform Set-change-cnt &#13;
+                 perform Anal-01&#13;
+                 perform Anal-02&#13;
+                 perform Anal-03&#13;
+                 perform Anal-04&#13;
+                 perform Set-change-cnt &#13;
+              end-if&#13;
            end-if.&#13;
                     &#13;
            .&#13;
@@ -2753,7 +2774,33 @@
         &#13;
            .&#13;
 &#13;
-</string>
+&#13;
+       screen-1-cb-1-evt-cmd-clicked.&#13;
+           initialize change-cnt.&#13;
+           perform Set-change-cnt &#13;
+           inquire screen-1-cb-1 value help-checked &#13;
+           if help-checked = 0&#13;
+              modify screen-1-ef-13 enabled 0&#13;
+              modify screen-1-ef-14 enabled 0&#13;
+              modify screen-1-ef-15 enabled 0&#13;
+              modify screen-1-ef-16 enabled 0&#13;
+              modify screen-1-ef-17 enabled 0&#13;
+              modify screen-1-ef-18 enabled 0&#13;
+              modify screen-1-ef-19 enabled 0&#13;
+              modify screen-1-ef-20 enabled 0&#13;
+           else&#13;
+              modify screen-1-ef-13 ENABLED 1&#13;
+              modify screen-1-ef-14 enabled 1&#13;
+              modify screen-1-ef-15 enabled 1&#13;
+              modify screen-1-ef-16 enabled 1&#13;
+              modify screen-1-ef-17 enabled 1&#13;
+              modify screen-1-ef-18 enabled 1&#13;
+              modify screen-1-ef-19 enabled 1&#13;
+              modify screen-1-ef-20 enabled 1&#13;
+           end-if.&#13;
+&#13;
+           . &#13;
+           .</string>
   </void>
  </object>
  <object class="com.iscobol.screenpainter.beans.types.FileSection" id="FileSection0">
@@ -2791,7 +2838,7 @@
  <object class="java.util.Hashtable">
   <void method="put">
    <string>iscobol.release</string>
-   <string>isCOBOL2022R1</string>
+   <string>isCOBOL2022R2</string>
   </void>
  </object>
  <object class="com.iscobol.screenpainter.beans.types.AlphabetList" id="AlphabetList0">
@@ -2846,6 +2893,12 @@
  </object>
  <object class="com.iscobol.screenpainter.propertysheet.DataDefinition">
   <string>lks</string>
+ </object>
+ <object class="com.iscobol.screenpainter.propertysheet.DataDefinition">
+  <string>lss</string>
+ </object>
+ <object class="com.iscobol.screenpainter.propertysheet.DataDefinition">
+  <string>tlss</string>
  </object>
  <array class="com.iscobol.screenpainter.beans.types.FontType" length="0"/>
  <object class="java.util.TreeSet"/>

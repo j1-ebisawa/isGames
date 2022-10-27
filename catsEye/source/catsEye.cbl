@@ -7,7 +7,7 @@
        identification division.
       *begin {iscobol}progid
        program-id. catsEye.
-       author. user.
+       author. j1_eb.
        remarks.
       *end {iscobol}progid
        environment division.
@@ -684,9 +684,26 @@
            modify screen-1-gr-1 reset-grid 3 
            move 2 to row-idx
            perform until 1 = 0
+             move space to map-record
              read map-file at end exit perform
              end-read
              modify screen-1-gr-1 record-to-add map-record
+             perform varying col-idx from 1 by 1 
+                     until col-idx >= col-max
+                compute wk-col = col-idx * 2 + 1
+                if map-record(wk-col:1) = "G"
+                   compute gold-row = row-idx - 1
+                   compute gold-col = col-idx
+                   modify screen-1-ef-2 value gold-row
+                   modify screen-1-ef-3 value gold-col                   
+                end-if
+                if map-record(wk-col:1) = "S"
+                   compute start-row = row-idx - 1
+                   compute start-col = col-idx
+                   modify screen-1-ef-5 value start-row
+                   modify screen-1-ef-6 value start-col                   
+                end-if
+             end-perform
              add 1 to row-idx
            end-perform
            modify screen-1-gr-1 mass-update = 0
