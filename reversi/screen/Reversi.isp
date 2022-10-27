@@ -12,16 +12,16 @@
     <void property="afterInitData">
      <string>screen-1-aft-init-data</string>
     </void>
+    <void id="Boolean0" method="isAutominimize"/>
     <void id="BackgroundIntensity0" property="backgroundIntensity">
      <void id="Integer0" property="selection"/>
     </void>
-    <void id="BackgroundColorType0" property="backgroundColor">
-     <void id="Boolean0" method="isBackHigh"/>
-    </void>
+    <void id="Integer1" property="cellHeight"/>
+    <void id="Boolean1" method="isAutoFit"/>
     <void property="components">
      <array class="com.iscobol.screenpainter.beans.AbstractBeanControl" length="20">
       <void index="0">
-       <object class="com.iscobol.screenpainter.beans.swing.SwingLabel" id="SwingLabel0">
+       <object class="com.iscobol.screenpainter.beans.swing.SwingLabel">
         <void property="column">
          <string>16.5</string>
         </void>
@@ -36,7 +36,7 @@
           <int>0</int>
           <string>Arial-20v0</string>
           <null/>
-          <boolean>false</boolean>
+          <object idref="Boolean0"/>
          </object>
         </void>
         <void property="id">
@@ -71,9 +71,6 @@
         </void>
         <void property="title">
          <string>Reversi Game</string>
-        </void>
-        <void id="ForegroundColorType0" property="foregroundColor">
-         <void id="Boolean1" method="isPartOfColorProp"/>
         </void>
        </object>
       </void>
@@ -165,8 +162,9 @@
          <string>...</string>
         </void>
         <void id="PushButtonAlignment0" property="alignment">
-         <void id="Integer1" property="selection"/>
+         <void id="Integer2" property="selection"/>
         </void>
+        <void id="Integer3" property="transparentColor"/>
        </object>
       </void>
       <void index="3">
@@ -178,7 +176,7 @@
          <float>515.0</float>
         </void>
         <void property="id">
-         <object idref="Integer1"/>
+         <object idref="Integer2"/>
         </void>
         <void property="line">
          <string>9.6</string>
@@ -211,9 +209,9 @@
          <float>222.0</float>
         </void>
         <void property="tabOrder">
-         <object idref="Integer1"/>
+         <object idref="Integer2"/>
         </void>
-        <void id="Integer2" property="visibleProposalCount"/>
+        <void id="Integer4" property="visibleProposalCount"/>
        </object>
       </void>
       <void index="4">
@@ -228,7 +226,7 @@
          <object idref="Integer0"/>
         </void>
         <void property="id">
-         <object idref="Integer2"/>
+         <object idref="Integer4"/>
         </void>
         <void property="line">
          <string>14.8</string>
@@ -255,7 +253,7 @@
          <float>96.0</float>
         </void>
         <void property="tabOrder">
-         <object idref="Integer2"/>
+         <object idref="Integer4"/>
         </void>
         <void property="title">
          <string>file load</string>
@@ -360,7 +358,7 @@
          <float>625.0</float>
         </void>
         <void property="exceptionValue">
-         <object idref="Integer1"/>
+         <object idref="Integer2"/>
         </void>
         <void property="id">
          <int>8</int>
@@ -479,7 +477,7 @@
          <float>93.0</float>
         </void>
         <void property="tabOrder">
-         <int>10</int>
+         <object idref="Integer1"/>
         </void>
         <void property="title">
          <string>White :</string>
@@ -823,7 +821,7 @@
         </void>
         <void property="borderColor">
          <object class="com.iscobol.screenpainter.beans.types.ForegroundColorType">
-          <int>-1</int>
+          <object idref="Integer3"/>
           <int>0</int>
           <int>0</int>
          </object>
@@ -955,7 +953,7 @@
         </void>
         <void property="dividerColor">
          <object class="com.iscobol.screenpainter.beans.types.ForegroundColorType">
-          <int>-1</int>
+          <object idref="Integer3"/>
           <int>0</int>
           <int>0</int>
          </object>
@@ -968,7 +966,7 @@
           <int>0</int>
           <string>Arial-20v00</string>
           <null/>
-          <boolean>false</boolean>
+          <object idref="Boolean0"/>
          </object>
         </void>
         <void property="id">
@@ -993,6 +991,9 @@
         </void>
         <void property="msgGdDblclickEv">
          <string>screen-1-gr-1-evt-msg-gd-dblclick</string>
+        </void>
+        <void property="msgGotoCellMouseEv">
+         <string>screen-1-gr-1-evt-msg-goto-cell-mouse</string>
         </void>
         <void property="name">
          <string>screen-1-gr-1</string>
@@ -1100,7 +1101,7 @@
          <float>710.0</float>
         </void>
         <void property="id">
-         <int>10</int>
+         <object idref="Integer1"/>
         </void>
         <void property="line">
          <string>28.6</string>
@@ -1779,7 +1780,7 @@
           <object idref="Boolean1"/>
          </void>
          <void property="times">
-          <int>10</int>
+          <object idref="Integer1"/>
          </void>
         </void>
        </object>
@@ -1853,6 +1854,9 @@
                   perform RESET-RTN&#13;
             end-evaluate           &#13;
            .&#13;
+       screen-1-gr-1-evt-msg-goto-cell-mouse.&#13;
+           perform screen-1-gr-1-evt-msg-gd-dblclick &#13;
+           .           &#13;
        &#13;
        screen-1-gr-1-evt-msg-gd-dblclick.&#13;
            inquire screen-1-gr-1 X ws-X Y ws-Y&#13;
@@ -2060,6 +2064,7 @@
            &#13;
        &#13;
        &#13;
+&#13;
 </string>
   </void>
  </object>

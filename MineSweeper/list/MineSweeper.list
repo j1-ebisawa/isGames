@@ -1,7 +1,7 @@
 *>(c) 2005 - 2021 Veryant
 *>compiler version: isCOBOL release 2022 R2 build#1074.6-20220909-34620
 *>source file name:  C:\Github\isGames\MineSweeper\source\MineSweeper.cbl
-*>date generated  :  Mon Oct 24 13:35:26 JST 2022
+*>date generated  :  Thu Oct 27 14:03:00 JST 2022
 *>compiler options:  -dx -eo=C:/Github/isGames/MineSweeper/errs -sp=cpy;screenpgm;fdsl -esme=100 -d -smat -g -lo=C:/Github/isGames/MineSweeper/list -tasks -od=C:/Github/isGames/MineSweeper/output -jj
 *>begin {iscobol}compiler-directives                               
 *>end {iscobol}compiler-directives                                 
@@ -1397,7 +1397,7 @@ screen section.
       lines 2.08 cells                                           
       font Arial-9v0                                             
       id 16                                                      
-      title "Double click: Open cell "                           
+      title "Click : Open cell "                                 
       .                                                          
    03 screen-1-la-9 Label                                        
       line 30.33                                                 
@@ -1406,7 +1406,7 @@ screen section.
       lines 2.33 cells                                           
       font Arial-9v0                                             
       id 6                                                       
-      title " Right click: set Flag"                             
+      title " Right click: Set Flag"                             
       .                                                          
    03 screen-1-ef-3 Entry-Field                                  
       line 15.17                                                 
@@ -1677,6 +1677,8 @@ is-screen-1-exit.
     set exit-pushed to true.                                     
 screen-1-gr-1-evt-proc.                                          
     evaluate event-type                                          
+    when msg-goto-cell-mouse                                     
+       perform screen-1-gr-1-evt-msg-goto-cell-mouse             
     when msg-grid-rbutton-down                                   
        perform screen-1-gr-1-evt-msg-grid-rbutton-down           
     when msg-gd-dblclick                                         
@@ -1743,6 +1745,10 @@ screen-1-aft-end-acc.
         end-evaluate                                             
     end-if                                                       
     .                                                            
+screen-1-gr-1-evt-msg-goto-cell-mouse.                           
+    perform screen-1-gr-1-evt-msg-gd-dblclick                    
+    .                                                            
+                                                                 
 screen-1-gr-1-evt-msg-grid-rbutton-down.                         
     inquire screen-1-gr-1 X ws-X Y ws-Y                          
     move ws-x to wk-col                                          
@@ -1842,15 +1848,15 @@ CHANGE-MODE-RTN.
     if mode-sw = 0                                               
        move 1 to mode-sw                                         
        modify screen-1-pb-5 value "Cell setting"                 
-       modify screen-1-la-8 title "Double click: Bomb Set/Clear" 
+       modify screen-1-la-8 title "Click cell: Bomb Set/Clear"   
        modify screen-1-la-9 visible false                        
        perform Show-BOMBS-RTN                                    
     else                                                         
        move 0 to mode-sw                                         
        modify screen-1-pb-5 value "Play Game"                    
-       modify screen-1-la-8 title "Double click: Open Cell"      
+       modify screen-1-la-8 title "Click cell: Open Cell"        
        modify screen-1-la-9 visible true                         
-       modify screen-1-la-9 title "Right  click: Flag Set/Clear" 
+       modify screen-1-la-9 title "Right click: Flag Set/Clear"  
        perform HIDE-BOMBS-RTN                                    
     end-if                                                       
     .                                                            
@@ -2085,6 +2091,9 @@ CALC-TIME.
                                                                  
                                                                  
                                                                  
+                                                                 
+                                                                 
+    .                                                            
 *>end event editor code                                            
 *>end {iscobol}copy-procedure                                      
 report-composer section.                                         

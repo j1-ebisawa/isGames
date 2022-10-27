@@ -326,7 +326,7 @@
              lines 2.08 cells 
              font Arial-9v0
              id 16
-             title "Double click: Open cell "
+             title "Click : Open cell "
              .
           03 screen-1-la-9 Label
              line 30.33
@@ -335,7 +335,7 @@
              lines 2.33 cells 
              font Arial-9v0
              id 6
-             title " Right click: set Flag"
+             title " Right click: Set Flag"
              .
           03 screen-1-ef-3 Entry-Field
              line 15.17
@@ -475,6 +475,8 @@
            set exit-pushed to true.
        screen-1-gr-1-evt-proc.
            evaluate event-type
+           when msg-goto-cell-mouse
+              perform screen-1-gr-1-evt-msg-goto-cell-mouse
            when msg-grid-rbutton-down
               perform screen-1-gr-1-evt-msg-grid-rbutton-down
            when msg-gd-dblclick
@@ -541,6 +543,10 @@
                end-evaluate  
            end-if
            .
+       screen-1-gr-1-evt-msg-goto-cell-mouse.
+           perform screen-1-gr-1-evt-msg-gd-dblclick            
+           .
+           
        screen-1-gr-1-evt-msg-grid-rbutton-down.
            inquire screen-1-gr-1 X ws-X Y ws-Y
            move ws-x to wk-col
@@ -640,15 +646,15 @@
            if mode-sw = 0
               move 1 to mode-sw
               modify screen-1-pb-5 value "Cell setting"
-              modify screen-1-la-8 title "Double click: Bomb Set/Clear" 
+              modify screen-1-la-8 title "Click cell: Bomb Set/Clear" 
               modify screen-1-la-9 visible false
               perform Show-BOMBS-RTN
            else
               move 0 to mode-sw
               modify screen-1-pb-5 value "Play Game"
-              modify screen-1-la-8 title "Double click: Open Cell" 
+              modify screen-1-la-8 title "Click cell: Open Cell" 
               modify screen-1-la-9 visible true
-              modify screen-1-la-9 title "Right  click: Flag Set/Clear"
+              modify screen-1-la-9 title "Right click: Flag Set/Clear"
               perform HIDE-BOMBS-RTN                     
            end-if
            .
@@ -883,6 +889,9 @@
                          
            
 
+
+            
+           .
       *end event editor code
       *end {iscobol}copy-procedure
        report-composer section.

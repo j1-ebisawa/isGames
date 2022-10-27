@@ -1,7 +1,7 @@
 *>(c) 2005 - 2021 Veryant
 *>compiler version: isCOBOL release 2022 R2 build#1074.6-20220909-34620
 *>source file name:  C:\Github\isGames\reversi\source\Reversi.cbl
-*>date generated  :  Thu Oct 27 09:55:23 JST 2022
+*>date generated  :  Thu Oct 27 14:10:11 JST 2022
 *>compiler options:  -dx -eo=C:/Github/isGames/reversi/errs -sp=cpy;screenpgm;fdsl -esme=100 -d -smat -g -lo=C:/Github/isGames/reversi/list -tasks -od=C:/Github/isGames/reversi/output -jj
 *>begin {iscobol}compiler-directives                               
 *>end {iscobol}compiler-directives                                 
@@ -1613,6 +1613,8 @@ is-screen-1-exit.
     set exit-pushed to true.                                     
 screen-1-gr-1-evt-proc.                                          
     evaluate event-type                                          
+    when msg-goto-cell-mouse                                     
+       perform screen-1-gr-1-evt-msg-goto-cell-mouse             
     when msg-gd-dblclick                                         
        perform screen-1-gr-1-evt-msg-gd-dblclick                 
     when other                                                   
@@ -1655,6 +1657,9 @@ screen-1-aft-end-acc.
        when  6    *>Reset                                        
            perform RESET-RTN                                     
      end-evaluate                                                
+    .                                                            
+screen-1-gr-1-evt-msg-goto-cell-mouse.                           
+    perform screen-1-gr-1-evt-msg-gd-dblclick                    
     .                                                            
                                                                  
 screen-1-gr-1-evt-msg-gd-dblclick.                               
@@ -1860,6 +1865,7 @@ RESET-RTN.
     modify screen-1-ef-3 value num-black                         
     modify screen-1-ef-4 value num-reverse                       
     .                                                            
+                                                                 
                                                                  
                                                                  
                                                                  

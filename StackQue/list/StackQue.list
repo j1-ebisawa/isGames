@@ -1,11 +1,7 @@
 *>(c) 2005 - 2021 Veryant
 *>compiler version: isCOBOL release 2022 R2 build#1074.6-20220909-34620
 *>source file name:  C:\Github\isGames\StackQue\source\StackQue.cbl
-<<<<<<< HEAD
-*>date generated  :  Sun Oct 23 21:25:13 JST 2022
-=======
-*>date generated  :  Mon Oct 24 10:42:13 JST 2022
->>>>>>> branch 'master' of https://github.com/j1-ebisawa/isGames
+*>date generated  :  Thu Oct 27 12:04:33 JST 2022
 *>compiler options:  -dx -eo=C:/Github/isGames/StackQue/errs -sp=cpy;screenpgm;fdsl -esme=100 -d -smat -g -lo=C:/Github/isGames/StackQue/list -tasks -od=C:/Github/isGames/StackQue/output -jj
 *>begin {iscobol}compiler-directives                               
 *>end {iscobol}compiler-directives                                 

@@ -1,7 +1,7 @@
 *>(c) 2005 - 2021 Veryant
 *>compiler version: isCOBOL release 2022 R2 build#1074.6-20220909-34620
 *>source file name:  C:\Github\isGames\MonoChrome\source\MonoChrome.cbl
-*>date generated  :  Thu Oct 27 09:55:07 JST 2022
+*>date generated  :  Thu Oct 27 14:07:31 JST 2022
 *>compiler options:  -dx -eo=C:/Github/isGames/MonoChrome/errs -sp=cpy;screenpgm;fdsl -esme=100 -d -smat -g -lo=C:/Github/isGames/MonoChrome/list -tasks -od=C:/Github/isGames/MonoChrome/output -jj
 *>begin {iscobol}compiler-directives                               
 *>end {iscobol}compiler-directives                                 
@@ -1569,7 +1569,10 @@ screen-1-aft-end-acc.
            perform RESET-RTN                                     
      end-evaluate                                                
     .                                                            
+screen-1-gr-1-evt-msg-goto-cell-mouse.                           
+    perform screen-1-gr-1-evt-msg-gd-dblclick                    
                                                                  
+    .                                                            
 screen-1-gr-1-evt-msg-gd-dblclick.                               
     inquire screen-1-gr-1 X ws-X Y ws-Y                          
     move ws-x to wk-col                                          
@@ -1697,13 +1700,7 @@ RESET-RTN.
     end-perform                                                  
     .                                                            
                                                                  
-screen-1-gr-1-evt-msg-goto-cell-mouse.                           
-    inquire screen-1-gr-1 X ws-X Y ws-Y                          
-    move ws-x to wk-col                                          
-    move ws-y to wk-row                                          
-    perform DBL-CLICKED-RTN                                      
                                                                  
-    .                                                            
 *>end event editor code                                            
 *>end {iscobol}copy-procedure                                      
 report-composer section.                                         

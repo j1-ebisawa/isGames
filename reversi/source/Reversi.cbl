@@ -411,6 +411,8 @@
            set exit-pushed to true.
        screen-1-gr-1-evt-proc.
            evaluate event-type
+           when msg-goto-cell-mouse
+              perform screen-1-gr-1-evt-msg-goto-cell-mouse
            when msg-gd-dblclick
               perform screen-1-gr-1-evt-msg-gd-dblclick
            when other
@@ -454,6 +456,9 @@
                   perform RESET-RTN
             end-evaluate           
            .
+       screen-1-gr-1-evt-msg-goto-cell-mouse.
+           perform screen-1-gr-1-evt-msg-gd-dblclick 
+           .           
        
        screen-1-gr-1-evt-msg-gd-dblclick.
            inquire screen-1-gr-1 X ws-X Y ws-Y
@@ -661,6 +666,7 @@
            
        
        
+
 
       *end event editor code
       *end {iscobol}copy-procedure

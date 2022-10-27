@@ -7,7 +7,7 @@
        identification division.
       *begin {iscobol}progid
        program-id. catsEye.
-       author. j1_eb.
+       author. user.
        remarks.
       *end {iscobol}progid
        environment division.
@@ -610,6 +610,7 @@
                    move selected-row(wk-i) to wk-row
                    move selected-col(wk-i) to wk-col
               modify screen-1-gr-1(wk-row, wk-col) CELL-DATA = "#"
+                                                   cell-color 289
            end-perform.
            .
        SET-GOLD-RTN.
@@ -621,7 +622,8 @@
            else
               move selected-row(1) to gold-row
               move selected-col(1) to gold-col
-              modify screen-1-gr-1(gold-row, gold-col) CELL-DATA = "G"
+              modify screen-1-gr-1(gold-row, gold-col)  CELL-DATA = "G" 
+                                                        cell-color 417
               compute wk-row = gold-row - 1
               compute wk-col = gold-col - 1
               modify screen-1-ef-2 value wk-row
@@ -637,7 +639,8 @@
            else
               move selected-row(1) to start-row
               move selected-col(1) to start-col
-              modify screen-1-gr-1(start-row, start-col) CELL-DATA ="S"
+              modify screen-1-gr-1(start-row, start-col)  CELL-DATA ="S" 
+                                                          cell-color 353
               compute wk-row = start-row - 1
               compute wk-col = start-col - 1
               modify screen-1-ef-5 value wk-row
@@ -688,24 +691,33 @@
              read map-file at end exit perform
              end-read
              modify screen-1-gr-1 record-to-add map-record
-             perform varying col-idx from 1 by 1 
-                     until col-idx >= col-max
-                compute wk-col = col-idx * 2 + 1
-                if map-record(wk-col:1) = "G"
-                   compute gold-row = row-idx - 1
-                   compute gold-col = col-idx
-                   modify screen-1-ef-2 value gold-row
-                   modify screen-1-ef-3 value gold-col                   
-                end-if
-                if map-record(wk-col:1) = "S"
-                   compute start-row = row-idx - 1
-                   compute start-col = col-idx
-                   modify screen-1-ef-5 value start-row
-                   modify screen-1-ef-6 value start-col                   
-                end-if
-             end-perform
              add 1 to row-idx
            end-perform
+           perform varying wk-row from 1 by 1 until wk-row > row-max 
+              perform varying wk-col from 1 by 1 until wk-col > col-max
+                inquire screen-1-gr-1(wk-row, wk-col) cell-data wk-cell
+                evaluate wk-cell
+                   when  "G"
+                       move wk-row to gold-row
+                       move wk-col to gold-col
+                       modify screen-1-ef-2 value gold-row
+                       modify screen-1-ef-3 value gold-col
+                       modify screen-1-gr-1(wk-row, wk-col) 
+                                              cell-color 417                   
+                   when "S"
+                       move wk-row to start-row
+                       move wk-col to start-col
+                       modify screen-1-ef-5 value start-row
+                       modify screen-1-ef-6 value start-col 
+                       modify screen-1-gr-1(wk-row, wk-col) 
+                                              cell-color 353                  
+                   when "#"
+                       modify screen-1-gr-1(wk-row, wk-col) 
+                                              cell-color 289                  
+                                         
+                end-evaluate
+             end-perform
+           end-perform.
            modify screen-1-gr-1 mass-update = 0
            close map-file.            
            .

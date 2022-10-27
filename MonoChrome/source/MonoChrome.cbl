@@ -367,7 +367,10 @@
                   perform RESET-RTN
             end-evaluate           
            .
-       
+       screen-1-gr-1-evt-msg-goto-cell-mouse.
+           perform screen-1-gr-1-evt-msg-gd-dblclick
+            
+           .       
        screen-1-gr-1-evt-msg-gd-dblclick.
            inquire screen-1-gr-1 X ws-X Y ws-Y
            move ws-x to wk-col
@@ -495,13 +498,7 @@
            end-perform           
            .
 
-       screen-1-gr-1-evt-msg-goto-cell-mouse.
-           inquire screen-1-gr-1 X ws-X Y ws-Y
-           move ws-x to wk-col
-           move ws-y to wk-row
-           perform DBL-CLICKED-RTN
-            
-           .
+
       *end event editor code
       *end {iscobol}copy-procedure
        report-composer section.
