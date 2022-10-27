@@ -1,7 +1,7 @@
 *>(c) 2005 - 2021 Veryant
 *>compiler version: isCOBOL release 2022 R2 build#1074.6-20220909-34620
 *>source file name:  C:\Github\isGames\MineSweeper\source\CellItem.cbl
-*>date generated  :  Mon Oct 24 10:42:05 JST 2022
+*>date generated  :  Thu Oct 27 14:56:34 JST 2022
 *>compiler options:  -dx -eo=C:/Github/isGames/MineSweeper/errs -sp=cpy;screenpgm;fdsl -esme=100 -d -smat -g -lo=C:/Github/isGames/MineSweeper/list -tasks -od=C:/Github/isGames/MineSweeper/output -jj
 IDENTIFICATION DIVISION.                                         
                                                                  

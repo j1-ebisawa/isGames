@@ -1,7 +1,7 @@
 *>(c) 2005 - 2021 Veryant
 *>compiler version: isCOBOL release 2022 R2 build#1074.6-20220909-34620
 *>source file name:  C:\Github\isGames\catsEye\source\catsEye.cbl
-*>date generated  :  Thu Oct 27 13:47:28 JST 2022
+*>date generated  :  Thu Oct 27 14:57:06 JST 2022
 *>compiler options:  -dx -eo=C:/Github/isGames/catsEye/errs -sp=cpy;screenpgm;fdsl -esme=100 -d -smat -g -lo=C:/Github/isGames/catsEye/list -tasks -od=C:/Github/isGames/catsEye/output -jj
 *>begin {iscobol}compiler-directives                               
 *>end {iscobol}compiler-directives                                 

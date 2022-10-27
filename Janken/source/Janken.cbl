@@ -7,7 +7,7 @@
        identification division.
       *begin {iscobol}progid
        program-id. Janken.
-       author. Žõˆê.
+       author. user.
        remarks.
       *end {iscobol}progid
        environment division.

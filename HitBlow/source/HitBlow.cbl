@@ -7,7 +7,7 @@
        identification division.
       *begin {iscobol}progid
        program-id. HitBlow.
-       author. j1_eb.
+       author. user.
        remarks.
       *end {iscobol}progid
        environment division.
