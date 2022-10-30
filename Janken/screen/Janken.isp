@@ -12,19 +12,16 @@
     <void property="beforeCreate">
      <string>screen-1-bef-create</string>
     </void>
-    <void id="Boolean0" method="isAutoFit"/>
     <void property="boxed">
-     <object idref="Boolean0"/>
+     <boolean>true</boolean>
     </void>
-    <void id="Boolean1" method="isAutominimize"/>
     <void id="BackgroundIntensity0" property="backgroundIntensity">
      <void id="Integer0" property="selection"/>
     </void>
-    <void id="Integer1" property="cellHeight"/>
     <void property="components">
      <array class="com.iscobol.screenpainter.beans.AbstractBeanControl" length="18">
       <void index="0">
-       <object class="com.iscobol.screenpainter.beans.swing.SwingLabel" id="SwingLabel0">
+       <object class="com.iscobol.screenpainter.beans.swing.SwingLabel">
         <void property="column">
          <string>26.2</string>
         </void>
@@ -39,7 +36,7 @@
           <int>0</int>
           <string>Arial-18v0</string>
           <null/>
-          <object idref="Boolean1"/>
+          <boolean>false</boolean>
          </object>
         </void>
         <void property="id">
@@ -75,7 +72,6 @@
         <void property="title">
          <string>Janken Game</string>
         </void>
-        <void id="Integer2" property="labelOffset"/>
        </object>
       </void>
       <void index="1">
@@ -83,10 +79,10 @@
         <void property="bitmap">
          <object class="com.iscobol.screenpainter.beans.types.ImageType">
           <void property="fileName">
-           <string>C:\ISLAB\isGames\Janken\img\gu.png</string>
+           <string>../img/gu.png</string>
           </void>
           <void property="handleName">
-           <string>gu-png</string>
+           <string>gu-png0</string>
           </void>
          </object>
         </void>
@@ -97,7 +93,7 @@
          <float>90.0</float>
         </void>
         <void property="id">
-         <object idref="Integer0"/>
+         <int>2</int>
         </void>
         <void property="line">
          <string>21.0</string>
@@ -124,7 +120,7 @@
          <float>183.0</float>
         </void>
         <void property="tabOrder">
-         <object idref="Integer0"/>
+         <int>2</int>
         </void>
        </object>
       </void>
@@ -133,10 +129,10 @@
         <void property="bitmap">
          <object class="com.iscobol.screenpainter.beans.types.ImageType">
           <void property="fileName">
-           <string>C:\ISLAB\isGames\Janken\img\gu.png</string>
+           <string>../img/gu.png</string>
           </void>
           <void property="handleName">
-           <string>gu-png</string>
+           <string>gu-png1</string>
           </void>
          </object>
         </void>
@@ -377,7 +373,7 @@
          <float>334.0</float>
         </void>
         <void property="id">
-         <object idref="Integer1"/>
+         <int>10</int>
         </void>
         <void property="line">
          <string>11.9</string>
@@ -499,7 +495,7 @@
          <float>81.0</float>
         </void>
         <void property="tabOrder">
-         <object idref="Integer1"/>
+         <int>10</int>
         </void>
         <void property="title">
          <string>Draws</string>
@@ -709,7 +705,7 @@
        </object>
       </void>
       <void index="14">
-       <object class="com.iscobol.screenpainter.beans.swing.SwingPushButton">
+       <object class="com.iscobol.screenpainter.beans.swing.SwingPushButton" id="SwingPushButton0">
         <void property="column">
          <string>61.9</string>
         </void>
@@ -752,6 +748,7 @@
         <void property="title">
          <string>Reset</string>
         </void>
+        <void id="Boolean0" method="isBitmapSquare"/>
        </object>
       </void>
       <void index="15">
@@ -884,7 +881,7 @@
          </object>
         </void>
         <void property="id">
-         <object idref="Integer2"/>
+         <int>20</int>
         </void>
         <void property="line">
          <string>44.5</string>
@@ -946,7 +943,7 @@
    </object>
   </void>
  </array>
- <array class="com.iscobol.screenpainter.beans.types.VariableType" length="16">
+ <array class="com.iscobol.screenpainter.beans.types.VariableType" length="17">
   <void index="0">
    <object class="com.iscobol.screenpainter.beans.types.VariableType" id="VariableType0">
     <void id="SettingTreeItemArray0" property="children"/>
@@ -1019,19 +1016,11 @@
     <void property="children">
      <object idref="SettingTreeItemArray3"/>
     </void>
-    <void property="level">
-     <string>77</string>
-    </void>
     <void property="name">
-     <string>gu-png</string>
+     <string>pcHand</string>
     </void>
     <void property="picture">
-     <string>s9(9)</string>
-    </void>
-    <void property="usage">
-     <object class="com.iscobol.screenpainter.beans.types.VariableUsage">
-      <int>5</int>
-     </object>
+     <string>9(01)</string>
     </void>
    </object>
   </void>
@@ -1042,20 +1031,6 @@
      <object idref="SettingTreeItemArray4"/>
     </void>
     <void property="name">
-     <string>pcHand</string>
-    </void>
-    <void property="picture">
-     <string>9(01)</string>
-    </void>
-   </object>
-  </void>
-  <void index="5">
-   <object class="com.iscobol.screenpainter.beans.types.VariableType" id="VariableType5">
-    <void id="SettingTreeItemArray5" property="children"/>
-    <void property="children">
-     <object idref="SettingTreeItemArray5"/>
-    </void>
-    <void property="name">
      <string>myHand</string>
     </void>
     <void property="picture">
@@ -1063,15 +1038,15 @@
     </void>
    </object>
   </void>
-  <void index="6">
+  <void index="5">
    <object class="com.iscobol.screenpainter.beans.types.VariableType">
     <void property="children">
      <array class="com.iscobol.screenpainter.beans.types.SettingTreeItem" length="2">
       <void index="0">
-       <object class="com.iscobol.screenpainter.beans.types.VariableType" id="VariableType6">
-        <void id="SettingTreeItemArray6" property="children"/>
+       <object class="com.iscobol.screenpainter.beans.types.VariableType" id="VariableType5">
+        <void id="SettingTreeItemArray5" property="children"/>
         <void property="children">
-         <object idref="SettingTreeItemArray6"/>
+         <object idref="SettingTreeItemArray5"/>
         </void>
         <void property="level">
          <string>05</string>
@@ -1092,14 +1067,14 @@
         <void property="children">
          <array class="com.iscobol.screenpainter.beans.types.SettingTreeItem" length="1">
           <void index="0">
-           <object class="com.iscobol.screenpainter.beans.types.VariableType" id="VariableType7">
+           <object class="com.iscobol.screenpainter.beans.types.VariableType" id="VariableType6">
             <void property="children">
              <array class="com.iscobol.screenpainter.beans.types.SettingTreeItem" length="1">
               <void index="0">
-               <object class="com.iscobol.screenpainter.beans.types.VariableType" id="VariableType8">
-                <void id="SettingTreeItemArray7" property="children"/>
+               <object class="com.iscobol.screenpainter.beans.types.VariableType" id="VariableType7">
+                <void id="SettingTreeItemArray6" property="children"/>
                 <void property="children">
-                 <object idref="SettingTreeItemArray7"/>
+                 <object idref="SettingTreeItemArray6"/>
                 </void>
                 <void property="level">
                  <string>15</string>
@@ -1158,6 +1133,20 @@
     </void>
    </object>
   </void>
+  <void index="6">
+   <object class="com.iscobol.screenpainter.beans.types.VariableType" id="VariableType8">
+    <void id="SettingTreeItemArray7" property="children"/>
+    <void property="children">
+     <object idref="SettingTreeItemArray7"/>
+    </void>
+    <void property="name">
+     <string>draws</string>
+    </void>
+    <void property="picture">
+     <string>9(02)</string>
+    </void>
+   </object>
+  </void>
   <void index="7">
    <object class="com.iscobol.screenpainter.beans.types.VariableType" id="VariableType9">
     <void id="SettingTreeItemArray8" property="children"/>
@@ -1165,7 +1154,7 @@
      <object idref="SettingTreeItemArray8"/>
     </void>
     <void property="name">
-     <string>draws</string>
+     <string>myWins</string>
     </void>
     <void property="picture">
      <string>9(02)</string>
@@ -1179,20 +1168,6 @@
      <object idref="SettingTreeItemArray9"/>
     </void>
     <void property="name">
-     <string>myWins</string>
-    </void>
-    <void property="picture">
-     <string>9(02)</string>
-    </void>
-   </object>
-  </void>
-  <void index="9">
-   <object class="com.iscobol.screenpainter.beans.types.VariableType" id="VariableType11">
-    <void id="SettingTreeItemArray10" property="children"/>
-    <void property="children">
-     <object idref="SettingTreeItemArray10"/>
-    </void>
-    <void property="name">
      <string>pcWins</string>
     </void>
     <void property="picture">
@@ -1200,15 +1175,15 @@
     </void>
    </object>
   </void>
-  <void index="10">
+  <void index="9">
    <object class="com.iscobol.screenpainter.beans.types.VariableType">
     <void property="children">
      <array class="com.iscobol.screenpainter.beans.types.SettingTreeItem" length="2">
       <void index="0">
-       <object class="com.iscobol.screenpainter.beans.types.VariableType" id="VariableType12">
-        <void id="SettingTreeItemArray11" property="children"/>
+       <object class="com.iscobol.screenpainter.beans.types.VariableType" id="VariableType11">
+        <void id="SettingTreeItemArray10" property="children"/>
         <void property="children">
-         <object idref="SettingTreeItemArray11"/>
+         <object idref="SettingTreeItemArray10"/>
         </void>
         <void property="level">
          <string>05</string>
@@ -1232,10 +1207,10 @@
         <void property="children">
          <array class="com.iscobol.screenpainter.beans.types.SettingTreeItem" length="1">
           <void index="0">
-           <object class="com.iscobol.screenpainter.beans.types.VariableType" id="VariableType13">
-            <void id="SettingTreeItemArray12" property="children"/>
+           <object class="com.iscobol.screenpainter.beans.types.VariableType" id="VariableType12">
+            <void id="SettingTreeItemArray11" property="children"/>
             <void property="children">
-             <object idref="SettingTreeItemArray12"/>
+             <object idref="SettingTreeItemArray11"/>
             </void>
             <void property="level">
              <string>10</string>
@@ -1279,11 +1254,11 @@
     </void>
    </object>
   </void>
-  <void index="11">
-   <object class="com.iscobol.screenpainter.beans.types.VariableType" id="VariableType14">
-    <void id="SettingTreeItemArray13" property="children"/>
+  <void index="10">
+   <object class="com.iscobol.screenpainter.beans.types.VariableType" id="VariableType13">
+    <void id="SettingTreeItemArray12" property="children"/>
     <void property="children">
-     <object idref="SettingTreeItemArray13"/>
+     <object idref="SettingTreeItemArray12"/>
     </void>
     <void property="name">
      <string>result-v</string>
@@ -1296,11 +1271,11 @@
     </void>
    </object>
   </void>
-  <void index="12">
-   <object class="com.iscobol.screenpainter.beans.types.VariableType" id="VariableType15">
-    <void id="SettingTreeItemArray14" property="children"/>
+  <void index="11">
+   <object class="com.iscobol.screenpainter.beans.types.VariableType" id="VariableType14">
+    <void id="SettingTreeItemArray13" property="children"/>
     <void property="children">
-     <object idref="SettingTreeItemArray14"/>
+     <object idref="SettingTreeItemArray13"/>
     </void>
     <void property="name">
      <string>msg-val</string>
@@ -1310,7 +1285,7 @@
     </void>
    </object>
   </void>
-  <void index="13">
+  <void index="12">
    <object class="com.iscobol.screenpainter.beans.types.VariableType">
     <void property="children">
      <array class="com.iscobol.screenpainter.beans.types.SettingTreeItem" length="2">
@@ -1319,10 +1294,10 @@
         <void property="children">
          <array class="com.iscobol.screenpainter.beans.types.SettingTreeItem" length="3">
           <void index="0">
-           <object class="com.iscobol.screenpainter.beans.types.VariableType" id="VariableType16">
-            <void id="SettingTreeItemArray15" property="children"/>
+           <object class="com.iscobol.screenpainter.beans.types.VariableType" id="VariableType15">
+            <void id="SettingTreeItemArray14" property="children"/>
             <void property="children">
-             <object idref="SettingTreeItemArray15"/>
+             <object idref="SettingTreeItemArray14"/>
             </void>
             <void property="level">
              <string>10</string>
@@ -1341,10 +1316,10 @@
            </object>
           </void>
           <void index="1">
-           <object class="com.iscobol.screenpainter.beans.types.VariableType" id="VariableType17">
-            <void id="SettingTreeItemArray16" property="children"/>
+           <object class="com.iscobol.screenpainter.beans.types.VariableType" id="VariableType16">
+            <void id="SettingTreeItemArray15" property="children"/>
             <void property="children">
-             <object idref="SettingTreeItemArray16"/>
+             <object idref="SettingTreeItemArray15"/>
             </void>
             <void property="level">
              <string>10</string>
@@ -1363,10 +1338,10 @@
            </object>
           </void>
           <void index="2">
-           <object class="com.iscobol.screenpainter.beans.types.VariableType" id="VariableType18">
-            <void id="SettingTreeItemArray17" property="children"/>
+           <object class="com.iscobol.screenpainter.beans.types.VariableType" id="VariableType17">
+            <void id="SettingTreeItemArray16" property="children"/>
             <void property="children">
-             <object idref="SettingTreeItemArray17"/>
+             <object idref="SettingTreeItemArray16"/>
             </void>
             <void property="level">
              <string>10</string>
@@ -1399,10 +1374,10 @@
         <void property="children">
          <array class="com.iscobol.screenpainter.beans.types.SettingTreeItem" length="1">
           <void index="0">
-           <object class="com.iscobol.screenpainter.beans.types.VariableType" id="VariableType19">
-            <void id="SettingTreeItemArray18" property="children"/>
+           <object class="com.iscobol.screenpainter.beans.types.VariableType" id="VariableType18">
+            <void id="SettingTreeItemArray17" property="children"/>
             <void property="children">
-             <object idref="SettingTreeItemArray18"/>
+             <object idref="SettingTreeItemArray17"/>
             </void>
             <void property="level">
              <string>10</string>
@@ -1445,6 +1420,20 @@
     </void>
    </object>
   </void>
+  <void index="13">
+   <object class="com.iscobol.screenpainter.beans.types.VariableType" id="VariableType19">
+    <void id="SettingTreeItemArray18" property="children"/>
+    <void property="children">
+     <object idref="SettingTreeItemArray18"/>
+    </void>
+    <void property="name">
+     <string>my-percent</string>
+    </void>
+    <void property="picture">
+     <string>9(03)</string>
+    </void>
+   </object>
+  </void>
   <void index="14">
    <object class="com.iscobol.screenpainter.beans.types.VariableType" id="VariableType20">
     <void id="SettingTreeItemArray19" property="children"/>
@@ -1452,7 +1441,7 @@
      <object idref="SettingTreeItemArray19"/>
     </void>
     <void property="name">
-     <string>my-percent</string>
+     <string>pc-percent</string>
     </void>
     <void property="picture">
      <string>9(03)</string>
@@ -1465,11 +1454,41 @@
     <void property="children">
      <object idref="SettingTreeItemArray20"/>
     </void>
+    <void property="level">
+     <string>77</string>
+    </void>
     <void property="name">
-     <string>pc-percent</string>
+     <string>gu-png0</string>
     </void>
     <void property="picture">
-     <string>9(03)</string>
+     <string>s9(9)</string>
+    </void>
+    <void property="usage">
+     <object class="com.iscobol.screenpainter.beans.types.VariableUsage">
+      <int>5</int>
+     </object>
+    </void>
+   </object>
+  </void>
+  <void index="16">
+   <object class="com.iscobol.screenpainter.beans.types.VariableType" id="VariableType22">
+    <void id="SettingTreeItemArray21" property="children"/>
+    <void property="children">
+     <object idref="SettingTreeItemArray21"/>
+    </void>
+    <void property="level">
+     <string>77</string>
+    </void>
+    <void property="name">
+     <string>gu-png1</string>
+    </void>
+    <void property="picture">
+     <string>s9(9)</string>
+    </void>
+    <void property="usage">
+     <object class="com.iscobol.screenpainter.beans.types.VariableUsage">
+      <int>5</int>
+     </object>
     </void>
    </object>
   </void>
@@ -1481,11 +1500,11 @@
            move 0 to pc-percent my-percent .&#13;
            move 1 to pcHand myHand.&#13;
            move &quot;Let&apos;s start Janken Game&quot; to msg-val&#13;
-           CALL &quot;W$BITMAP&quot; USING WBITMAP-LOAD   &quot;..\img\gu.png&quot;&#13;
+           CALL &quot;W$BITMAP&quot; USING WBITMAP-LOAD   &quot;../img/gu.png&quot;&#13;
                            GIVING goo-Handle&#13;
-           CALL &quot;W$BITMAP&quot; USING WBITMAP-LOAD   &quot;..\img\ch.png&quot;&#13;
+           CALL &quot;W$BITMAP&quot; USING WBITMAP-LOAD   &quot;../img/ch.png&quot;&#13;
                            GIVING choki-Handle&#13;
-           CALL &quot;W$BITMAP&quot; USING WBITMAP-LOAD   &quot;..\img\pa.png&quot;&#13;
+           CALL &quot;W$BITMAP&quot; USING WBITMAP-LOAD   &quot;../img/pa.png&quot;&#13;
                            GIVING paa-Handle&#13;
             &#13;
            .&#13;
@@ -1618,7 +1637,7 @@
  <object class="java.util.Hashtable">
   <void method="put">
    <string>iscobol.release</string>
-   <string>isCOBOL2022R1</string>
+   <string>isCOBOL2022R2</string>
   </void>
  </object>
  <object class="com.iscobol.screenpainter.beans.types.AlphabetList" id="AlphabetList0">
@@ -1643,6 +1662,12 @@
  </object>
  <object class="com.iscobol.screenpainter.propertysheet.DataDefinition">
   <string>lks</string>
+ </object>
+ <object class="com.iscobol.screenpainter.propertysheet.DataDefinition">
+  <string>lss</string>
+ </object>
+ <object class="com.iscobol.screenpainter.propertysheet.DataDefinition">
+  <string>tlss</string>
  </object>
  <array class="com.iscobol.screenpainter.beans.types.FontType" length="0"/>
  <object class="java.util.TreeSet"/>

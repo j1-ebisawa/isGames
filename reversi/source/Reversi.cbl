@@ -7,7 +7,7 @@
        identification division.
       *begin {iscobol}progid
        program-id. Reversi.
-       author. user.
+       author. j1_eb.
        remarks.
       *end {iscobol}progid
        environment division.

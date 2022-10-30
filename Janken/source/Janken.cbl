@@ -7,7 +7,7 @@
        identification division.
       *begin {iscobol}progid
        program-id. Janken.
-       author. user.
+       author. j1_eb.
        remarks.
       *end {iscobol}progid
        environment division.
@@ -50,7 +50,6 @@
        77 window-handle handle of window.
        77 Arial-15v0 handle of font.
        77 Arial-18v0 handle of font.
-       77 gu-png pic s9(9) comp-4.
        01 pcHand pic 9(01).
        01 myHand pic 9(01).
        01 winLose-tbl.
@@ -76,6 +75,8 @@
              10 icons occurs 3 handle of bitmap.
        01 my-percent pic 9(03).
        01 pc-percent pic 9(03).
+       77 gu-png0 pic s9(9) comp-4.
+       77 gu-png1 pic s9(9) comp-4.
       *end {iscobol}copy-working
       *begin {iscobol}external-definitions
       *end {iscobol}external-definitions
@@ -105,7 +106,7 @@
              size 183 pixels 
              lines 182 pixels 
              id 2
-             bitmap-handle gu-png
+             bitmap-handle gu-png0
              bitmap-number 1
              .
           03 screen-1-bi-2 Bitmap
@@ -114,7 +115,7 @@
              size 183 pixels 
              lines 182 pixels 
              id 3
-             bitmap-handle gu-png
+             bitmap-handle gu-png1
              bitmap-number 1
              .
           03 screen-1-rb-1 Radio-Button
@@ -295,8 +296,9 @@
            set wfont-fixed-pitch to false.
            call "w$font" using wfont-get-font arial-18v0 wfont-data.
        is-load-bitmaps.
-           call "w$bitmap" using wbitmap-load "C:\ISLAB\isGames\Janken\i
-      -    "mg\gu.png" giving gu-png.
+           call "w$bitmap" using wbitmap-load "../img/gu.png" giving 
+           gu-png0.
+           move gu-png0 to gu-png1.
        is-exit-rtn.
            perform is-destroy-fonts.
            perform is-destroy-bitmaps.
@@ -305,7 +307,8 @@
        is-destroy-fonts.
            destroy arial-18v0.
        is-destroy-bitmaps.
-           call "w$bitmap" using wbitmap-destroy gu-png.
+           call "w$bitmap" using wbitmap-destroy gu-png0.
+           call "w$bitmap" using wbitmap-destroy gu-png1.
        is-screen-1-routine.
            perform is-screen-1-scrn
            perform is-screen-1-proc.
@@ -359,11 +362,11 @@
            move 0 to pc-percent my-percent .
            move 1 to pcHand myHand.
            move "Let's start Janken Game" to msg-val
-           CALL "W$BITMAP" USING WBITMAP-LOAD   "..\img\gu.png"
+           CALL "W$BITMAP" USING WBITMAP-LOAD   "../img/gu.png"
                            GIVING goo-Handle
-           CALL "W$BITMAP" USING WBITMAP-LOAD   "..\img\ch.png"
+           CALL "W$BITMAP" USING WBITMAP-LOAD   "../img/ch.png"
                            GIVING choki-Handle
-           CALL "W$BITMAP" USING WBITMAP-LOAD   "..\img\pa.png"
+           CALL "W$BITMAP" USING WBITMAP-LOAD   "../img/pa.png"
                            GIVING paa-Handle
             
            .
